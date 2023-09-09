@@ -4,30 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="shortcut icon" href="./imgs/logo/Favicon.svg" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+
+    <title>X GAIN</title>
+
+    <!-- <link rel="stylesheet" href="/css/icons.css"> -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/home.css">
+    
 </head>
 <body>
 
-    <section id="carrinho">
+                                                            <!-- Barra de pesquisa -->
+    <!-- <section id="pesquisa-section" class="section-pesquisa">
+        <i id="exit-pesquisa-section" class="btn-sair">
+            <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+            <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+            <path id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+            /></g></g></svg>
+        </i>
+        <div class="barra-pesquisa">
+            <input type="search">
+            <button type="submit"></button>
+        </div>
+    </section> --> 
+
+                                                                <!-- Carrinho -->
+    <section id="carrinho-section" class="section-carrinho">
+
+        <section class="x-title">
+            <i id="exit-carrinho-section" class="btn-sair" alt="Botão de fechar carrinho">
+            <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                <path id="path1" d="m-6116.2-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z"/><path id="path2" d="m-5924.7-1640c12.114-12.262 11.615-31.661-1.1201-43.33-6.1133-5.6039-14.287-8.6395-22.724-8.4381-8.4375 0.201-16.445 3.623-22.263 9.5122l-64.776 65.814-67.069-65.814c-5.8179-5.8885-13.825-9.3097-22.261-9.5122-8.4375-0.2011-16.613 2.8339-22.726 8.4381-12.73 11.669-13.23 31.068-1.1201 43.33l67.833 68.628-67.833 69.224c-12.114 12.262-11.615 31.662 1.1201 43.331 12.73 11.67 32.873 11.188 44.988-1.074l65.916-66.461 65.928 66.461c12.114 12.262 32.256 12.743 44.986 1.074 12.732-11.669 13.231-31.069 1.1201-43.331l-67.754-68.416z"/></g></g>
+            </svg>
+
+            </i>
+
+            <p>PEDIDO PARA ORÇAMENTO</p>
+        </section>
+
+        <section id="" class="tabela-produtos-carrinho">
+            <div id="" class="item-produto-carrinho">
+                <div class="card-produto-carrinho">
+                    <div class="qtn-produto">
+                        <i class="menos-mais">-</i>
+                        <p class="numero-qtn">01</p>
+                        <i class="menos-mais">+</i>
+                    </div>
+                    <p class="nome-produto">----</p>
+                    <i class="excluir-produto">
+                        
+                    </i>
+                </div>
+                <div class="barrinha"></div>
+            </div>
+    
+            <div id="total-produtos" class="total-produtos">
+                <p>TOTAL - </p>
+            </div>
+            <button id="limpar-lista" class="limpar-lista">LIMPAR LISTA</button>
+        </section>
+
+        <section id="" class="btns-carrinho">
+            <button id="finalizar-orcamento" class="btn-carrinho">
+                FINALIZAR ORÇAMENTO
+            </button>
+            <button id="voltar-carrinho" class="btn-carrinho">
+                VOLTAR
+            </button>
+        </section>
 
     </section>
-    
+                                                                <!-- Header -->
     <header>
-        <section>
-        <ul>
-            <li>
-                <div class="">
-                    <a href="">CARDIO</a>
+        <section class="left-header">
+
+            <section class="item-header" id="categoria-cardio">
+                <a href="" >CARDIO</a>
+                <div id="list-cardio" class="list-itens-header">
                     <ul>
                         <li><a href="">ESTEIRA</a></li>
                         <li><a href="">ESCADA</a></li>
                         <li><a href="">BIKE</a></li>
                     </ul>
                 </div>
-            </li>
-            <li>
-                <div class="">
-                    <a href="">MUSCULAÇÃO</a>
+            </section>
+
+            <section class="item-header" id="categoria-musculacao">
+                <a href="">MUSCULAÇÃO</a>
+                <div id="list-musculacao" class="list-itens-header">
                     <ul>
                         <li><a href="">ABDÔMEN</a></li>
                         <li><a href="">BRAÇO</a></li>
@@ -37,70 +107,87 @@
                         <li><a href="">PERNA</a></li>
                     </ul>
                 </div>
-            </li>
-            <li>
-                <div class="">
-                    <a href="">ACESSÓRIOS</a>
+            </section>
+            <section class="item-header" id="categoria-acessorios">
+                <a href="">ACESSÓRIOS</a>
+                <div id="list-acessorios" class="list-itens-header">
                     <ul>
                         <li><a href="">UTILITÁRIOS</a></li>
                         <li><a href="">EQUIPAMENTOS</a></li>
                         <li><a href="">OUTROS</a></li>
                     </ul>
                 </div>
-            </li>
+            </section>
 
-        </ul>
         </section>
 
-        <section>
-            <svg
-                    width="80"
-                    viewBox="0 0 150.87131 90.953636"
-                    version="1.1"
-                    id="svg627"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:svg="http://www.w3.org/2000/svg"
-                >
-                    <defs id="Logo icon" />
-                    <g id="layer1" transform="translate(-4464.5644,-454.52318)">
-                        <path
-                        style="font-variation-settings:'wght' 400;;fill-opacity:1;stroke:none;stroke-width:3.47457;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-                        d="m 3540.4023,553.1932 -33.7322,-0.0426 -18.533,-23.68018 0.03,-24.93274 39.8064,0.0204 -14.4754,15.52013 -0.2235,0.22443 10.2509,13.07657 23.1431,-26.96226 -16.2336,-18.40028 -18.8019,-0.025 -23.4513,-25.72091 53.7599,-0.0312 21.6382,24.42122 21.6239,-24.42122 53.7598,0.0312 -23.4513,25.72091 -18.8018,0.025 -16.2336,18.40028 23.1429,26.96226 10.2511,-13.07657 -0.2236,-0.22443 -14.4754,-15.52013 39.8065,-0.0204 0.03,24.93274 -18.5329,23.68018 -33.7321,0.0426 -23.1582,-26.95768 z"
-                        id="path1716-2-9-6"
-                        transform="translate(976.42725,-7.7163839)"
-                        />
-                    </g>
-                </svg>
+        <div class="icon-logo">
+            <a href="/"><i>
+                <svg version="1.1" viewBox="0 0 514.16 314.73" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(3.3284 0 0 3.3284 -14854 -1506.8)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.6053" style="paint-order:normal">
+                    <path alt="Logo do site, clique para voltar na pagina inicial" transform="translate(976.43,-7.7164)" d="m3540.4 553.19-33.732-0.0426-18.533-23.68 0.03-24.933 39.806 0.0204-14.475 15.52-0.2235 0.22443 10.251 13.077 23.143-26.962-16.234-18.4-18.802-0.025-23.451-25.721 53.76-0.0312 21.638 24.421 21.624-24.421 53.76 0.0312-23.451 25.721-18.802 0.025-16.234 18.4 23.143 26.962 10.251-13.077-0.2236-0.22443-14.475-15.52 39.806-0.0204 0.03 24.933-18.533 23.68-33.732 0.0426-23.158-26.958z" 
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="3.6053"/></g>
+                </svg>                  
+                    
+            </i></a>
+        </div>
+
+        <section class="right-header">
+
+            <div class="item-header"><a href="">SOBRE</a></div>
+            <div class="item-header"><a href="">CONTATO</a></div>
+
+            <div class="icons-header">
+                <i id="icon-pesquisa">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path alt="Icone de pesquisa, clique para abrir a barra de pesquisa, ao meio da pagina" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>                
+                </i>
+                
+                <i id="icon-carrinho">
+                    <!-- <div class="qtd-carrinho">
+                        <p id="qtd-carrinho">1</p>
+                    </div> -->
+                    <svg version="1.1" viewBox="0 0 492.56 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(4530.3 1880)">
+                        <path alt="Icone de carrinho: clique para abrir o carrinho, na direita do pagina" d="m-4283.7-1880c-41.144 0.1497-77.326 11.389-103.09 35.496-18.917 17.701-30.963 41.674-36.064 69.404-49.774 3.8482-85.993 46.425-89.912 94.908l-17.209 212.87c-4.501 55.675 43.695 99.32 97.223 99.32h297.57c53.518 0 101.27-43.642 97.238-99.119l-15.488-212.87c-3.4257-47.082-37.666-88.347-84.861-94.584-5.4251-29.768-19.334-55.043-40.434-72.734-27.307-22.896-64.114-32.84-104.97-32.691zm0.1816 50.049c32.61-0.1186 56.985 7.8757 72.631 20.994 9.9847 8.3717 17.347 19.009 21.451 33.478h-182.26c3.865-13.827 10.414-24.346 19.108-32.48 14.4-13.475 36.75-21.875 69.072-21.992zm-92.564 104.52h189.99c-0.077 4.5539-0.096 4.8075-0.1719 10.074-0.2444 16.835-0.524 33.609-0.1621 42.125a25.025 25.025 0 0 0 26.064 23.939 25.025 25.025 0 0 0 23.94-26.064c-0.1272-2.9929-0.041-22.602 0.2012-39.274 0.063-4.3458 0.078-4.4153 0.1425-8.3242 18.57 6.0527 31.048 23.496 32.729 46.594l15.488 212.87c1.7752 24.398-20.752 45.439-47.32 45.439h-297.57c-26.558 0-49.288-21.088-47.336-45.238l17.209-212.87c2.0144-24.917 15.966-43.312 36.699-48.012l-1.209 49.264a25.025 25.025 0 0 0 24.404 25.631 25.025 25.025 0 0 0 25.631-24.402z"/></g>
+                    </svg>
+                </i>
+                <!-- <button id="login-header" class="login">LOGIN</button> -->
+                <i id="icon-perfil">
+                    <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6840.4 1865.3)">
+                        <path alt="Icone de perfil clique para abrir a pagina de perfil" d="m-6584.4-1865.3c-141.25 0-256 114.75-256 256 0 141.25 114.75 256 256 256 141.25 0 256-114.75 256-256 0-141.25-114.75-256-256-256zm0 65.867c105.9 0 190.13 84.23 190.13 190.13 0 105.9-84.23 190.13-190.13 190.13-105.9 0-190.13-84.228-190.13-190.13 0-105.9 84.23-190.13 190.13-190.13zm-5.2896-18.828c-123.58 0-223.07 99.486-223.07 223.06 0 123.58 99.488 223.07 223.07 223.07 123.58 0 223.07-99.488 223.07-223.07 0-123.58-99.488-223.06-223.07-223.06zm21.088 27.528c42.032 0 76.106 34.074 76.106 76.106 0 24.676-11.745 46.611-29.852 60.556 7.5379 2.0285 13.667 6.3513 20.112 10.57 10.753 7.0389 17.893 17.789 23.004 25.101 16.656 5.1082 26.207 15.982 32.226 29.417 4.312 13.023 3.4295 20.415 2.0235 34.924 2.6657 6.8536 6.5894 9.1381 7.9987 25.252 0.9222 10.543-2.6315 23.124-4.9371 31.856-4.0771 15.441-11.682 30.582-13.548 35.361-3.034 7.7691-1.5498 21.238-5.7897 23.647-5.4238 3.0822-31.887 3.9786-33.438 4.1559-2.3603 0.2697-1.7611 3.7718-2.1052 5.109-0.6875 2.6719-3.2004 8.935-8.9007 12.046-5.1687 2.8208-27.149 15.491-60.137 16.751-24.082 0.92-44.089-0.8688-57.52-7.6005-8.6549-4.3382-18.112-12.894-17.965-21.071 0.1238-6.8767 1.4297-15.022-1.4091-21.287-0.6129-1.352-6.7445 2.8969-23.806 8.9894-3.22 1.1489-4.3772 0.3582-5.6978-1.5556-3.8878-6.9014-7.8048-13.478-13.041-31.469 0 0-39.296-7.1563-55.818-25.613-3.1934-11.086-0.7688-25.264 3.9161-38.869-1.3705-12.365 0.5567-20.496 4.8094-30.69 4.865-11.661 14.418-21.447 23.909-33.032 5.3396-12.724 7.5982-26.964 20.266-36.745 12.08-9.3281 28.206-11.984 44.441-11.033 3.7326-1.5399 6.6116-4.806 10.393-6.2203 3.9203-1.4663 9.1507-1.8738 13.312-2.415-15.156-13.957-24.658-33.938-24.658-56.136 0-42.032 34.074-76.106 76.106-76.106zm106.18 192.18-19.924 5.8748-5.337 11.418-10.693-6.6798-19.915 5.8987 11.506 6.9623 6.9691-2.0491 8.0294 5.0392-5.623 12.526-5.2298-3.7236 0.059-0.1073 3.6624-7.3349-14.75 4.3516 2.7196 9.2411 9.4589 6.7445 12.504-3.6794 5.6366-12.526 11.534 7.4524 12.493-3.71 4.2751-10.805-2.7417-9.2343-14.747 4.367 7.0627 4.1645 0.1073 0.059-2.3673 5.9684-11.527-7.4559 3.9993-8.5961 6.964-2.0678z" 
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width=".87135"/></g>
+                    </svg>
+                </i>
+            </div>
+
         </section>
-
-        <section>
-            <ul class="">
-                <li><a href="">SOBRE</a></li>
-                <li><a href="">CONTATO</a></li>
-                <li><a href="">
-                    <i><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></i>
-                    <div class="">
-                        <input id="" class="" type="search">
-                    </div>
-                </a></li> 
-                <!-- n terminado  -->
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-
-            <i id="icon-carrinho"><?xml version="1.0" encoding="UTF-8"?>
-                <svg version="1.1" viewBox="0 0 436.5 498.18" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-121.38 -741.65)"><path d="m232.35 923.19 1.5421-62.856c0-65.286 39.503-100.64 106.08-100.88 66.574-0.24219 110.89 32.508 111.38 97.793 0 0-1.1031 55.511-0.66003 65.94m-230.28-67.502h240.02c36.286 0 63.339 29.277 65.499 65.499l14.035 235.33c2.1603 36.222-29.212 65.499-65.499 65.499h-269.65c-36.286 0-67.898-29.292-65.499-65.499l15.595-235.33c2.3994-36.207 29.213-65.499 65.499-65.499z" 
-                    fill="none" stop-color="#000" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="35.617"/></g></svg></i>
-            <i class="icon-login"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/></svg></i>
-        </section>
-
     </header>
 
+    <div class="preto"></div>
 
+    <main>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum asperiores quidem sit non ipsum, laborum velit hic at reiciendis consequatur quae aspernatur aliquam accusantium error quibusdam doloribus odit magni. Dolor!</p>
+        <p>Natus vero exercitationem laborum assumenda ipsum! Unde facilis molestias optio, ipsa a voluptatum fugit! Aperiam labore, dignissimos temporibus distinctio delectus recusandae vel dolorum beatae, ipsam magni, natus tenetur ab mollitia!</p>
+        <p>Voluptas laboriosam pariatur explicabo dolor quam ducimus accusamus, error consectetur aspernatur facilis aliquam sit quibusdam modi, praesentium debitis iste ab? Mollitia magni maxime totam esse quibusdam officiis ipsa ex doloribus.</p>
+        <p>Maxime consequatur adipisci fuga quam deserunt iste cumque recusandae consectetur, aut accusantium, commodi eligendi autem facere libero unde sequi? Magnam laudantium ipsum adipisci saepe? Libero magnam consequuntur iusto mollitia aliquam!</p>
+        <p>Error voluptas rem obcaecati dolorem, cum nesciunt suscipit consequuntur quos aliquid quae dicta, quibusdam, aperiam modi dolor aliquam incidunt! Enim, nesciunt praesentium. Qui accusamus quos nesciunt dolorem, doloribus adipisci ducimus!</p>
+        <p>Eaque obcaecati minus sapiente quam atque magnam fugiat rem sequi placeat eligendi necessitatibus laudantium quisquam beatae facere reprehenderit ipsum, debitis facilis non laborum pariatur veniam blanditiis quos excepturi repudiandae! Eligendi!</p>
+        <p>Placeat aliquam architecto blanditiis aperiam maxime! Tempore soluta alias corporis, nostrum provident dolorem, expedita commodi porro cupiditate eaque hic repellendus veritatis nobis ullam? Alias consequatur odio molestias eligendi? Obcaecati, ad.</p>
+        <p>Rerum adipisci sint nemo eos voluptas error reprehenderit sed molestiae odio autem, doloribus laborum voluptatem nesciunt officiis atque fuga quis omnis exercitationem quia repellat in officia veniam blanditiis. Neque, a?</p>
+        <p>Quaerat tempore voluptatem itaque rerum consequatur dolorum reprehenderit, accusamus natus. Veniam quis sapiente impedit reiciendis earum, officiis architecto aspernatur quia quibusdam rerum beatae perspiciatis illo laudantium dolorem consequatur pariatur velit!</p>
+        <p>Non esse voluptates accusamus reprehenderit laborum fugit numquam deleniti minus magni. Consectetur eveniet quas, unde ratione commodi minima ducimus vel eaque labore molestiae dicta atque tenetur maiores nesciunt. Quo, quidem?</p>
+        <p>Id, repudiandae dolorem. Corrupti molestiae amet id perferendis unde ratione, assumenda a impedit nobis vel. Repudiandae iste nulla delectus praesentium suscipit hic libero. Dolore repellendus possimus nostrum exercitationem libero est.</p>
+        <p>Illo doloremque labore voluptate corrupti qui, hic inventore dolores eligendi, numquam dignissimos veniam magnam iure adipisci illum nihil autem consequuntur quis et deleniti possimus? Amet exercitationem aperiam minima animi dicta?</p>
+        <p>Placeat molestias necessitatibus laboriosam aut culpa blanditiis porro modi fuga, praesentium alias! Fugiat distinctio sit dolorum libero alias. Dignissimos minus delectus doloremque aspernatur inventore sit temporibus non distinctio perspiciatis deserunt?</p>
+        <p>Totam, quis? Eveniet nemo odit illo explicabo laboriosam quidem odio atque molestias, ad quibusdam ex quis, nesciunt temporibus delectus. Illo ut porro tempore nam fuga incidunt blanditiis numquam saepe accusamus!</p>
+        <p>Voluptatibus tenetur ratione, natus excepturi rerum fugiat tempora pariatur repellendus labore delectus tempore voluptate aliquam exercitationem porro ipsam quam velit possimus? Exercitationem, fugiat! Sunt et aut aspernatur incidunt ex sed.</p>
+        <p>Explicabo, ducimus eius. Beatae eius architecto, nam minima atque ratione possimus fugiat, ullam consequatur quidem ea aut sed magni dicta. Voluptatum molestiae deserunt tempora ipsum quaerat temporibus aperiam laborum illum.</p>
+        <p>Ab recusandae ut autem soluta accusantium, natus nam ex voluptates, vero exercitationem vitae consequuntur repudiandae aut illum ea. Saepe sapiente dolor iure ipsum earum ab? Corporis odit odio minus ex.</p>
+        <p>Vitae eligendi suscipit quis? Omnis delectus vero itaque earum iusto cupiditate eos eius, voluptatum totam enim adipisci quod doloremque quo deserunt debitis? Esse, ab excepturi ratione tenetur in officia laudantium?</p>
+        <p>Aliquam ratione voluptatem, tenetur architecto cum quas quia iusto provident dignissimos adipisci nostrum quae quam aut nesciunt aliquid facere sint unde ducimus veritatis nisi excepturi totam nobis a eius? Facilis.</p>
+        <p>Hic voluptas reiciendis tempore unde qui doloribus molestiae, iste nihil atque a. Dolorum quibusdam quae corporis! Error aliquam ratione pariatur mollitia. Hic voluptatem dignissimos fuga architecto amet optio, assumenda culpa?</p>
+    </main>
 
+    <footer></footer>
+
+<script type="module" src="./Js/header.js"></script>
 </body>
 </html>
-
-
-<!-- https://www.svgminify.com/ -->
