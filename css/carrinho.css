@@ -1,0 +1,257 @@
+/* Carrinho */
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+}
+
+.section-carrinho {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--bran);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    
+    top: 0;
+    z-index: 100;
+    transition: 0.5s;
+}
+#carrinho-section{
+    right: -400px;
+}
+
+
+.section-carrinho .x-title {
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    align-items: start;
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.section-carrinho .btn-sair {
+    position: absolute;
+    cursor: pointer;
+}
+
+.section-carrinho .btn-sair svg {
+    height: 30px;
+    stroke: var(--Preto);
+    fill: transparent;
+    stroke-width: 30px;
+}
+
+.section-carrinho .btn-sair svg #path1, .section-carrinho .btn-sair svg #path2 {
+    transition: 0.3s;
+}
+
+.section-carrinho .btn-sair:hover svg #path1 {
+    stroke: var(--verm);
+}
+
+.section-carrinho .btn-sair:hover svg #path2 {
+    stroke: var(--verm);
+}
+
+.section-carrinho .x-title p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.section-carrinho .tabela-carrinho {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    top: 100px;
+}
+
+.section-carrinho .tabela-carrinho .tabela-produtos-carrinho{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.section-carrinho .tabela-carrinho .item-produto-carrinho {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.section-carrinho .card-produto-carrinho {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 10px 10px;
+    font-family: 'mulish';
+    font-weight: 800;
+    color: var(--Preto);
+}
+
+.section-carrinho .qtn-produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-carrinho .qtn-produto .menos-mais {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.section-carrinho .qtn-produto .menos-mais svg path {
+    fill: var(--Preto);
+    transition: 0.2s;
+}
+
+.section-carrinho .qtn-produto .menos-mais svg circle {
+    stroke: var(--Preto);
+    fill: none;
+    transition: 0.2s;
+}
+
+.section-carrinho .qtn-produto .menos-mais:hover svg path {
+    fill: var(--marr);
+}
+
+.section-carrinho .qtn-produto .menos-mais:hover svg circle {
+    stroke: var(--marr);
+}
+
+.section-carrinho .numero-qtn {
+    font-size: 18px;
+    font-family: 'mulish';
+    font-weight: 800;
+}
+
+.section-carrinho .nome-produto {
+    display: flex;
+    margin-right: 20px;
+    width: 50%;
+    align-items: center;
+    font-size: 15px;
+}
+
+.section-carrinho .excluir-produto {
+    display: flex;
+    margin-right: 15px;
+    width: 5%;
+    justify-content: end;
+    align-items: center;
+}
+
+.section-carrinho .excluir-produto svg {
+    height: 20px;
+    fill: var(--Preto);
+    transition: 0.2s;
+}
+
+.section-carrinho .excluir-produto:hover svg {
+    fill: var(--marr);
+}
+
+.section-carrinho .tabela-carrinho .barrinha {
+    height: 2px;
+    background-color: var(--Preto);
+    width: 100%;
+}
+
+.section-carrinho .total-produtos{
+    height:40px;
+    width: 90%;
+    margin-top: 7px;
+    background-color: var(--marr);
+    color: var(--bran);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.section-carrinho .total-produtos p{
+    margin-right: 15px;
+    font-size: 15px;
+    font-family: 'mulish';
+    font-weight: 900;
+}
+
+.section-carrinho .limpar-lista{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+    margin-top: 8px;
+}
+.section-carrinho .limpar-lista .btn-limpar-lista{
+    height: 32px;
+    width: 155px;
+    background-color: transparent;
+    border: solid 2px var(--marr);
+    color: var(--marr);
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: 'mulish';
+    font-weight: 700;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.section-carrinho .limpar-lista .btn-limpar-lista:hover{
+    color: var(--bran);
+    background-color: var(--marr);
+    border: var(--marr);
+}
+
+
+.section-carrinho .btns-carrinho{
+    width: 100%;
+    height: 170px;
+    background-color: var(--Preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+.section-carrinho .btns-carrinho button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    background-color: transparent;
+    color: var(--bran);
+    border: solid 2px var(--bran);
+    border-radius: 100px;
+    transition: 0.2s;
+    font-family: 'mulish';
+    font-weight: 600;
+}
+.section-carrinho .btns-carrinho button:hover{
+    color: var(--Preto);
+    border: var(--Preto);
+    background-color: var(--bran);
+}
+
+.section-carrinho .btns-carrinho #finalizar-orcamento{
+    width: 70%;
+}
+.section-carrinho .btns-carrinho #voltar-carrinho{
+    width: 45%;
+}
+

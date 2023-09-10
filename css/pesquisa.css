@@ -1,0 +1,232 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+}
+.overflow-y{
+    overflow-y: hidden;
+}
+
+.section-pesquisa{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /* background-color: #0D0D0D; */
+    z-index: 100;
+    top: 0;
+    transition: 0.2s;
+    animation-name: surgiDaAreaDePesquisa;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes surgiDaAreaDePesquisa {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* @keyframes desaparecerDaAreaDePesquisa {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+} */
+
+
+.section-pesquisa .area-pesquisa{
+    position: fixed;
+    width: 80%;
+    height: 75vh;
+    background-color:#0d0d0df5;
+    display: flex;
+    flex-flow: column;
+    border-radius: 3vw;
+    border: solid 2px var(--bran);
+    align-items: center;
+    transition: 0.2s;
+    /* backdrop-filter: blur(20px); */
+}
+
+.section-pesquisa .btn-sair {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.section-pesquisa .btn-sair svg {
+    height: 30px;
+    stroke: var(--bran);
+    fill: transparent;
+    stroke-width: 30px;
+}
+
+.section-pesquisa .btn-sair svg #path1, .section-pesquisa .btn-sair svg #path2 {
+    transition: 0.3s;
+}
+
+.section-pesquisa .btn-sair:hover svg #path1 {
+    stroke: var(--verm);
+}
+
+.section-pesquisa .btn-sair:hover svg #path2 {
+    stroke: var(--verm);
+}
+
+.section-pesquisa .area-pesquisa .barra-pesquisa{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 40px;
+    /* border-radius: 10vw;
+    border: solid 2px var(--bran); */
+}
+
+.section-pesquisa .barra-pesquisa input{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 90%;
+    background-color: transparent;
+    border-radius: 10vw 0 0 10vw;
+    border: solid 2px var(--bran);
+    color: var(--bran);
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 0.2s;
+}
+
+.section-pesquisa .barra-pesquisa input:hover{
+    border: solid 2px var(--verm);
+}
+.section-pesquisa .barra-pesquisa input[type="search"]:focus{
+    background-color: initial; 
+    border: initial;
+}
+
+.section-pesquisa .barra-pesquisa input::placeholder{
+    font-size: 15px;
+    font-family: 'mulish';
+    color:#7f7f7f;
+}
+
+.section-pesquisa .barra-pesquisa
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.section-pesquisa .barra-pesquisa #x-limpar-barra-pesquisa{
+    position: absolute;
+    right: 7.2vw;
+    width: 20px;
+    height: 20px;
+    border: solid 2px var(--bran);
+    border-radius: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    /* visibility: hidden; */
+    z-index: 10000;
+}
+.section-pesquisa .barra-pesquisa #x-limpar-barra-pesquisa svg{
+    height: 13px;
+    fill: var(--bran);
+    transition: 0.2s;
+}
+.section-pesquisa .barra-pesquisa #x-limpar-barra-pesquisa:hover svg{
+    fill: var(--verm);
+}
+.section-pesquisa .barra-pesquisa #x-limpar-barra-pesquisa:hover{
+    border-color: var(--verm);
+}
+
+.section-pesquisa .barra-pesquisa button{
+    background-color: var(--bran);
+    position: absolute;
+    right: 0;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 10%;
+    height: 100%;
+    border-radius: 0px 10vw 10vw 0;
+    transition: 0.2s;
+}
+
+.section-pesquisa .barra-pesquisa button i svg{
+    fill: var(--Preto);
+    height: 28px;
+}
+
+.section-pesquisa .barra-pesquisa button:hover{
+    background-color: var(--verm);
+}
+
+.section-pesquisa .barra-pesquisa button:hover svg{
+    fill: var(--bran);
+}
+
+.section-pesquisa .area-pesquisa .resultado-pesquisa{
+    width: 80%;
+    min-height: 100px;
+    max-height: 80%;
+    position: relative;
+    top: 75px;
+    background-color: transparent;
+    border: solid 2px var(--bran);
+    border-radius: 2vw;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.section-pesquisa .resultado-pesquisa .item-resultado{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.section-pesquisa .resultado-pesquisa .item-resultado p{
+    font-family: 'mulish';
+    font-weight: 600;
+    color: var(--bran);
+    width: 100%;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.section-pesquisa .resultado-pesquisa .item-resultado .barrinha{
+    height: 2px;
+    background-color: var(--bran);
+    width: 100%;
+    transition: 0.2s;
+}
+
+.section-pesquisa .item-resultado:hover{
+    background-color:#383838;
+}
