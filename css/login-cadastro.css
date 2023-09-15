@@ -1,0 +1,242 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.section-login-cadastro{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d0d0dd8;
+    z-index: 70;
+    backdrop-filter: blur(2px);
+}
+.login{
+    display: flex;
+    position: fixed;
+    height: 80vh;
+    width: 80%;
+    top: 110px;
+    z-index: 70;
+    background-clip: border-box;
+    transition: 0.2s;
+    animation-name: surgiDaAreaDelogin-cadastro;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+.login iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 3vw;
+}
+@keyframes surgiDaAreaDelogin-cadastro {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.section-login-cadastro .btn-sair {
+    position: absolute;
+    right: 1.5vw;
+    top: 1.5vw;
+    cursor: pointer;
+}
+
+.section-login-cadastro .btn-sair svg {
+    height: 40px;
+    stroke: var(--bran);
+    fill: transparent;
+    stroke-width: 30px;
+}
+
+.section-login-cadastro .btn-sair svg #path1, .section-login-cadastro .btn-sair svg #path2 {
+    transition: 0.3s;
+}
+
+.section-login-cadastro .btn-sair:hover svg #path1 {
+    stroke: var(--verm);
+}
+
+.section-login-cadastro .btn-sair:hover svg #path2 {
+    stroke: var(--verm);
+}
+
+
+.forms-login-cadastro{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 70;
+    background-image: url(../imgs/banner-cadastro-login.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-clip: border-box;
+    transition: 0.2s;
+    animation-name: surgiDaAreaDelogin-cadastro;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    border-radius: 3vw;
+
+    justify-content: center;
+    flex-flow: column;
+    color: var(--bran);
+}
+
+.area-forms{
+    max-width: 30%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: 'mulish';
+    margin-left: 3vw;
+}
+.area-forms h2{
+    font-size: 23px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+.area-forms label{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 12px;
+    /* margin-left: -0.5vw; */
+}
+.area-forms input{
+    margin-top: 5px;
+    box-shadow: none;
+    border: 0;
+    border-bottom: solid 2px var(--bran);
+    outline: 0;
+    background-color: transparent;
+    transition: 0.3s;
+    color: var(--bran);
+}
+.area-forms input:hover{
+    border-bottom: 2px solid var(--verm);
+}
+
+.area-forms input:focus{
+    border-bottom: 2px solid var(--verm);
+}
+.area-forms input::placeholder{
+    color:#d9dbda56;
+    font: 15px;
+}
+
+
+.area-forms form div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.area-forms button{
+    margin-top: 30px;
+    width: 50%;
+    height: 40px;
+    background-color: transparent;
+    border: solid 2px var(--bran);
+    border-radius: 5vw;
+    color: var(--verm);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.area-forms button:hover{
+    color: var(--bran);
+    background-color: var(--verm);
+    border: transparent;
+}
+.area-forms p{
+    color: #d9dbda56;
+    margin-top: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.area-forms p:hover{
+    color: var(--verm);
+}
+
+.logo-horizontal svg{
+    width: 15vw;
+    fill: var(--verm);
+    transition: 0.3s;
+}
+.logo-horizontal:hover svg{
+    fill:#7a2121;
+}
+
+.form-login, .form-cadastro{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin-top: 3vw;
+}
+#form-login{
+    display: flex;
+    flex-flow: column;
+}
+.area-forms #form-cadastro{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    position: relative;
+}
+.area-forms #form-cadastro .para-o-lado{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 30vw;
+    margin-left: 30px;
+}
+
+/* .form-login{
+    display: flex;
+}
+.form-cadastro{
+    display: none;
+}
+#area-form-login{
+    display: none;
+}
+#area-form-cadastro{
+    display: flex;
+} */
+
+#section-entrar, #section-cadastrar{
+    display: none;
+}
+
+/* .trocar-forms{
+    position: absolute;
+    top: ;
+} */

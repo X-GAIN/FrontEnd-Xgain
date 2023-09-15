@@ -16,6 +16,10 @@ body{
     background-color: var(--Preto);
     max-width: 100vw;
     font-family: 'mulish';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
 }
 header{
     background-color: var(--Preto);
@@ -147,7 +151,7 @@ header .left-header .item-header .list-itens-header ul {
     transition: 0.5s;
     background-color:#0d0d0dcb;
     backdrop-filter: blur(2px);
-    height: 0;
+    height: auto;
 }
 
 header .left-header .item-header .list-itens-header li{
@@ -192,6 +196,71 @@ header .left-header .item-header .list-itens-header a:hover{
     
 }
 
+
+
+
+
+header .area-list-perfil {
+    position: absolute;
+    top: 0;
+    display:none;
+}
+header .header-perfil:hover .area-list-perfil {
+    display: block;
+}
+header .header-perfil:hover .icon-perfil svg {
+    fill: var(--verm);
+}
+header .area-list-perfil ul {
+    position: relative;
+    top: 50px;
+    right: 110px;
+    padding: 10px;
+    width: 150px;
+    border: solid 2.8px var(--bran);
+    border-radius: 20px 5px 20px 20px;
+    transition: 0.5s;
+    background-color:#0d0d0dcb;
+    backdrop-filter: blur(2px);
+    height: 0;
+}
+
+header .area-list-perfil li{
+    list-style: none;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: end;
+    color: var(--bran);    
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+header .header-perfil:hover ul{
+    animation-name: lista-perfil-animation;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+header .header-perfil:hover li{
+    animation-name: lista-itens-animation;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+}
+header .area-list-perfil li:hover{
+    color: var(--verm);
+}
+
+header .nao-logado{
+    display: block;
+}
+header .logado{
+    display: none;
+}
+
                                         /* Animation */
 
 header-animation{
@@ -204,6 +273,14 @@ header-animation{
     }
     to{
         height: 102px;
+    }
+}
+@keyframes lista-perfil-animation {
+    from{
+        height: 0;
+    }
+    to{
+        height: 80px;
     }
 }
 @keyframes lista-animation-musculacao {

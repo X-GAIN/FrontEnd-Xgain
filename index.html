@@ -16,11 +16,28 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/carrinho.css">
     <link rel="stylesheet" href="./css/pesquisa.css">
+    <link rel="stylesheet" href="./css/login-cadastro.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/footer.css">
     
     
 </head>
-<body>
+<body id="body">
+                                                            <!-- Login || Cadastro -->
+    <section class="section-login-cadastro" id="section-login-cadastro">
+        
+        <section class="login">
+            <i id="exit-login-section" class="btn-sair">
+                <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                <path id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                /></g></g></svg>
+            </i>
+            <iframe id="section-entrar" src="./iframe/login.html" frameborder="0"></iframe>
+            <iframe id="section-cadastrar" src="./iframe/cadastro.html" frameborder="0"></iframe>
+            <!-- <div class="area-forms"><div><p class="trocar-forms">Já possui uma conta? Faça login</p></div></div> -->
+        </section>
+    </section>
 
                                                             <!-- Barra de pesquisa -->
     <section id="pesquisa-section" class="section-pesquisa">
@@ -33,9 +50,9 @@
             </i>
             <div class="barra-pesquisa">
                 <input type="search" placeholder="Pesquise..." id="search">
-                <i id="x-limpar-barra-pesquisa">
+                <!-- <i id="x-limpar-barra-pesquisa">
                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                </i>
+                </i> -->
                 <button type="submit">
                     <i>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
@@ -44,7 +61,7 @@
             </div>
 
             <section id="resultado-pesquisa" class="resultado-pesquisa">
-                <div class="item-resultado">
+                <div class="item-resultado" id="item-resultado">
                     <p>Exemplo de texto pesquisado</p>
                     <div class="barrinha"></div>
                 </div>
@@ -167,7 +184,7 @@
                     <ul>
                         <li><a href="">ABDÔMEN</a></li>
                         <li><a href="">BRAÇO</a></li>
-                        <li><a href="">COSTA</a></li>
+                        <li><a href="">COSTAS</a></li>
                         <li><a href="">OMBRO</a></li>
                         <li><a href="">PEITO</a></li>
                         <li><a href="">PERNA</a></li>
@@ -216,12 +233,25 @@
                     </svg>
                 </i>
                 <!-- <button id="login-header" class="login">LOGIN</button> -->
-                <i id="icon-perfil" class="icon-perfil">
+                <div class="header-perfil">
+                    <i id="icon-perfil" class="icon-perfil">
                     <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6840.4 1865.3)">
                         <path alt="Icone de perfil clique para abrir a pagina de perfil" d="m-6584.4-1865.3c-141.25 0-256 114.75-256 256 0 141.25 114.75 256 256 256 141.25 0 256-114.75 256-256 0-141.25-114.75-256-256-256zm0 65.867c105.9 0 190.13 84.23 190.13 190.13 0 105.9-84.23 190.13-190.13 190.13-105.9 0-190.13-84.228-190.13-190.13 0-105.9 84.23-190.13 190.13-190.13zm-5.2896-18.828c-123.58 0-223.07 99.486-223.07 223.06 0 123.58 99.488 223.07 223.07 223.07 123.58 0 223.07-99.488 223.07-223.07 0-123.58-99.488-223.06-223.07-223.06zm21.088 27.528c42.032 0 76.106 34.074 76.106 76.106 0 24.676-11.745 46.611-29.852 60.556 7.5379 2.0285 13.667 6.3513 20.112 10.57 10.753 7.0389 17.893 17.789 23.004 25.101 16.656 5.1082 26.207 15.982 32.226 29.417 4.312 13.023 3.4295 20.415 2.0235 34.924 2.6657 6.8536 6.5894 9.1381 7.9987 25.252 0.9222 10.543-2.6315 23.124-4.9371 31.856-4.0771 15.441-11.682 30.582-13.548 35.361-3.034 7.7691-1.5498 21.238-5.7897 23.647-5.4238 3.0822-31.887 3.9786-33.438 4.1559-2.3603 0.2697-1.7611 3.7718-2.1052 5.109-0.6875 2.6719-3.2004 8.935-8.9007 12.046-5.1687 2.8208-27.149 15.491-60.137 16.751-24.082 0.92-44.089-0.8688-57.52-7.6005-8.6549-4.3382-18.112-12.894-17.965-21.071 0.1238-6.8767 1.4297-15.022-1.4091-21.287-0.6129-1.352-6.7445 2.8969-23.806 8.9894-3.22 1.1489-4.3772 0.3582-5.6978-1.5556-3.8878-6.9014-7.8048-13.478-13.041-31.469 0 0-39.296-7.1563-55.818-25.613-3.1934-11.086-0.7688-25.264 3.9161-38.869-1.3705-12.365 0.5567-20.496 4.8094-30.69 4.865-11.661 14.418-21.447 23.909-33.032 5.3396-12.724 7.5982-26.964 20.266-36.745 12.08-9.3281 28.206-11.984 44.441-11.033 3.7326-1.5399 6.6116-4.806 10.393-6.2203 3.9203-1.4663 9.1507-1.8738 13.312-2.415-15.156-13.957-24.658-33.938-24.658-56.136 0-42.032 34.074-76.106 76.106-76.106zm106.18 192.18-19.924 5.8748-5.337 11.418-10.693-6.6798-19.915 5.8987 11.506 6.9623 6.9691-2.0491 8.0294 5.0392-5.623 12.526-5.2298-3.7236 0.059-0.1073 3.6624-7.3349-14.75 4.3516 2.7196 9.2411 9.4589 6.7445 12.504-3.6794 5.6366-12.526 11.534 7.4524 12.493-3.71 4.2751-10.805-2.7417-9.2343-14.747 4.367 7.0627 4.1645 0.1073 0.059-2.3673 5.9684-11.527-7.4559 3.9993-8.5961 6.964-2.0678z" 
                         stroke-linecap="round" stroke-linejoin="round" stroke-width=".87135"/></g>
                     </svg>
-                </i>
+                    </i>
+
+                    <div class="area-list-perfil">
+                        <ul class="list-perfil nao-logado" id="nao-logado">
+                            <li id="cadastre-se" onclick="abrirSectionCadastro()">CADASTRE-SE</li>
+                            <li id="entrar" onclick="abrirSectionLogin()">ENTRAR</li>
+                        </ul>
+                        <ul class="list-perfil logado" id="logado">
+                            <li><a href="">PERFIL</a></li>
+                            <li>SAIR</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -231,52 +261,43 @@
     </div>
 
     <main>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum asperiores quidem sit non ipsum, laborum velit hic at reiciendis consequatur quae aspernatur aliquam accusantium error quibusdam doloribus odit magni. Dolor!</p>
-        <p>Natus vero exercitationem laborum assumenda ipsum! Unde facilis molestias optio, ipsa a voluptatum fugit! Aperiam labore, dignissimos temporibus distinctio delectus recusandae vel dolorum beatae, ipsam magni, natus tenetur ab mollitia!</p>
-        <p>Voluptas laboriosam pariatur explicabo dolor quam ducimus accusamus, error consectetur aspernatur facilis aliquam sit quibusdam modi, praesentium debitis iste ab? Mollitia magni maxime totam esse quibusdam officiis ipsa ex doloribus.</p>
-        <p>Maxime consequatur adipisci fuga quam deserunt iste cumque recusandae consectetur, aut accusantium, commodi eligendi autem facere libero unde sequi? Magnam laudantium ipsum adipisci saepe? Libero magnam consequuntur iusto mollitia aliquam!</p>
-        <p>Error voluptas rem obcaecati dolorem, cum nesciunt suscipit consequuntur quos aliquid quae dicta, quibusdam, aperiam modi dolor aliquam incidunt! Enim, nesciunt praesentium. Qui accusamus quos nesciunt dolorem, doloribus adipisci ducimus!</p>
-        <p>Eaque obcaecati minus sapiente quam atque magnam fugiat rem sequi placeat eligendi necessitatibus laudantium quisquam beatae facere reprehenderit ipsum, debitis facilis non laborum pariatur veniam blanditiis quos excepturi repudiandae! Eligendi!</p>
-        <p>Placeat aliquam architecto blanditiis aperiam maxime! Tempore soluta alias corporis, nostrum provident dolorem, expedita commodi porro cupiditate eaque hic repellendus veritatis nobis ullam? Alias consequatur odio molestias eligendi? Obcaecati, ad.</p>
-        <p>Rerum adipisci sint nemo eos voluptas error reprehenderit sed molestiae odio autem, doloribus laborum voluptatem nesciunt officiis atque fuga quis omnis exercitationem quia repellat in officia veniam blanditiis. Neque, a?</p>
-        <p>Quaerat tempore voluptatem itaque rerum consequatur dolorum reprehenderit, accusamus natus. Veniam quis sapiente impedit reiciendis earum, officiis architecto aspernatur quia quibusdam rerum beatae perspiciatis illo laudantium dolorem consequatur pariatur velit!</p>
-        <p>Non esse voluptates accusamus reprehenderit laborum fugit numquam deleniti minus magni. Consectetur eveniet quas, unde ratione commodi minima ducimus vel eaque labore molestiae dicta atque tenetur maiores nesciunt. Quo, quidem?</p>
-        <p>Id, repudiandae dolorem. Corrupti molestiae amet id perferendis unde ratione, assumenda a impedit nobis vel. Repudiandae iste nulla delectus praesentium suscipit hic libero. Dolore repellendus possimus nostrum exercitationem libero est.</p>
-        <p>Illo doloremque labore voluptate corrupti qui, hic inventore dolores eligendi, numquam dignissimos veniam magnam iure adipisci illum nihil autem consequuntur quis et deleniti possimus? Amet exercitationem aperiam minima animi dicta?</p>
-        <p>Placeat molestias necessitatibus laboriosam aut culpa blanditiis porro modi fuga, praesentium alias! Fugiat distinctio sit dolorum libero alias. Dignissimos minus delectus doloremque aspernatur inventore sit temporibus non distinctio perspiciatis deserunt?</p>
-        <p>Totam, quis? Eveniet nemo odit illo explicabo laboriosam quidem odio atque molestias, ad quibusdam ex quis, nesciunt temporibus delectus. Illo ut porro tempore nam fuga incidunt blanditiis numquam saepe accusamus!</p>
-        <p>Voluptatibus tenetur ratione, natus excepturi rerum fugiat tempora pariatur repellendus labore delectus tempore voluptate aliquam exercitationem porro ipsam quam velit possimus? Exercitationem, fugiat! Sunt et aut aspernatur incidunt ex sed.</p>
-        <p>Explicabo, ducimus eius. Beatae eius architecto, nam minima atque ratione possimus fugiat, ullam consequatur quidem ea aut sed magni dicta. Voluptatum molestiae deserunt tempora ipsum quaerat temporibus aperiam laborum illum.</p>
-        <p>Ab recusandae ut autem soluta accusantium, natus nam ex voluptates, vero exercitationem vitae consequuntur repudiandae aut illum ea. Saepe sapiente dolor iure ipsum earum ab? Corporis odit odio minus ex.</p>
-        <p>Vitae eligendi suscipit quis? Omnis delectus vero itaque earum iusto cupiditate eos eius, voluptatum totam enim adipisci quod doloremque quo deserunt debitis? Esse, ab excepturi ratione tenetur in officia laudantium?</p>
-        <p>Aliquam ratione voluptatem, tenetur architecto cum quas quia iusto provident dignissimos adipisci nostrum quae quam aut nesciunt aliquid facere sint unde ducimus veritatis nisi excepturi totam nobis a eius? Facilis.</p>
-        <p>Hic voluptas reiciendis tempore unde qui doloribus molestiae, iste nihil atque a. Dolorum quibusdam quae corporis! Error aliquam ratione pariatur mollitia. Hic voluptatem dignissimos fuga architecto amet optio, assumenda culpa?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quae recusandae excepturi inventore, minima incidunt totam molestias dolorum corrupti blanditiis atque consequatur iste nobis soluta dicta? Praesentium minima magni dolorem?</p>
-        <p>Dolore, eius enim earum, magnam ratione suscipit eum incidunt molestias delectus mollitia consectetur culpa rerum aliquid praesentium nulla excepturi sit harum veritatis! Laborum, veniam dolorem qui quos obcaecati sequi voluptas.</p>
-        <p>Fugiat repudiandae consectetur dolorem, voluptatum pariatur sed debitis odit ratione eligendi culpa animi minima id amet sint. Velit magnam esse vero provident impedit, alias natus reiciendis, iste voluptate animi cupiditate!</p>
-        <p>Blanditiis nostrum ipsum saepe doloremque natus quidem assumenda inventore mollitia accusamus? Ipsum quidem mollitia dolor, consequatur culpa amet quod. Laudantium optio sequi reprehenderit, inventore consectetur minima maxime explicabo ab est.</p>
-        <p>Sit autem magni adipisci distinctio? Laudantium dolore eos voluptatem dolorum. Aliquam sunt quibusdam quod beatae reiciendis veniam earum, molestiae ab sapiente commodi aut perspiciatis. Fugit enim placeat veniam quae praesentium.</p>
-        <p>Vero quidem similique delectus quo enim quas quos nulla sed repudiandae doloremque recusandae, eligendi accusamus reiciendis voluptates eos expedita quia quaerat dolor minima blanditiis suscipit animi reprehenderit eius explicabo. Veniam.</p>
-        <p>Earum corporis cupiditate sint enim fugit, illum quos minus consectetur laboriosam hic veritatis alias dolorum quasi perspiciatis, molestiae optio ratione, ipsum reprehenderit fugiat veniam adipisci repellat tenetur distinctio. Soluta, quibusdam.</p>
-        <p>Quis vel eum tenetur nesciunt voluptatum est deserunt iure aspernatur consectetur. Eaque temporibus soluta architecto accusantium ipsam corrupti totam consectetur officia quasi rerum quibusdam, dolorum numquam nisi atque, animi asperiores!</p>
-        <p>Officia animi porro tempore dignissimos neque repellat numquam et dolorem, nesciunt laborum, ut nobis esse eum ex quae impedit assumenda quisquam error, placeat corporis voluptates? Suscipit perspiciatis voluptatem voluptatum aut!</p>
-        <p>Ex fuga sunt libero eum aspernatur repellat esse maxime ea ad et, non ipsum odio ipsam ullam laborum ducimus consequuntur necessitatibus odit beatae error eos quidem porro! Libero, praesentium modi.</p>
-        <p>Inventore facilis ut qui officiis dicta quaerat deleniti exercitationem aliquid? Sint quisquam, dolore facere praesentium mollitia error cum eius molestias nam adipisci facilis soluta esse asperiores sed eveniet! Commodi, consequuntur?</p>
-        <p>Minima voluptatibus eius, eligendi, voluptatem aperiam doloribus quos debitis suscipit tempora inventore perspiciatis. Consectetur perferendis laborum eum itaque ipsa quo, numquam consequatur ad eveniet repellendus aliquam saepe eos dolor cum?</p>
-        <p>Placeat, cum eos. Laborum id soluta cupiditate officia dolore deleniti minima enim, dolor omnis nulla, nihil quo facere. Hic, suscipit enim. Repudiandae, nisi aut? Deleniti doloremque tempora ipsa nostrum praesentium.</p>
-        <p>Illo, necessitatibus. Voluptatem facere sit laboriosam est ipsum illum dolorum optio architecto asperiores explicabo officia hic adipisci blanditiis similique qui ea voluptas ut tenetur ratione saepe, iure illo numquam fuga.</p>
-        <p>Distinctio saepe voluptas voluptatibus iusto doloremque fugit numquam ea cumque consequuntur. Magnam corrupti ratione deserunt nihil quam voluptas magni incidunt earum nam! Possimus minus ipsa aut, reiciendis ea eaque eos?</p>
-        <p>Eos modi autem ab dolores animi mollitia consectetur! Magni non eius aperiam hic odit est consequuntur quisquam nemo asperiores, aut quo explicabo rem neque corporis dicta mollitia. Dignissimos, voluptatibus delectus!</p>
-        <p>Ipsum facere libero corrupti maiores quae molestiae vero maxime nesciunt adipisci unde architecto dicta eligendi eius voluptates officiis natus, praesentium iste veritatis ea perspiciatis quidem quam! Id assumenda autem obcaecati!</p>
-        <p>Enim cumque officiis maiores numquam voluptate dignissimos molestias. Praesentium illum possimus dolorum autem dolores eligendi eius, impedit libero suscipit repellendus ipsa quisquam, expedita sint iusto ullam ea asperiores delectus nesciunt?</p>
-        <p>Distinctio explicabo illo quos quo rem suscipit hic nihil corrupti laboriosam sint. Facilis ea ducimus iure, optio soluta, libero sunt, at voluptatibus ad inventore repellendus obcaecati. Quaerat sed sequi perspiciatis.</p>
-        <p>Velit fugiat porro debitis voluptates commodi deserunt animi, facilis ipsa totam odit voluptas laboriosam maiores tempore vitae architecto autem earum veniam doloremque nulla magni laudantium deleniti. Ab eligendi deserunt veritatis.</p>
+        
     </main>
 
-    <footer></footer>
+    <footer>
+        <section class="start-footer">
+            <section class="sobre-footer">
+                <h2></h2>
+                <p></p>
+            </section>
+            <section class="media-contato-footer">
+                <div class="contato-footer">
+                    <h2></h2>
+                    <div class="fone-footer">
+                        <i></i>
+                        <p></p>
+                    </div>
+                    <div class="email-footer">
+                        <i></i>
+                        <a href="mailto:"></a>
+                    </div>
+                </div>
+                <div class="redes-footer">
 
-<script type="module" src="./Js/header.js" defer></script>
-<script type="module" src="./Js/header/carrinho.js" defer></script>
-<script type="module" src="./Js/header/barra-pesquisa.js" defer></script>
+                </div>
+            </section>
+        </section>
+
+        <section class="end-footer">
+            <i></i>
+            <p></p>
+            <p></p>
+        </section>
+    </footer>
+
+<script src="./Js/header.js" defer></script>
+<script src="./Js/header/carrinho.js" defer></script>
+<script src="./Js/header/barra-pesquisa.js" defer></script>
+<script src="./Js/header/login-cadastro.js" defer></script>
 </body>
 </html>
