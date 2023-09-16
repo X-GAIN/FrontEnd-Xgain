@@ -54,6 +54,7 @@
     border: solid 2px var(--bran);
     align-items: center;
     transition: 0.2s;
+    z-index: 71;
 }
 
 .section-pesquisa .btn-sair {
@@ -133,7 +134,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .section-pesquisa .barra-pesquisa input[type="search"]:focus::-webkit-search-cancel-button {
     opacity: .3;
     pointer-events: all;
-  }
+}
 
 .section-pesquisa .barra-pesquisa input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
@@ -252,4 +253,13 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .section-pesquisa .item-resultado:hover{
     background-color:#9e9e9e;
+}
+
+.section-pesquisa .fundo{
+    background-color: #0d0d0dd8;
+    position: absolute;
+    top: -1;
+    width: 100vw;
+    height: 200vh;
+    z-index: 69;
 }

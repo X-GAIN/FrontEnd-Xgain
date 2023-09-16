@@ -10,12 +10,12 @@ document.getElementById('icon-pesquisa').addEventListener('click', abrirBarraDeP
 
 function abrirBarraDePesquisa(){
     document.getElementById('pesquisa-section').style.display = 'flex';
-    document.getElementById('body').style.overflowY = 'hidden';
+    /* document.getElementById('body').style.overflowY = 'hidden'; */
 }
 
 function fecharBarraDePesquisa(){
     document.getElementById('pesquisa-section').style.display = 'none';
-    document.getElementById('body').style.overflowY = 'auto';
+    /* document.getElementById('body').style.overflowY = 'auto'; */
 }
 
 // const xDaBarra = document.getElementById('search').addEventListener('change', xDeLimpar())
