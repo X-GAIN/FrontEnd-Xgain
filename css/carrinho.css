@@ -5,7 +5,37 @@
     --bran: #D9DBDA;
     --marr: #6A4334;
     --Preto: #0D0D0D;
+    --cinz-bran: #848484;
 }
+.tabela-produtos-carrinho::-webkit-scrollbar {
+    width: 5px;
+}
+.tabela-produtos-carrinho::-webkit-scrollbar-thumb{
+    background-color: var(--cinz-bran);
+    border-radius: 2px;
+}
+.tabela-produtos-carrinho::-webkit-scrollbar-thumb:hover{
+    background-color: var(--verm);
+}
+/* .section-carrinho [aria-label]{
+    position: relative;
+}
+.section-carrinho [aria-label]::after {
+    content: attr(aria-label);
+    display: none;
+    position: absolute;
+    top:32px;
+    padding: 10px;
+    z-index: 5000;
+    font-style: normal;
+    font-size: 15px;
+    color: var(--bran);
+    background-color: var(--cinza);
+    border-radius: 0.9vw;
+}
+.section-carrinho [aria-label]:hover::after {
+    display: block;
+    }*/
 
 .section-carrinho {
     position: fixed;
@@ -21,7 +51,7 @@
     transition: 0.5s;
 }
 #carrinho-section{
-    right: -400px;
+    right: -768px;
 }
 
 
@@ -38,10 +68,11 @@
 .section-carrinho .btn-sair {
     position: absolute;
     cursor: pointer;
+    right: 0;
 }
 
 .section-carrinho .btn-sair svg {
-    height: 30px;
+    height: 40px;
     stroke: var(--Preto);
     fill: transparent;
     stroke-width: 30px;
@@ -80,8 +111,8 @@
     flex-flow: column;
     align-items: center;
     width: 100%;
-    max-height: 50vh;
-    overflow-y: auto;
+    height: 40vh;
+    overflow-y: scroll;
 }
 
 .section-carrinho .tabela-carrinho .item-produto-carrinho {
@@ -91,6 +122,13 @@
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+}
+.item-produto-carrinho::after{
+    content: '';
+    background-color: var(--Preto);
+    height: 2px;
+    width: 100%;
+    display: block;
 }
 
 .section-carrinho .card-produto-carrinho {
@@ -169,11 +207,11 @@
     fill: var(--marr);
 }
 
-.section-carrinho .tabela-carrinho .barrinha {
+/* .section-carrinho .tabela-carrinho .barrinha {
     height: 2px;
     background-color: var(--Preto);
     width: 100%;
-}
+} */
 
 .section-carrinho .total-produtos{
     height:40px;

@@ -4,14 +4,47 @@
     --bran: #D9DBDA;
     --marr: #6A4334;
     --Preto: #0D0D0D;
+    --cinz-bran: #848484;
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
 }
+*::-webkit-scrollbar {
+    width: 10px;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--bran);
+    border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover{
+    background-color: var(--verm);
+}
+[aria-label]{
+    position: relative;
+}
+[aria-label]::after {
+    content: attr(aria-label);
+    display: none;
+    position: absolute;
+    top:45px;
+    padding: 10px;
+    z-index: 5000;
+    font-style: normal;
+    font-size: 15px;
+    color: var(--bran);
+    background-color: var(--cinza);
+    border-radius: 0.9vw;
+    /* border: solid 1px var(--bran); */
+}
+[aria-label]:hover::after {
+    display: block;
+    }
 
 #topo-pagina{
     position: absolute;
@@ -32,19 +65,7 @@ body{
     overflow-x: hidden;
     overflow-y: auto;
 }
-body::-webkit-scrollbar {
-    width: 10px;
-}
-body::-webkit-scrollbar-track{
-    background-color: transparent;
-}
-body::-webkit-scrollbar-thumb{
-    background-color: var(--bran);
-    border-radius: 2px;
-}
-body::-webkit-scrollbar-thumb:hover{
-    background-color: var(--verm);
-}
+
 
 
 
@@ -315,7 +336,7 @@ header-animation{
         height: 0;
     }
     to{
-        height: 172px;
+        height: 178px;
     }
 }
 @keyframes lista-itens-animation {

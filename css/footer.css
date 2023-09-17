@@ -20,6 +20,16 @@ footer{
     justify-content: center;
 }
 
+footer::before{
+    content:'';
+    height: 2px;
+    width: 96%;
+    display: block;
+    background-color: var(--Preto);
+    position: absolute;
+    top: 0;
+}
+
 footer h2{
     font-weight: 900;
     font-size: 20px;
@@ -103,6 +113,10 @@ footer .contato-footer .email-footer{
 }
 footer .email-footer{
     margin-top: 5px;
+}
+footer .email-footer a{
+    display: flex;
+    align-items: center;
 }
 footer .fone-footer i, footer .email-footer i{
     margin-right: 10px;

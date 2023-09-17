@@ -4,7 +4,7 @@ const header = document.getElementById('myHeader');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 0 && isHeaderExpanded) {
                 header.style.height = '50px';
-                document.querySelector('.icon-logo').classList.add('icon-logo-reduzido');
+                document.getElementById('icon-logo').classList.add('icon-logo-reduzido');
                 document.querySelector('.icons-header').classList.add('icons-reduzidos');
                 document.querySelector('.icon-perfil').classList.add('icon-perfil-reduzido');
                 document.querySelector('.text-left-header').classList.add('item-header-reduzido');
@@ -13,7 +13,7 @@ const header = document.getElementById('myHeader');
                 
             } else if (window.scrollY === 0 && !isHeaderExpanded) {
                 header.style.height = '100px';
-                document.querySelector('.icon-logo').classList.remove('icon-logo-reduzido');
+                document.getElementById('icon-logo').classList.remove('icon-logo-reduzido');
                 document.querySelector('.icons-header').classList.remove('icons-reduzidos');
                 document.querySelector('.icon-perfil').classList.remove('icon-perfil-reduzido');
                 document.querySelector('.text-left-header').classList.remove('item-header-reduzido');
@@ -45,3 +45,15 @@ function normalHeader(){
         document.querySelector('.text-right-header').classList.add('item-header-reduzido');
     }
 } */
+
+
+// Header mobile
+
+document.getElementById('icon-menu').addEventListener('click', () => {
+    document.getElementById('header-mobile').style.display = "flex"
+    document.getElementById('body').style.overflowY = 'hidden';
+});
+document.getElementById('exit-menu-mobile').addEventListener('click', () => {
+    document.getElementById('header-mobile').style.display = "none"
+    document.getElementById('body').style.overflowY = 'auto';
+});

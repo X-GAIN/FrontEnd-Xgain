@@ -1,0 +1,106 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (max-width: 768px) {
+    .section-login-cadastro{
+        z-index: 100;
+    }
+    .login{
+        min-height: 100vh;
+        width: 100vw;
+        top: 0px;
+        border-radius: 0;
+        border: transparent;
+    }
+
+    .forms-login-cadastro{
+        background-image: none;
+        background-color:#0d0d0dcb;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-horizontal svg{
+        width: 180px;
+    }
+
+    .area-forms #form-cadastro .para-o-lado{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+
+    .area-forms{
+        min-width: 80vw;
+        margin-left: 0;
+    }
+    .area-forms input{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .area-forms button{
+        width: 100%;
+        color: var(--bran);
+        background-color: var(--verm);
+        border: transparent;
+        font-size: 22px;
+        height: 50px;
+    }
+
+    .area-forms #form-cadastro .para-o-lado{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .area-forms h2{
+        font-size: 25px;
+    }
+    .area-forms label{
+        font-size: 22px;
+    }
+    .area-forms input{
+        font-size: 20px;
+    }
+    .area-forms p{
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .login .btn-sair{
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    
+}
