@@ -1,0 +1,261 @@
+:root{
+    --verm: #992d2d;
+    --cinza: #2F2F2F;
+    --bran: #D9DBDA;
+    --marr: #6A4334;
+    --Preto: #0D0D0D;
+    --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+}
+
+main{
+    position: relative;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 100%;
+    min-height: 50vh;
+    background-color: var(--preto);
+    color: var(--bran);
+    font-family: 'mulish';
+}
+
+main img, main svg{
+    height: 100px;
+}
+
+main .section-banner-home{
+    position: relative;
+    display: flex;
+    height: 75vh;
+    width: 100%;
+    background-color: var(--Preto);
+    flex-direction: column;
+}
+    main .section-banner-home .banner-home{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-image: url(../imgs/banner-home-img-1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-color: var(--cinza);
+        clip-path: polygon(0 0, 100% 0, 130% 70%, 0 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+        main .banner-home .btns-setinha-banner-home{
+            width: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 27vh;
+        }
+            main .btns-setinha-banner-home .btn-setinha-banner{
+                height: 50px;
+                width: 50px;
+                background-color: var(--cinza);
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                border-radius: 10vw;
+                position: relative;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+                main .btns-setinha-banner-home .btn-setinha-banner svg{
+                    height: 30px;
+                    fill: var(--bran);
+                    transition: 0.3s;
+                }
+                main .btns-setinha-banner-home #btn-setinha-banner-D svg{
+                    position: absolute;
+                    left: 17px;
+                }
+                main .btns-setinha-banner-home #btn-setinha-banner-E svg{
+                    position: absolute;
+                    left: 12px;
+                }
+                .btns-setinha-banner-home .btn-setinha-banner:hover{
+                    background-color: var(--verm);
+                }
+
+            main .banner-home .btns-bolinha-banner-home{
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                position: absolute;
+                top:55vh;
+            }
+                .btns-bolinha-banner-home .btn-bolinha-banner{
+                    height: 15px;
+                    width: 15px;
+                    background-color: transparent;
+                    border: 2px solid var(--bran);
+                    border-radius: 100%;
+                    transition: 0.2s;
+                    cursor: pointer;
+                    margin: 5px;
+                }
+                .btns-bolinha-banner-home .btn-bolinha-banner:hover{
+                    background-color: var(--bran);
+                }
+
+        main .saibaMais-banner{
+            display: flex;
+            align-items: start;
+            justify-content: end;
+            position: absolute;
+            top: 62vh;
+            right: 2.5vw;
+        }
+            .saibaMais-banner .btn-saiba-mais{
+                padding: 15px;
+                color: var(--bran);
+                background-color: transparent;
+                border: solid 2px var(--bran);
+                border-radius: 12px;
+                cursor: pointer;  
+                transition: 0.3s;         
+            }
+            .btn-saiba-mais a{
+                color: var(--bran);
+                text-decoration: none;
+                font-weight: 900;
+                font-size: 18px;
+                font-family: var(--mulish); 
+                transition: 0.3s;
+            }
+                .btn-saiba-mais:hover{
+                    background-color: var(--bran);
+                } 
+                .btn-saiba-mais:hover a{
+                    color: var(--Preto);
+                }
+
+    main .section-categorias-main-home{
+        position: relative;
+        background-color: var(--Preto);
+        width: 100%;
+        min-height: 150px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+        .section-categorias-main-home .btn-categoria-home{
+            padding: 20px;
+            width: 200px;
+            margin: 0 50px;
+            background-color: var(--Preto);
+            border: 3px solid var(--cinza);
+            border-radius: 20px;
+            color: var(--bran);
+            font-size: 16px;
+            font-weight: 900;
+            font-family: var(--mulish);
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            .section-categorias-main-home .btn-categoria-home:hover{
+                color: var(--Preto);
+                background-color: var(--bran);
+                border: transparent;
+            }
+
+    main .section-produtos-destaque-home{
+        position: relative;
+        width: 93%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        border: 1px solid red;
+
+    }
+        main .section-produtos-destaque-home h2{
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        main .section-produtos-destaque-home h3{
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-decoration:underline;
+        }
+        main .section-produtos-destaque-home .amostra-produtos-linha{
+            position: relative;
+            display: flex;
+        }
+            .amostra-produtos-linha .area-img-produto-destaque{
+                max-height: 35vw;min-height: 35vw;
+                max-width: 35vw;min-width: 35vw;              
+                border: 2px solid var(--bran);
+                border-radius: 3vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 4vw;
+                /* background-color: var(--cinz-bran); */
+            }
+                .area-img-produto-destaque .img-produto-destaque img{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            .amostra-produtos-linha .right-amostra-produtos-linha{
+                display: flex;
+                flex-direction: column;
+                min-height: 35vw;
+                justify-content: space-between;
+                position: relative;
+            }
+                .right-amostra-produtos-linha p.descricao-produto-destaque{
+                    position: relative;
+                    display: flex;
+                    height: 200px;
+                    font-size: 20px;
+                    margin-top: 25px;
+                    font-weight: 500;
+                    text-align: justify;
+                    overflow-y: auto;
+                }
+                .right-amostra-produtos-linha .outros-linha{
+                    position: relative;
+                    border: 1px solid red;
+                    width: 100%;
+                    height: 100%;
+                }
+                    .right-amostra-produtos-linha .outros-linha h3{
+                        font-weight: 900;
+                    }
+                    .outros-linha .produtos-outros-linha{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
+                        .produtos-outros-linha .produto-outro-linha{
+                            width: 13vw;
+                            height: 13vw;
+                            border: 2px solid var(--bran);
+                            background-color: transparent;
+                            border-radius: 2vw;
+                        }
+                    .outros-linha .btns-controle-amostra-produtos{
+                        display: flex;
+                        justify-content: space-between;
+                        position: absolute;
+                    }

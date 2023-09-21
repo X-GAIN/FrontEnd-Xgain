@@ -206,7 +206,6 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     flex-flow: column;
     align-items: start;
-    justify-content: center;
     padding: 20px;
     overflow-y: auto;
 }

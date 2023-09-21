@@ -27,7 +27,7 @@ footer::before{
     display: block;
     background-color: var(--Preto);
     position: absolute;
-    top: 0;
+    top: -2px;
 }
 
 footer h2{

@@ -279,6 +279,7 @@
     transition: 0.2s;
     font-family: 'mulish';
     font-weight: 600;
+    cursor: pointer;
 }
 .section-carrinho .btns-carrinho button:hover{
     color: var(--Preto);
