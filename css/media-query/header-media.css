@@ -6,14 +6,50 @@
     --Preto: #0D0D0D;
     --cinz-bran: #848484;
 }
+@media only screen and (max-width: 400px){
+    header .icon-menu{
+        left: 38vw !important;
+    }
+    header .right-header{
+        right: -5vw !important;
+    }
+}
 
 /* Smartphones (600px para baixo) */
 @media only screen and (max-width: 600px) {
+    header{
+        flex-direction: row-reverse;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    header .icon-logo{
+        position: absolute;
+        left: 30px;
+    }
     header .icon-logo svg{
         height: 25px;
     }
+    header .right-header{
+        width: 100%;
+        position: absolute;
+        right: -10vw;
+    }
+    header .left-header .icon-menu{
+        margin: 0;
+        position: absolute;
+        left: 40vw;
+    }
+    header .left-header{
+        width: auto;
+
+    }
+    header .icons-header{
+        /* position: absolute;
+        right: 0px; */
+    }
     header .icons-header svg{
-        height: 25px;
+        height: 28px;
     }
 }
 
@@ -45,6 +81,7 @@
         justify-content: center;
         position:relative;
         left: 7.5vw;
+        z-index: 100;
     }
     header .icon-menu i{
         background-color: var(--bran);

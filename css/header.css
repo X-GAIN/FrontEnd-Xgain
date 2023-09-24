@@ -101,9 +101,9 @@ header svg:hover{
     fill: var(--verm);
 }
 
-/* header .icon-logo{
-    margin: 3vw;
-} */
+header .icon-logo{
+    position: relative;
+}
 header .icon-logo svg{
     fill: transparent;
     stroke: var(--verm);
