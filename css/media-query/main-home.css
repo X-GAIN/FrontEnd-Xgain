@@ -168,6 +168,57 @@
             }
 
     main .section-banner-cadastro{
+        border-radius: 10vw;
+    }
+        .section-banner-cadastro .banner-cadastro{
+            border-radius: 10vw;
+            border: none;
+            width: 100%;
+            background-position: center 35%;
+        }
+            .banner-cadastro i{
+                margin-left: 0;
+            }
+            .banner-cadastro svg{
+                height: 65px !important;
+            }
+            .area-btn-cadastro .btn-cadastro{
+                position: absolute;
+                right: 30px;
+                border-radius: 3.5vw;
+            }
+
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+/* @media only screen and (min-width: 768px) {
+    
+} */
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (max-width: 992px) {
+    main .section-sobre-home{
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        padding-bottom: 165px;
+    }
+        .section-sobre-home .title-sobre{
+            margin-top:40px;
+        }
+        .section-sobre-home .main-sobre-home{
+            flex-direction: column-reverse;
+            align-items: start;
+            justify-content: center;
+        }
+            .main-sobre-home p{
+                font-size: 18px;
+            }
+            .main-sobre-home .img-sobre{
+                width: 95%;
+                height: 40vw;
+                margin: 40px 0;
+            }
+
+    main .section-banner-cadastro{
         border-radius: 5vw;
     }
         .section-banner-cadastro .banner-cadastro{
@@ -177,29 +228,18 @@
             background-position: center 35%;
         }
             .banner-cadastro i{
-                margin-left: 0;
+                margin-left: 30px;
             }
             .banner-cadastro svg{
-                height: 65px;
+                height: 80px;
             }
             .area-btn-cadastro .btn-cadastro{
                 position: absolute;
-                right: 30px;
+                right: 50px;
             }
-
-}
-
-/*Dispostivos Médios (Tablets deitados, 768px para cima) */
-@media only screen and (min-width: 768px) {
-    
-}
-
-/* Dispostivos Largos (laptops/desktops, 992px para cima) */
-@media only screen and (min-width: 992px) {
-    
 }
 
 /* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
     
-}
+} */
