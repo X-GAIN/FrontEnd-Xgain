@@ -309,6 +309,14 @@ header .logado{
     display: none;
 }
 
+.logo-horizontal-vertical svg{
+    width: 15vw;
+    fill: var(--verm);
+    transition: 0.3s;
+}
+.logo-horizontal-vertical:hover svg{
+    fill:#7a2121;
+}
                                         /* Animation */
 
 header-animation{

@@ -17,76 +17,50 @@
 
 }
 @media only screen and (max-width: 768px) {
-    .section-login-cadastro{
-        z-index: 100;
+    .logo-horizontal-vertical{
+        left: 0 !important;
     }
-    .login{
-        min-height: 100vh;
-        width: 100vw;
-        top: 0px;
-        border-radius: 0;
-        border: transparent;
+    .logo-horizontal-vertical svg{
+        height: 10vw !important;
+    }
+    .area-aviso{
+        min-width: 95vw !important;
     }
 
-    .forms-login-cadastro{
-        background-image: none;
-        background-color:#0d0d0dcb;
-        justify-content: center;
+    .section-forms{
+        min-height: 95vh !important;
+        min-width: 95vw !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .area-form{
+        min-width: 50% !important;
+        left: 0 !important;
+        right: 0 !important;
         align-items: center;
+        justify-content: center;
     }
-
-    .logo-horizontal svg{
-        width: 180px;
+    .form{
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center;
     }
-
-    .area-forms #form-cadastro .para-o-lado{
-        position: absolute;
-        width: 100%;
-        left: 0;
-        margin-left: 0;
+    .form input{
+        width: 60vw !important;
+        margin-right: 0 !important;
     }
-
-    .area-forms{
-        min-width: 80vw;
-        margin-left: 0;
-    }
-    .area-forms input{
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .area-forms button{
-        width: 100%;
-        color: var(--bran);
-        background-color: var(--verm);
-        border: transparent;
-        font-size: 22px;
-        height: 50px;
-    }
-
-    .area-forms #form-cadastro .para-o-lado{
+    .form div{
         width: 100%;
         display: flex;
         flex-direction: column;
-        position: relative;
+        align-items: center;
+        justify-content: center;text-align: center;
     }
-    .area-forms h2{
-        font-size: 25px;
+    .form button{
+        background-color: var(--bran);
     }
-    .area-forms label{
-        font-size: 22px;
-    }
-    .area-forms input{
-        font-size: 20px;
-    }
-    .area-forms p{
-        margin-top: 25px;
-        font-size: 20px;
-    }
-
-    .login .btn-sair{
-        top: 20px;
-        right: 20px;
+    #form-cadastro .lado-form{
+        margin-right: 0;
     }
 }
 
@@ -102,5 +76,13 @@
 
 /* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
 @media only screen and (min-width: 1200px) {
-    
+    .section-forms .area-form{
+        position: relative;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        min-height: 50vh;
+        /* border: 1px solid red; */
+        width: 65%;max-width: 65%;
+    }
 }

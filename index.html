@@ -12,6 +12,9 @@
 
     <title>X GAIN</title>
 
+    <!-- Link do script do Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!-- <link rel="stylesheet" href="./css/icons.css"> -->
     <link rel="stylesheet" href="./css/loading.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -43,19 +46,9 @@
     <div id="Home"></div>
 
                                                             <!-- Login || Cadastro -->
-<!-- <section class="section-login-cadastro" id="section-login-cadastro">
-        
-        <section class="login">
-            <i id="exit-login-section" class="btn-sair" title="Sair">
-                <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
-                <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
-                <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
-                /></g></g></svg>
-            </i>
-            <iframe id="section-entrar" src="./iframe/login.html" frameborder="0"></iframe>
-            <iframe id="section-cadastrar" src="./iframe/cadastro.html" frameborder="0"></iframe>
-        </section>
-    </section> -->
+    <section class="section-login-cadastro" id="section-login-cadastro">
+        <iframe id="iframe-login-cadastro" src="./iframe/login.html" frameborder="0"></iframe>
+    </section>
 
                                                             <!-- Barra de pesquisa -->
     <section id="pesquisa-section" class="section-pesquisa">
@@ -67,11 +60,8 @@
                 /></g></g></svg>
             </i>
             <div class="barra-pesquisa" title="">
-                <input type="search" placeholder="Pesquise..." id="search">
-                <!-- <i id="x-limpar-barra-pesquisa">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                </i> -->
-                <button type="submit" >
+                <input type="search" placeholder="Pesquise..." id="searchbar">
+                <button type="submit" ><!-- botao onde será execultado a pesquisa e enviado o usuario até a pagina de resultados da pesquisa -->
                     <i title="Pesquisar">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
                     </i>
@@ -79,14 +69,11 @@
             </div>
 
             <section id="resultado-pesquisa" class="resultado-pesquisa">
-                <div class="item-resultado" id="item-resultado">
-                    <p>Exemplo de texto pesquisado</p>
-                    <!-- <div class="barrinha"></div> -->
+                <!-- Dentro de espaço apararecera o resultado da pesquisa -->
+                <div class="item-resultado" id="item-resultado"><!-- Ao clicar nesse item ira direcionar o usuario ate a pagina do produto -->
+                    <p>Exemplo de produto pesquisado</p>
+                    <!-- aqui dentro é referente a um item do resultado da pesquisa -->
                 </div>
-                <div class="item-resultado">
-                    <p>Exemplo de texto pesquisado</p>
-                    <!-- <div class="barrinha"></div> -->
-                </div>              
             </section>
 
         </div>
@@ -309,7 +296,13 @@
                                                             <!-- Banner -->
         <section class="section-banner-home">
             <div class="banner-home">
-                <div class="btns-setinha-banner-home">
+
+                <!-- Imagens que serão os banners -->
+                <div class="banners-img" id="banners-img">
+                    <img class="banner-img" id="banner-img" src="./imgs/banner-home-img-1.jpg" alt="">
+                </div>
+
+                <div class="btns-setinha-banner-home" id="btns-setinha-banner-home">
                     <i id="btn-setinha-banner-E" class="btn-setinha-banner">
                         <?xml version="1.0" encoding="UTF-8"?>
                         <svg version="1.1" viewBox="0 0 378.44 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(9646.9 1806.7)"><g transform="matrix(14.08 0 0 14.08 -10207 -1154.8)"><g transform="matrix(.96856 0 0 .96856 39.045 -51.848)"><path d="m27.513 42.273-25.752-17.773 25.752-17.773c-4.6295 5.3561-8.6143 10.991-8.6143 17.265 0 6.7856 4.1164 13.922 8.6143 18.281z"/><path d="m27.863 5.791a1.0001 1.0001 0 0 0-0.91797 0.11328l-25.752 17.773a1.0001 1.0001 0 0 0 0 1.6445l25.752 17.773a1.0001 1.0001 0 0 0 1.2637-1.541c-4.3251-4.1912-8.3105-11.181-8.3105-17.562 0-5.8496 3.7828-11.303 8.3711-16.611a1.0001 1.0001 0 0 0-0.40625-1.5898zm-5.1328 5.4512c-2.7739 3.9394-4.832 8.1256-4.832 12.75 0 4.8082 1.9735 9.586 4.6289 13.625l-19.008-13.117z"/></g></g></g></svg>
@@ -320,9 +313,7 @@
                     </i>
                 </div>
                 <div class="btns-bolinha-banner-home">
-                    <i id="btn-bolinha-banner" class="btn-bolinha-banner" style="background-color: #992d2d; border: #992d2d;"></i>
-                    <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
-                    <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
+                    <i id="btn-bolinha-banner" class="btn-bolinha-banner banner-foco"></i>
                     <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
                     <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
                 </div>
@@ -347,7 +338,8 @@
             <div class="amostra-produtos-linha">
                 <div class="area-img-produto-destaque"></div>
                 <div class="right-amostra-produtos-linha">
-                    <p id="" class="descricao-produto-destaque">Equipamento versátil que pode ser usado para exercitar diversas partes do corpo dependendo do uso, como, por exemplo, costas, peito e braço (bíceps e tríceps), mas também pode ser usado para trabalhar a região das pernas e glúteos
+                    <p id="" class="descricao-produto-destaque">
+                        A musculação é uma das modalidades mais populares de exercício físico, e seus aparelhos desempenham um papel fundamental no treinamento de força e hipertrofia muscular. Essa categoria de equipamentos é projetada para proporcionar aos praticantes de musculação uma variedade de opções e exercícios que visam o desenvolvimento hipertrófico e o fortalecimento dos músculos.
                     </p>
 
                     <div class="outros-linha">
@@ -357,14 +349,58 @@
                             <div class="produto-outro-linha" id="produto"></div>
                             <div class="produto-outro-linha" id="produto"></div>
                         </div>
-                        <div class="btns-controle-amostra-produtos">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="" class="section-produtos-destaque-home">
+            <h2>EM DESTAQUE</h2>
+            <h3>LINHA DE CÁRDIO</h3>
+
+            <div class="amostra-produtos-linha">
+                <div class="area-img-produto-destaque"></div>
+                <div class="right-amostra-produtos-linha">
+                    <p id="" class="descricao-produto-destaque">
+                        Os aparelhos dessa categoria são uma modalidade de exercícios que visam fortalecer o sistema cardíaco, os pulmões e os músculos por meio de atividades físicas que testam sua resistência e movimentam o corpo inteiro
+                    </p>
+
+                    <div class="outros-linha">
+                        <a id="outros-da-linha" href="">OUTROS DA LINHA</a>
+                        <div class="produtos-outros-linha">
+                            <div class="produto-outro-linha" id="produto"></div>
+                            <div class="produto-outro-linha" id="produto"></div>
+                            <div class="produto-outro-linha" id="produto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="" class="section-produtos-destaque-home">
+            <h2>EM DESTAQUE</h2>
+            <h3>LINHA DE ACESSÓRIOS</h3>
+
+            <div class="amostra-produtos-linha">
+                <div class="area-img-produto-destaque"></div>
+                <div class="right-amostra-produtos-linha">
+                    <p id="" class="descricao-produto-destaque">
+                        Os produtos dessa categoria visam possibilitar, auxiliar e facilitar a execução de um exercício, nessa categoria os produtos vão de halteres, bancos, colchonetes, á bolsas, toalhas, strap, faixas de compressão, cinturões de musculação entre outros.
+                    </p>
+
+                    <div class="outros-linha">
+                        <a id="outros-da-linha" href="">OUTROS DA LINHA</a>
+                        <div class="produtos-outros-linha">
+                            <div class="produto-outro-linha" id="produto"></div>
+                            <div class="produto-outro-linha" id="produto"></div>
+                            <div class="produto-outro-linha" id="produto"></div>
+                        </div>
+                        <!-- <div class="btns-controle-amostra-produtos">
                             <i id="btn-setinha-base-E" class="seta-base seta-base-E">
                                 <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10539 1782.7)"><path d="m-10244-1392.5-134.21-134.21 134.21-134.21m198.86 134.21a238.11 238.11 0 0 1-238.1 238.11 238.11 238.11 0 0 1-238.11-238.11 238.11 238.11 0 0 1 238.11-238.11 238.11 238.11 0 0 1 238.1 238.11z" 
                                 fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="35.788"/></g></svg>
                             </i>
 
                             <div class="btns-bolinha-produtos">
-                                <i id="btn-bolinha-produto" class="btn-bolinha-produto" style="background-color: #D9DBDA;"></i>
+                                <i id="btn-bolinha-produto" class="btn-bolinha-produto area-foco"></i>
                                 <i id="btn-bolinha-produto" class="btn-bolinha-produto"></i>
                                 <i id="btn-bolinha-produto" class="btn-bolinha-produto"></i>
                                 <i id="btn-bolinha-produto" class="btn-bolinha-produto"></i>
@@ -375,7 +411,7 @@
                                 <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(11225 1802.8)"><path d="m-11008-1412.6 134.21-134.21-134.21-134.21m-198.86 134.21a238.11 238.11 0 0 0 238.11 238.11 238.11 238.11 0 0 0 238.11-238.11 238.11 238.11 0 0 0-238.11-238.11 238.11 238.11 0 0 0-238.11 238.11z" 
                                 fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="35.788"/></g></svg>
                             </i>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -401,7 +437,7 @@
                                                             <!-- Banner de cadastro -->
         <section class="section-banner-cadastro">
             <div class="banner-cadastro">
-                <i class="logo-horizontal">
+                <i class="logo-horizontal-vertical">
                     <svg version="1.1" viewBox="0 0 277.49 162.24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-3391.3 -418.88)"><g transform="matrix(1.428 0 0 1.428 1469.5 -183.57)" 
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3584">
                         <g aria-label="gain"><path d="m1439.4 524.32q0 2.0532-0.521 3.6773-0.521 1.6548-1.379 2.8806-0.8581 1.2564-1.9919 2.1145-1.1339 0.88869-2.3903 1.4403-1.2258 0.5516-2.5128 0.79675-1.2565 0.2758-2.3903 0.2758h-14.372v-7.9676h14.372q1.6242 0 2.4209-0.82741 0.7968-0.8274 0.7968-2.3903v-25.159q0-1.5629-0.7968-2.3596-0.7967-0.8274-2.4209-0.8274h-14.372q-1.4709 0-2.329 0.91934-0.858 0.88869-0.858 2.2677v10.787q0 1.5629 0.8274 2.3903t2.4209 0.8274h14.311v7.9676h-14.372q-1.1338 0-2.3903-0.24516-1.2564-0.2758-2.5128-0.8274-1.2258-0.5516-2.3596-1.4096-1.1339-0.88869-1.9919-2.1145-0.8581-1.2564-1.379-2.8806-0.521-1.6548-0.521-3.708v-10.787q0-1.1338 0.2452-2.3903 0.2758-1.2564 0.8274-2.4822 0.5516-1.2564 1.4096-2.3903 0.8887-1.1338 2.1145-1.9919 1.2564-0.85804 2.8806-1.379 1.6241-0.52096 3.6773-0.52096h14.372q1.1338 0 2.3903 0.2758 1.287 0.24516 2.5128 0.79676 1.2564 0.5516 2.3903 1.4403 1.1338 0.85805 1.9919 2.1145 0.858 1.2258 1.379 2.8499t0.521 3.6773z"/><path d="m1480.9 510.16q0 1.6548-0.5822 3.5854-0.5822 1.9-1.9 3.5548-1.287 1.6242-3.4015 2.7274-2.0838 1.1032-5.087 1.1032h-14.372q-1.6548 0-3.5854-0.58225-1.9-0.58224-3.5548-1.8693-1.6241-1.3177-2.7273-3.4016-1.1032-2.1145-1.1032-5.1176 0-1.6548 0.5822-3.5854 0.5823-1.9306 1.8693-3.5548 1.3178-1.6548 3.4016-2.758 2.1145-1.1032 5.1176-1.1032h14.372v7.5998h-14.372q-1.6241 0-2.5128 1.0113-0.8887 0.98063-0.8887 2.4516 0 1.5629 1.0112 2.4516 1.042 0.85805 2.4516 0.85805h14.311q1.6242 0 2.5129-0.98063 0.8886-0.98062 0.8886-2.4516v-11.124q0-1.5629-0.9806-2.4822-0.95-0.91934-2.4209-0.91934h-17.498v-7.5692h17.498q1.6548 0 3.5548 0.58225 1.9306 0.58224 3.5547 1.9 1.6548 1.2871 2.758 3.4015 1.1032 2.0838 1.1032 5.087z"/><path d="m1495.8 481.2h-7.9676v-7.2015h7.9676zm0 39.93h-7.9676v-33.127h7.9676z"/><path d="m1540.1 521.13h-7.9676v-18.387q0-1.5629-0.5516-2.7886-0.5209-1.2564-1.4403-2.1451-0.9193-0.88869-2.1757-1.3484-1.2258-0.49031-2.6661-0.49031h-13.943v25.159h-7.9676v-29.174q0-0.82741 0.3064-1.5322 0.3065-0.73547 0.8581-1.2564 0.5516-0.5516 1.287-0.85804 0.7355-0.30645 1.5629-0.30645h17.958q1.5016 0 3.1564 0.33709 1.6854 0.33709 3.3096 1.1032 1.6548 0.73547 3.1257 1.9 1.5016 1.1338 2.6355 2.7886 1.1645 1.6242 1.8386 3.7693 0.6742 2.1451 0.6742 4.8418z"/></g><path d="m1387.2 488.19-14.311 15.629 16.119 17.498h-10.971l-10.603-11.553-10.603 11.553h-11.001l16.088-17.559-14.25-15.567h10.91l8.795 9.5917 8.8562-9.5917z"/></g><path d="m3512.8 486.39-25.036-0.0316-13.755-17.575 0.022-18.505 29.544 0.0152-10.744 11.519-0.1659 0.16657 7.6082 9.7054 17.177-20.011-12.048-13.657-13.955-0.0186-17.406-19.09 39.9-0.0232 16.06 18.125 16.049-18.125 39.9 0.0232-17.406 19.09-13.955 0.0186-12.049 13.657 17.177 20.011 7.6083-9.7054-0.1659-0.16657-10.744-11.519 29.544-0.0152 0.022 18.505-13.755 17.575-25.036 0.0316-17.188-20.008z" 
@@ -489,5 +525,6 @@
 <script src="./Js/header/barra-pesquisa.js" defer></script>
 <script src="./Js/header/login-cadastro.js" defer></script>
 <script src="./Js/loading.js" defer></script>
+<script src="./Js/main.js" defer></script>
 </body>
 </html>
