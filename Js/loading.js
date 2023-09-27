@@ -7,5 +7,5 @@ function preLoading(){
     setTimeout(() => {
         loading.style.display = 'none'
         document.querySelector('#body').style.overflow = 'auto';
-    }, 500);
+    }, 700);
 }

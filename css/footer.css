@@ -122,10 +122,12 @@ footer .fone-footer i, footer .email-footer i{
     margin-right: 10px;
 }
 
-footer .fone-footer:hover p, footer .fone-footer:hover i, 
-footer .email-footer:hover a, footer .email-footer:hover i{
-    color: var(--verm);
+footer .fone-footer:hover p,footer .fone-footer:hover svg, footer .email-footer:hover p,footer .email-footer:hover svg{
     fill: var(--verm);
+    color: var(--verm);
+}
+footer .email-footer:hover p{
+    text-decoration: underline;
 }
 
 

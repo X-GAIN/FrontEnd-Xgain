@@ -388,7 +388,7 @@ main .section-sobre-home{
         .main-sobre-home .img-sobre{
             min-height: 30vw;
             min-width: 30vw;
-            background-image: url(../imgs/banner-sobre.jpg);
+            background-image: url(../imgs/banner-sobre-home.jpg);
             background-position: center ;
             background-size: cover;
             background-repeat: no-repeat;

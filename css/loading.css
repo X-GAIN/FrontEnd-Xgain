@@ -22,7 +22,7 @@
 }
 
 .load-icon svg{
-    width: 6vw;
+    width: 70px;
     fill: #D9DBDA;
     opacity: 1;
     animation: load-animation 2s ease-in-out;
