@@ -48,7 +48,7 @@ section.forms-login-cadastro{
         border-radius: 30px;
         backdrop-filter: blur(5px);
         color: var(--bran);
-        font-family: var(--mulish);
+        font-family: var(--mulish), sans-serif;
         font-weight: 600;
         font-size: 18px;
         opacity: 0;
@@ -111,7 +111,7 @@ section.forms-login-cadastro{
 
 
         color: var(--bran);
-        font-family: 'mulish';
+        font-family: var(--mulish), sans-serif;
         
     }
 

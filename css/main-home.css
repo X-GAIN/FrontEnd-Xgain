@@ -16,6 +16,9 @@
 .descricao-produto-destaque::-webkit-scrollbar {
     width: 5px;
 }
+.produtos-outros-linha::-webkit-scrollbar-button{
+    margin: 20px;
+}
 
 .produtos-outros-linha::-webkit-scrollbar-thumb{
     background-color: var(--bran);
@@ -36,7 +39,7 @@ main{
     min-height: 50vh;
     background-color: var(--preto);
     color: var(--bran);
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
 }
 
 main .section-banner-home{
@@ -156,7 +159,7 @@ main .section-banner-home{
             text-decoration: none;
             font-weight: 900;
             font-size: 18px;
-            font-family: var(--mulish); 
+            font-family: var(--mulish), sans-serif; 
             transition: 0.3s;
         }
             .btn-saiba-mais:hover{
@@ -185,7 +188,7 @@ main .section-categorias-main-home{
             color: var(--bran);
             font-size: 16px;
             font-weight: 900;
-            font-family: var(--mulish);
+            font-family: var(--mulish), sans-serif;
             cursor: pointer;
             transition: 0.3s;
             display: flex;
@@ -366,7 +369,7 @@ main .section-sobre-home{
     }
         .title-sobre .title-sobre-xgain{
             margin-left: 12px;
-            font-family: var(--audiowide);
+            font-family: var(--audiowide), sans-serif;
             font-weight: 100;
         }
     
@@ -454,7 +457,7 @@ main .section-banner-cadastro{
             background-color: var(--bran);
             border: solid 2px var(--bran);
             border-radius: 1.2vw;
-            font-family: var(--mulish);
+            font-family: var(--mulish), sans-serif;
             font-weight: 900;
             font-size: 18px;
             color: var(--Preto);

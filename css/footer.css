@@ -5,6 +5,9 @@
     --marr: #6A4334;
     --Preto: #0D0D0D;
     --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
 }
 
 footer{
@@ -15,7 +18,7 @@ footer{
     display: flex;
     flex-flow: column;
     color: var(--Preto);
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     align-items: center;
     justify-content: center;
 }

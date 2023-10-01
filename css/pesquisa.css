@@ -5,6 +5,9 @@
     --marr: #6A4334;
     --Preto: #0D0D0D;
     --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
 }
 
 .section-pesquisa{
@@ -128,7 +131,7 @@
 
 .section-pesquisa .barra-pesquisa input::placeholder{
     font-size: 15px;
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     color:#7f7f7f;
 }
 
@@ -216,7 +219,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .section-pesquisa .resultado-pesquisa .item-resultado p{
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     font-weight: 600;
     color: var(--bran);
     width: 100%;

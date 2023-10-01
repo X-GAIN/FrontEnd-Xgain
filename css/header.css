@@ -5,6 +5,9 @@
     --marr: #6A4334;
     --Preto: #0D0D0D;
     --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
 }
 
 *{
@@ -57,7 +60,7 @@ html{
 body{
     background-color: var(--Preto);
     max-width: 100vw;
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +82,7 @@ header{
     transition: 0.3s;
     align-items: center;
     justify-content: center;
-    font-family: 'Mulish';
+    font-family: var(--mulish), sans-serif;
     font-weight: 700;
     z-index: 80;
 }
@@ -103,6 +106,7 @@ header svg:hover{
 
 header .icon-logo{
     position: relative;
+    z-index: 100;
 }
 header .icon-logo svg{
     fill: transparent;

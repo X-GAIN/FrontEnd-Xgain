@@ -6,6 +6,9 @@
     --marr: #6A4334;
     --Preto: #0D0D0D;
     --cinz-bran: #848484;
+
+    --mulish: 'mulish';
+    --audiowide: 'audiowide';
 }
 .tabela-produtos-carrinho::-webkit-scrollbar {
     width: 5px;
@@ -137,7 +140,7 @@
     width: 100%;
     justify-content: space-between;
     margin: 0 0 10px 10px;
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     font-weight: 800;
     color: var(--Preto);
 }
@@ -177,7 +180,7 @@
 
 .section-carrinho .numero-qtn {
     font-size: 18px;
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     font-weight: 800;
 }
 
@@ -227,7 +230,7 @@
 .section-carrinho .total-produtos p{
     margin-right: 15px;
     font-size: 15px;
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     font-weight: 900;
 }
 
@@ -246,7 +249,7 @@
     color: var(--marr);
     border-radius: 30px;
     font-size: 15px;
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     font-weight: 700;
     transition: 0.2s;
     cursor: pointer;
@@ -277,7 +280,7 @@
     border: solid 2px var(--bran);
     border-radius: 100px;
     transition: 0.2s;
-    font-family: 'mulish';
+    font-family: var(--mulish), sans-serif;
     font-weight: 600;
     cursor: pointer;
 }

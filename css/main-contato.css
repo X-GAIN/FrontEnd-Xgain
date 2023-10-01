@@ -71,7 +71,7 @@ main .section-contato{
     display: flex;
     align-items: start;
     justify-self: center;
-    font-family: var(--mulish);
+    font-family: var(--mulish), sans-serif;
 }
     .section-contato svg{
         height: 35px;
@@ -80,7 +80,7 @@ main .section-contato{
     .section-contato a{
         text-decoration: none;
         color: var(--cinz-bran);
-        font-family: var(--mulish);
+        font-family: var(--mulish), sans-serif;
     }
     .section-contato .section-info-redes-sociais{
         width: 40%;
@@ -188,7 +188,7 @@ main .section-contato{
             border: 2px solid var(--bran);
             border-radius: 10px 40px 40px 40px;
             padding: 20px;
-            font-family: var(--mulish);
+            font-family: var(--mulish), sans-serif;
             color: var(--bran);
             font-weight: 500;
             margin-top: 20px;
@@ -246,7 +246,7 @@ main .section-contato{
             border-radius: 30px;
             backdrop-filter: blur(5px);
             color: var(--bran);
-            font-family: var(--mulish);
+            font-family: var(--mulish), sans-serif;
             font-weight: 600;
             font-size: 18px;
             opacity: 0;
