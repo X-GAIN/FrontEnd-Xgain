@@ -216,8 +216,11 @@ input[type="search"]::-webkit-search-results-decoration {
 .section-pesquisa .resultado-pesquisa .item-resultado{
     width: 100%;
     margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
+.section-pesquisa .resultado-pesquisa .item-resultado a, 
 .section-pesquisa .resultado-pesquisa .item-resultado p{
     font-family: var(--mulish), sans-serif;
     font-weight: 600;
@@ -227,6 +230,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin: 5px;
     cursor: pointer;
     transition: 0.2s;
+    text-decoration: none;
 }
 
 .section-pesquisa .resultado-pesquisa .item-resultado::after{
