@@ -22,11 +22,31 @@
 @media only screen and (max-width: 768px) {
 
     main .section-titulo-main{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%) !important;
     }
 
     .area-mostrar-produto{
         flex-direction: column !important;
     }
 
+    .img-principal{
+        display: none !important;
+    }
+    .section-imgs-rolagem{
+        display: none;
+    }
+    .img-principal-mobile{
+        display: flex !important;
+    }
+    .section-img3d .area-img3d{
+        height: 95vh;
+        max-height: 95vw;
+        width: 95vw;
+    }
+    .area-descricao-btns-adicionar{
+        min-width: 100% !important;max-width: 100% !important;
+        flex-direction: column;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 }

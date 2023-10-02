@@ -30,9 +30,9 @@ sr.reveal('.area-redes-sociais');
 //     document.getElementById('banners-img').scrollLeft -= scrollPosition;
 // });
 
-
 document.getElementById('exit-aviso-section-contato').addEventListener('click', () => {
     document.getElementById('area-aviso-contato').style.visibility = "hidden";
 });
+
 
 //Filtro
