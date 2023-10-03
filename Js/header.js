@@ -57,3 +57,19 @@ document.getElementById('exit-menu-mobile').addEventListener('click', () => {
     document.getElementById('header-mobile').style.display = "none"
     document.getElementById('body').style.overflowY = 'auto';
 });
+function ajustarTextoPerfil(id){
+    let title = document.getElementById('header-nome-perfil')
+    title.title = 'Perfil de ' + title.textContent;
+    let perfil = document.getElementById(id);
+    let nomePerfil = perfil.textContent;
+    if(nomePerfil.length > 8){
+        nomePerfil = nomePerfil.toUpperCase();
+        nomePerfil = nomePerfil.slice(0, 8) + '...';
+
+        perfil.textContent = nomePerfil;
+    }
+}
+
+ajustarTextoPerfil('header-nome-perfil');
+
+

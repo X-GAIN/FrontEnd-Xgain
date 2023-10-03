@@ -66,7 +66,7 @@ body{
     justify-content: center;
     flex-flow: column;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 
@@ -288,6 +288,11 @@ header .area-list-perfil li{
     text-decoration: none;
     transition: 0.5s;
 }
+header .area-list-perfil a{
+    color: var(--bran);    
+    text-decoration: none;
+    transition: 0.5s;
+}
 header .header-perfil:hover ul{
     animation-name: lista-perfil-animation;
     animation-duration: 0.2s;
@@ -295,14 +300,14 @@ header .header-perfil:hover ul{
     animation-fill-mode: forwards;
 }
 
-header .header-perfil:hover li{
+header .header-perfil:hover li, header .header-perfil:hover a{
     animation-name: lista-itens-animation;
     animation-duration: 0.3s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 
 }
-header .area-list-perfil li:hover{
+header .area-list-perfil li:hover, header .area-list-perfil a:hover{
     color: var(--verm);
 }
 
@@ -311,6 +316,10 @@ header .nao-logado{
 }
 header .logado{
     display: none;
+    animation-name: lista-perfil-animation2 !important;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
 .logo-horizontal-vertical svg{
@@ -341,6 +350,14 @@ header-animation{
     }
     to{
         height: 80px;
+    }
+}
+@keyframes lista-perfil-animation2 {
+    from{
+        height: 0;
+    }
+    to{
+        height: 100px;
     }
 }
 @keyframes lista-animation-musculacao {
