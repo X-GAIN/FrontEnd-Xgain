@@ -62,9 +62,9 @@ function ajustarTextoPerfil(id){
     title.title = 'Perfil de ' + title.textContent;
     let perfil = document.getElementById(id);
     let nomePerfil = perfil.textContent;
-    if(nomePerfil.length > 8){
+    if(nomePerfil.length > 12){
         nomePerfil = nomePerfil.toUpperCase();
-        nomePerfil = nomePerfil.slice(0, 8) + '...';
+        nomePerfil = nomePerfil.slice(0, 12) + '...';
 
         perfil.textContent = nomePerfil;
     }

@@ -16,6 +16,18 @@
     box-sizing: border-box;
 }
 
+.lista-itens::-webkit-scrollbar{
+    width: 10px;
+}
+/* .lista-itens::-webkit-scrollbar-button{
+    margin: 50px 0;
+} */
+.lista-itens::-webkit-scrollbar-thumb{
+    background-color: var(--Preto);
+}
+.lista-itens::-webkit-scrollbar-thumb:hover{
+    background-color: var(--verm);
+}
 main{
     margin-top: 120px;
     min-height: 500px;
@@ -122,6 +134,12 @@ main svg:hover{
                 width: 100%;
                 padding: 1vw 20px;
             }
+                .area-lista-itens .lista-itens{
+                    width: 100%;
+                    max-height: 50vh;
+                    overflow-y: auto;
+                    padding-right: 10px;
+                }
                 .area-lista-itens .item-lista{
                     position: relative;
                     width: 100%;
@@ -129,6 +147,7 @@ main svg:hover{
                     justify-content: space-between;
                     align-items: center;
                     padding-bottom: 10px;
+                    margin-bottom: 10px;
                 }
                 .area-lista-itens .item-lista::after{
                     content: '';

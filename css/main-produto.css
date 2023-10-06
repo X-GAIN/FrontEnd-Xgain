@@ -145,6 +145,7 @@ main svg:hover{
                             font-size: 18px;
                             text-align: justify;
                             margin: 0;
+                            padding-right: 10px;
                         }
                     .area-descricao-btns-adicionar .btns-adicionar{
                         display: flex;
@@ -338,5 +339,9 @@ main svg:hover{
                             border: 2px solid var(--Preto);
                             border-radius: 50px;
                             margin-bottom: 10px;
+                        }
+                        .load-icon svg:hover{
+                            fill: transparent;
+                            stroke: var(--Preto);
                         }
                 
