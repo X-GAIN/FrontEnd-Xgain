@@ -32,7 +32,7 @@
         left: 0;
         top: 0;
     }
-    main .section-sobre-home .img-sobre{
+    main .section-sobre-home img{
         height: 80vw !important;
         width: 80vw !important;
         padding: 0;
@@ -161,9 +161,9 @@
             .main-sobre-home p{
                 font-size: 18px;
             }
-            .main-sobre-home .img-sobre{
-                width: 95%;
-                height: 40vw;
+            .main-sobre-home img{
+                width: 95% !important;
+                height: auto !important;
                 margin: 40px 0;
             }
 
@@ -214,7 +214,7 @@
             .main-sobre-home p{
                 font-size: 18px;
             }
-            .main-sobre-home .img-sobre{
+            .main-sobre-home img{
                 width: 95%;
                 height: 40vw;
                 margin: 40px 0;
