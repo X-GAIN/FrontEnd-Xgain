@@ -90,6 +90,7 @@ if(qtnImgs <= 0){
         const img = document.createElement('img')
         img.src = '../imgs/banner-home-img-reserva.jpg';
         img.classList.add('banner-img');
+        img.title = 'Não existe nenhum banner no momento'
 
         localImg.appendChild(img);
 

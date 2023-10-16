@@ -31,7 +31,7 @@
     }
 
     .main-resultado .section-filtro{
-        z-index: 100;
+        /* z-index: 100; */
         animation: none;
         width: 95% !important;
         align-items: center !important;

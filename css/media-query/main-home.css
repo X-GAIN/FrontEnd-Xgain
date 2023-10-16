@@ -32,10 +32,11 @@
         left: 0;
         top: 0;
     }
-    main .section-sobre-home img{
+    main .section-sobre-home .img-sobre{
         height: 80vw !important;
         width: 80vw !important;
         padding: 0;
+        margin: 20px 0;
     }
     main .section-sobre-home .texto-sobre{
         width: 100%;
@@ -161,9 +162,9 @@
             .main-sobre-home p{
                 font-size: 18px;
             }
-            .main-sobre-home img{
+            .main-sobre-home .img-sobre{
                 width: 95% !important;
-                height: auto !important;
+                height: 50vw !important;
                 margin: 40px 0;
             }
 
@@ -214,9 +215,9 @@
             .main-sobre-home p{
                 font-size: 18px;
             }
-            .main-sobre-home img{
+            .main-sobre-home .img-sobre{
                 width: 95%;
-                height: 40vw;
+                height: 50vw;
                 margin: 40px 0;
             }
 
