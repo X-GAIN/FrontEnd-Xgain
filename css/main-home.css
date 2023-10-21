@@ -206,7 +206,7 @@ main .section-categorias-main-home{
         .section-categorias-main-home .btn-categoria-home:hover{
                 color: var(--Preto);
                 background-color: var(--bran);
-                border: transparent;
+                border-color: var(--bran);
         }
 
 main .section-produtos-destaque-home{
@@ -236,7 +236,7 @@ main .section-produtos-destaque-home{
             max-height: 35vw;min-height: 35vw;
             max-width: 35vw;min-width: 35vw;              
             border: 2px solid var(--bran);
-            border-radius: 3vw;
+            border-radius: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -395,7 +395,7 @@ main .section-sobre-home{
             background-size: cover;
             background-repeat: no-repeat;
             border: 2px solid var(--bran);
-            border-radius: 3vw;
+            border-radius: 50px;
         }
 
 main .section-banner-cadastro{
@@ -403,7 +403,7 @@ main .section-banner-cadastro{
     height: 300px;
     width: 90%; 
     border: 2px solid var(--bran);
-    border-radius: 3vw;
+    border-radius: 50px;
     display: flex;
     position: relative;
     background-color: var(--cinza);
@@ -416,7 +416,7 @@ main .section-banner-cadastro{
         background-position: center 50%;
         background-size: cover;
         background-repeat: no-repeat;
-        border-radius: 3vw;
+        border-radius: 50px;
         display: flex;
         align-items: center;
     }
@@ -447,7 +447,7 @@ main .section-banner-cadastro{
         width: 28%;
         height: 100%;
         background-color: transparent;
-        border-radius: 0 3vw 3vw 0;
+        border-radius: 0 50px 50px 0;
         /* clip-path: polygon(41% 0, 100% 0, 100% 100%, 0 100%); */
     }
         .area-btn-cadastro .btn-cadastro{
@@ -455,7 +455,7 @@ main .section-banner-cadastro{
             padding: 20px;
             background-color: var(--bran);
             border: solid 2px var(--bran);
-            border-radius: 1.2vw;
+            border-radius: 25px;
             font-family: var(--mulish), sans-serif;
             font-weight: 900;
             font-size: 18px;

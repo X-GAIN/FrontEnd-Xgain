@@ -17,6 +17,7 @@
 
     <!-- <link rel="stylesheet" href="./css/icons.css"> -->
     <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/carrinho.css">
     <link rel="stylesheet" href="../css/pesquisa.css">
@@ -51,7 +52,7 @@
     </section>
 
                                                             <!-- Barra de pesquisa -->
-    <section id="pesquisa-section" class="section-pesquisa">
+    <section id="pesquisa-section" class="section-pesquisa container">
         <div class="area-pesquisa">
             <i id="exit-pesquisa-section" class="btn-sair" title="Sair">
                 <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
@@ -292,7 +293,7 @@
     </header>
 
                                                                 <!-- Main -->
-    <main>
+    <main class="container">
 
         <section class="section-titulo-main">
             <h2 class="nome-produto">Fechar Orçamento</h2>
@@ -381,15 +382,15 @@
                     <div class="div-form div-form-2">
                         <div>
                             <label for="">CEP*</label>
-                            <input type="number" placeholder="xxxxx-xxx">
+                            <input type="text" name="cep" placeholder="xxxxx-xxx">
                         </div>
                         <div>
                             <label for="">Estado</label>
-                            <input type="text" placeholder="São Paulo" required>
+                            <input type="text" name="estado" placeholder="São Paulo" required>
                         </div>
                         <div>
                             <label for="">Cidade</label>
-                            <input type="text" placeholder="Presidente Prudente" required>
+                            <input type="text" name="cidade" placeholder="Presidente Prudente" required>
                         </div>
                     </div>
                     <button type="submit">Enviar Orçamento</button>
@@ -402,7 +403,7 @@
 
                                                                 <!-- Footer -->
     <footer>
-        <section class="start-footer">
+        <section class="start-footer container">
             <section class="sobre-footer">
                 <h2>SOBRE:</h2>
                 <p>A X-Gain é uma empresa fictícia inovadora e autônoma, criada para fins ilustrativos, que surge no cenário comercial com a determinação de competir com grandes marcas consolidadas. Fundada por um grupo fictício de três visionários estudantes, nossa narrativa busca apresentar o propósito de fornecer equipamentos fictícios de alta qualidade com um excelente custo-benefício, ajudando nossos clientes fictícios a alcançar o sucesso em seus negócios imaginários.
@@ -459,7 +460,7 @@
             </section>
         </section>
 
-        <section class="end-footer">
+        <section class="end-footer container">
             <a href="#topo"><i id="icon-logo-footer" title="Logo, clique para subir para o topo da pagina"><svg version="1.1" viewBox="0 0 514.16 314.73" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(3.3284 0 0 3.3284 -14854 -1506.8)">
                 <path alt="logo do site, clique para subir até o topo da página" transform="translate(976.43,-7.7164)" d="m3540.4 553.19-33.732-0.0426-18.533-23.68 0.03-24.933 39.806 0.0204-14.475 15.52-0.2235 0.22443 10.251 13.077 23.143-26.962-16.234-18.4-18.802-0.025-23.451-25.721 53.76-0.0312 21.638 24.421 21.624-24.421 53.76 0.0312-23.451 25.721-18.802 0.025-16.234 18.4 23.143 26.962 10.251-13.077-0.2236-0.22443-14.475-15.52 39.806-0.0204 0.03 24.933-18.533 23.68-33.732 0.0426-23.158-26.958z" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.6053" style="font-variation-settings:'wght' 400;paint-order:normal"/></g></svg>
             </i></a>

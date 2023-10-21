@@ -297,7 +297,7 @@ main svg:hover{
 
             .section-forms-fechar-orcamento .area-aviso-orcamento{
                 position: absolute;
-                min-height: 15vh;
+                min-height: 100px;
                 width: 85%;
                 padding: 20px;
                 background-color:#992d2d;

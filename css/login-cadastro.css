@@ -36,8 +36,8 @@ section.forms-login-cadastro{
 
     .forms-login-cadastro .area-aviso{
         position: absolute;
-        min-height: 15vh;
-        min-width: 50vw;
+        min-height: 100px;
+        min-width: 20vw;
         padding: 20px;
         background-color:#992d2d;
         display: flex;
@@ -213,6 +213,7 @@ section.forms-login-cadastro{
                 .form p{
                     color: #d9dbda56;
                     margin-top: 12px;
+                    font-size: 15px;
                     transition: 0.3s;
                     cursor: pointer;
                     margin-bottom: 3.5vw;
@@ -237,8 +238,8 @@ section.forms-login-cadastro{
 
 .section-forms .btn-sair{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 2vw;
+    right: 2vw;
     cursor: pointer;
 }
 .section-forms .btn-sair svg{
@@ -273,4 +274,23 @@ section.forms-login-cadastro{
 }
 .section-login-cadastro{
     display: none;
+}
+
+
+.senha{
+    display: flex;
+    position: relative;
+}
+.senha .icon-mostrar-senha{
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+.icon-mostrar-senha svg{
+    fill: var(--bran);
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-mostrar-senha:hover svg{
+    fill: var(--verm);
 }

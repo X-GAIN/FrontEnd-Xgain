@@ -131,11 +131,10 @@ main svg:hover{
                 width: 100%;
                 height: auto;
             }
-                .informacao-perfil-conta .area-edicao{
+                .informacao-perfil-conta{
                     width: 100%;
                     /* border: 1px solid red; */
                     display: flex;
-                    justify-content: space-between;
                 }
                 .informacao-perfil-conta label{
                     font-size: 18px;
@@ -146,12 +145,19 @@ main svg:hover{
                     font-family: var(--mulish), sans-serif;
                     font-weight: 600;
                     font-size: 16px;
+                    border: transparent;
+                    background-color: transparent;
+                    border-bottom: 2px solid var(--Preto);
+                    width: 100%;
+                    /* padding: 5px 0 0 0; */
+                    margin-bottom: 10px;
                 }
                 .informacao-perfil-conta input:hover{
                     border-bottom: 2px solid var(--marr);
                 }
                 .informacao-perfil-conta input:focus{
                     border-bottom: 2px solid var(--marr);
+                    outline: none;
                 }
                 .informacao-perfil-conta input::placeholder{
                     color: var(--cinz-bran);
@@ -356,4 +362,29 @@ main svg:hover{
                     }
                     .title-selecionado::after{
                         background-color: var(--verm) !important;
+                    }
+
+
+                    .senha-editar{
+                        display: flex;
+                        position: relative;
+                    }
+                    .senha-editar input{
+                        width: 100%;
+                    }
+                    .senha-editar .icon-mostrar-senha-editar{
+                        position: absolute;
+                        right: 5px;
+                        bottom: 10px;
+                        cursor: pointer;
+                        visibility: hidden;
+                    }
+                    .icon-mostrar-senha-editar svg{
+                        height: 20px;
+                        fill: var(--Preto);
+                        transition: all 0.2s ease-in-out;
+                    }
+                    
+                    .icon-mostrar-senha-editar:hover svg{
+                        fill: var(--marr);
                     }

@@ -234,7 +234,7 @@ main .section-contato{
 
         .section-forms-contato .area-aviso-contato{
             position: absolute;
-            min-height: 15vh;
+            min-height: 100px;
             width: 95%;
             padding: 20px;
             background-color:#992d2d;

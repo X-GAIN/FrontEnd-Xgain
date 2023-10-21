@@ -243,6 +243,41 @@
 }
 
 /* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
-/* @media only screen and (min-width: 1200px) {
-    
-} */
+@media only screen and (min-width: 1920px) {
+    main .section-banner-home{
+        height: 50vh;
+    }
+    main .banner-home .btns-setinha-banner-home{
+        top: 21vh;
+    }
+    main .banner-home .btns-bolinha-banner-home{
+        top: 38vh;
+    }
+
+    main .saibaMais-banner{
+        top: 42vh;
+        right: 2.5vw;
+    }
+
+
+    .amostra-produtos-linha .area-img-produto-destaque{
+        max-height: 500px;min-height: 500px;
+        max-width: 500px;min-width: 500px;
+    }
+    .amostra-produtos-linha .right-amostra-produtos-linha{
+        min-height: auto;
+    }
+
+    main .section-sobre-home{
+        min-height: 50vh;
+        width: 100%;
+    }
+    .section-sobre-home .title-sobre{
+        top: 10vw;
+    }
+
+    .main-sobre-home .img-sobre{
+        max-height: 500px;min-height: 500px;
+        max-width: 500px;min-width: 500px;
+    }
+}

@@ -28,6 +28,10 @@
     .section-contato .section-forms-contato{
         width: 100%;
     }
+
+    .section-info-redes-sociais{
+        width: 100% !important;
+    }
 }
 
 /*Dispostivos Médios (Tablets deitados, 768px para cima) */
