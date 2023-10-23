@@ -320,39 +320,50 @@
             </div>
             <section class="area-informacoes-perfil">
 
+                <div class="area-aviso" id="area-aviso">
+                    <i id="exit-aviso-editor" class="btn-sair" title="Sair">
+                        <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                        <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                        <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                        /></g></g></svg>
+                    </i>
+                    <p class="erro">--ERRO--</p>
+                    <p class="aviso" id="aviso">Email ou senha incorreta | Sobrenome e telefone não inseridos</p>
+                </div>
+
                 <div class="informacao-perfil-conta" id="informacao-perfil-conta">
                     <form action="">
                         <label for="">Nome</label>
 
-                            <input type="text" name="nome" id="informacao-perfil-nome" class="input-edicao" disabled value="Nome">
+                            <input type="text" name="nome" id="informacao-perfil-nome" class="input-edicao" disabled placeholder="Nome">
                         <label for="">Sobrenome</label>
 
-                            <input type="text" name="sobrenome" id="informacao-perfil-sobrenome" class="input-edicao" disabled value="Sobrenome">
+                            <input type="text" name="sobrenome" id="informacao-perfil-sobrenome" class="input-edicao" disabled placeholder="Sobrenome">
 
                         <label for="">E-mail</label>
 
-                            <input type="email" name="email" id="informacao-perfil-email" class="input-edicao" disabled value="email@email.com">
+                            <input type="email" name="email" id="informacao-perfil-email" class="input-edicao" disabled placeholder="nome.sobrenome@email.com">
 
                         <label for="">Senha</label>
                         <div class="senha-editar">
-                            <input class="input-senha-editar input-edicao" id="input-senha-editar" type="password" placeholder="xxxxxxxxx" disabled value="senha1234">
+                            <input class="input-senha-editar input-edicao" id="input-senha-editar" type="password" placeholder="xxxxxxxxx" disabled>
                             <i class="icon-mostrar-senha-editar" id="icon-mostrar-senha-editar" onclick="mostrarSenhaEditar(this)"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></i>
                         </div>
-                        <label for="">Número</label>
+                        <label for="">Telefone</label>
 
-                            <input type="tel" name="numero" id="informacao-perfil-numero" class="input-edicao" disabled value="151632">
+                            <input type="tel" name="telefone" id="informacao-perfil-numero" class="input-edicao" disabled placeholder="(xx)xxxx-xxxx">
 
                         <label for="">CEP</label>
 
-                            <input type="text" name="cep" id="informacao-perfil-cep" class="input-edicao" disabled value="">
+                            <input type="text" name="cep" id="informacao-perfil-cep" class="input-edicao" disabled placeholder="xxxxx-xxx">
 
                         <label for="">Estado</label>
 
-                            <input type="text" name="estado" id="informacao-perfil-estado" class="input-edicao" disabled value="">
+                            <input type="text" name="estado" id="informacao-perfil-estado" class="input-edicao" disabled placeholder="SP">
 
                         <label for="">Cidade</label>
 
-                            <input type="text" name="cidade" id="informacao-perfil-cidade" class="input-edicao" disabled value="">
+                            <input type="text" name="cidade" id="informacao-perfil-cidade" class="input-edicao" disabled placeholder="Presidente Prudente">
 
                         <button type="button" class="btn-atualizar-perfil" id="btn-atualizar-perfil" onclick="habilitarEdicao()">Editar informações</button>
                     </form>

@@ -107,3 +107,80 @@ function mostrarSenha(a){
         }
     }
 }
+
+function verificarFormsCadastro(){
+    const todosInputs = document.querySelectorAll('input');
+    const areaAviso = document.getElementById('area-aviso');
+    const aviso = document.getElementById('aviso');
+    let todosPreenchidos = true;
+    const email = document.querySelector('input[name=email]');
+    const senha = document.getElementById('input-senha-1').value;
+    const confirmarSenha = document.getElementById('input-senha-2').value;
+    const telefone = document.querySelector('input[name=telefone]');
+    let telefoneValue = telefone.value;
+    telefoneValue = telefoneValue.replace(/[^\d]/g, '');
+
+    todosInputs.forEach(input => {
+        if (input.value.trim() === '') {
+            todosPreenchidos = false;
+        }
+    });
+
+    if (!todosPreenchidos) {
+        areaAviso.style.display = 'flex';
+        aviso.innerHTML = 'Preencha todos os campos';
+    }
+    else if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        areaAviso.style.display = 'flex';
+        aviso.innerHTML = 'Email incorreto';
+    }
+    else if(senha !== confirmarSenha){
+        areaAviso.style.display = 'flex';
+        aviso.innerHTML = 'As senhas não são iguais';
+    }
+    else if(telefoneValue === ''){
+        areaAviso.style.display = 'flex';
+        aviso.innerHTML = 'Telefone inválido';
+    }
+    else if(!(telefoneValue.length >= 10 && telefoneValue.length <= 11)){
+        areaAviso.style.display = 'flex';
+        aviso.innerHTML = 'Telefone inválido';
+    }
+    else{
+        const formulario = document.querySelector('form');
+        formulario.submit();
+        parent.location.reload();
+    }
+    
+    // console.log(telefoneValue)
+
+}
+
+function verificarFormsLogin(){
+    const todosInputs = document.querySelectorAll('input');
+    const areaAviso = document.getElementById('area-aviso');
+    const aviso = document.getElementById('aviso');
+    let todosPreenchidos = true;
+    const email = document.querySelector('input[name=email]');
+
+    todosInputs.forEach(input => {
+        if (input.value.trim() === '') {
+            todosPreenchidos = false;
+        }
+    });
+
+    if (!todosPreenchidos) {
+        areaAviso.style.display = 'flex';
+        aviso.innerHTML = 'Preencha todos os campos';
+    }
+    else if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        areaAviso.style.display = 'flex';
+        aviso.innerHTML = 'Email incorreto';
+    }
+    else{
+        const formulario = document.querySelector('form');
+        formulario.submit();
+        parent.location.reload();
+    }
+}
+

@@ -26,6 +26,29 @@ document.getElementById('title-privacidade-perfil').addEventListener('click', ()
     document.getElementById('title-privacidade-perfil').classList.add ('title-selecionado');
 })
 
+document.getElementById('exit-aviso-editor').addEventListener('click', ()=>{
+    document.getElementById('area-aviso').style.display = 'none';
+})
+
+function cep () {
+    const cep = document.querySelector("input[name=cep]");
+
+    cep.addEventListener("blur", (e) => {
+    const value = cep.value.replace(/[^0-9]+/, "");
+    const url = `https://viacep.com.br/ws/${value}/json/`;
+
+    fetch(url)
+        .then((response) => response.json())
+        .then((json) => {
+        if (json.logradouro) {
+            document.querySelector("input[name=cidade]").value = json.localidade;
+            document.querySelector("input[name=estado]").value = json.uf;
+        }
+    });
+});
+};
+cep()
+
 
 function mostrarSenhaEditar(a){
     const inputSenha = document.getElementById('input-senha-editar');
@@ -50,26 +73,57 @@ function habilitarEdicao(){
         });
         inputFoco.focus();
     document.getElementById('icon-mostrar-senha-editar').style.visibility = 'visible';
-    btnAtualizar.addEventListener('click', ()=>{
-        btnAtualizar.type = 'submit'
-    })
-    }
+    
+    btnAtualizar.addEventListener('click', verificarFormsEditor)
+        }
 }
 
-(function () {
-    const cep = document.querySelector("input[name=cep]");
+function verificarFormsEditor(){
+    const todosInputs = document.querySelectorAll('input');
+        const areaAviso = document.getElementById('area-aviso');
+        const aviso = document.getElementById('aviso');
+        let todosPreenchidos = true;
+        const email = document.querySelector('input[name=email]');
+        const telefone = document.querySelector('input[name=telefone]');
+        let telefoneValue = telefone.value;
+        telefoneValue = telefoneValue.replace(/[^\d]/g, '');
+        const cep = document.querySelector('input[name=cep]');
+        let cepValue = cep.value;
+        cepValue = cepValue.replace(/[^\d]/g, '');
 
-    cep.addEventListener("blur", (e) => {
-    const value = cep.value.replace(/[^0-9]+/, "");
-    const url = `https://viacep.com.br/ws/${value}/json/`;
+        todosInputs.forEach(input => {
+            if (input.value.trim() === '') {
+                todosPreenchidos = false;
+            }
+        });
 
-    fetch(url)
-        .then((response) => response.json())
-        .then((json) => {
-        if (json.logradouro) {
-            document.querySelector("input[name=cidade]").value = json.localidade;
-            document.querySelector("input[name=estado]").value = json.uf;
+        if (!todosPreenchidos) {
+            areaAviso.style.display = 'flex';
+            aviso.innerHTML = 'Preencha todos os campos';
         }
-    });
-});
-})();
+        else if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+            areaAviso.style.display = 'flex';
+            aviso.innerHTML = 'Email incorreto';
+        }
+
+        else if(telefoneValue === ''){
+            areaAviso.style.display = 'flex';
+            aviso.innerHTML = 'Telefone inválido';
+        }
+        else if(!(telefoneValue.length >= 10 && telefoneValue.length <= 11)){
+            areaAviso.style.display = 'flex';
+            aviso.innerHTML = 'Telefone inválido';
+        }
+        else if(cepValue === ''){
+            areaAviso.style.display = 'flex';
+            aviso.innerHTML = 'CEP inválido';
+        }
+        else if(!(cepValue.length === 8)){
+            areaAviso.style.display = 'flex';
+            aviso.innerHTML = 'CEP inválido';
+        }
+        else{
+            const formulario = document.querySelector('form');
+            formulario.submit();
+        }
+}

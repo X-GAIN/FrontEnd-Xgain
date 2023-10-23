@@ -123,12 +123,16 @@ main svg:hover{
             }
         .main-perfil .area-informacoes-perfil{
             width: 65%;
-            padding: 35px;
+            display: flex;
+            justify-content: center;
+            /* padding: 35px; */
             border: 2px solid var(--Preto);
             border-radius: 40px;
+            position: relative;
         }
             .area-informacoes-perfil .informacao-perfil-conta{
                 width: 100%;
+                padding: 35px;
                 height: auto;
             }
                 .informacao-perfil-conta{
@@ -220,6 +224,7 @@ main svg:hover{
 
                 .area-informacoes-perfil .informacao-perfil-carrinho{
                     width: 100%;
+                    padding: 35px;
                 }
                     .informacao-perfil-carrinho svg{
                         height: 25px;
@@ -252,7 +257,7 @@ main svg:hover{
                     .informacao-perfil-carrinho .excluir-produto:hover svg{
                         stroke: transparent;
                     }
-                    
+
                         .area-lista-itens .informacao-perfil-privacidade p{
                             width: 100%;
                             max-height: 50vh;
@@ -336,8 +341,10 @@ main svg:hover{
                     .area-informacoes-perfil .informacao-perfil-privacidade{
                         width: 100%;
                         display: flex;
+                        padding: 35px;
                         flex-direction: column;
                         align-items: center;
+                        text-align: center;
                     }
                         .informacao-perfil-privacidade h2{
                             font-weight: 900;
@@ -388,3 +395,64 @@ main svg:hover{
                     .icon-mostrar-senha-editar:hover svg{
                         fill: var(--marr);
                     }
+
+                    .area-informacoes-perfil .area-aviso{
+                        position: absolute;
+                        min-height: 100px;
+                        min-width: 90%;
+                        margin-top: 35px;
+                        padding: 20px;
+                        background-color:#992d2d;
+                        display: flex;
+                        display: none;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 999;
+                        border: 2px solid var(--Preto);
+                        border-radius: 30px;
+                        backdrop-filter: blur(5px);
+                        color: var(--bran);
+                        font-family: var(--mulish), sans-serif;
+                        font-weight: 600;
+                        font-size: 18px;
+                        opacity: 0;
+                        animation-name: surgiAreaAviso;
+                        animation-duration: 0.3s;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                        z-index: 70;
+                    }
+                        @keyframes surgiAreaAviso {
+                            from{
+                                opacity: 0;
+                            }
+                            to{
+                                opacity: 1;
+                            }
+                        }
+                        .area-aviso .erro{
+                            position: absolute;
+                            top: 20px;
+                            font-weight: 900;
+                        }
+                        .area-aviso .btn-sair{
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            cursor: pointer;
+                        }
+                        .btn-sair svg{
+                            height: 35px;
+                            stroke: var(--bran);
+                            fill: transparent;
+                            stroke-width: 30px; 
+                            transition: 0.3s;
+                        }        
+                        .btn-sair:hover svg{
+                            stroke: var(--cinza);
+                            fill: none;
+                        }
+                        .area-aviso .aviso{
+                            margin: 30px;
+                            text-align: center;
+                        }
