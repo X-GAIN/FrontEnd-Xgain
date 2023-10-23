@@ -47,9 +47,8 @@
     <div id="topo"></div>
 
                                                             <!-- Login || Cadastro -->
-    <section class="section-login-cadastro container" id="section-login-cadastro">
-        <iframe id="iframe-login" src="../iframe/login.html" frameborder="0"></iframe>
-        <iframe id="iframe-cadastro" src="../iframe/cadastro.html" frameborder="0"></iframe>
+    <section class="section-login-cadastro" id="section-login-cadastro">
+        <iframe id="iframe-login-cadastro" src="./iframe/login.html" frameborder="0"></iframe>
     </section>
 
                                                             <!-- Barra de pesquisa -->
@@ -354,8 +353,8 @@
                         <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
                         /></g></g></svg>
                     </i>
-                    <p class="aviso" id="motivo">ORÇAMENTO ENVIADO!</p>
-                    <p class="mensagem-aviso" id="aviso">Entraremos em contato em até 72h, fique atento em sua caixa de e-mail</p>
+                    <p class="aviso" id="aviso">ORÇAMENTO ENVIADO!</p>
+                    <p class="mensagem-aviso" id="mensagem-aviso">Entraremos em contato em até 72h, fique atento em sua caixa de e-mail</p>
                 </div>
                 <h2>FAZER ORÇAMENTO</h2>
                 <p>Preencha com os dados para entrarmos em contato</p>
@@ -363,39 +362,39 @@
                     <div class="div-form">
                         <div>
                             <label for="">Nome</label>
-                            <input type="text" placeholder="Seu nome" class="inputs-orcamento">
+                            <input type="text" placeholder="Seu nome" required>
                         </div>
                         <div>
                             <label for="">Sobrenome</label>
-                            <input type="text" placeholder="Seu sobrenome" class="inputs-orcamento">
+                            <input type="text" placeholder="Seu sobrenome" required>
                         </div>
                     </div>
                     <div class="div-form">
                         <div>
                             <label for="">E-mail</label>
-                            <input type="email" placeholder="nome.sobrenome@email.com" name="emailOrcamento" class="inputs-orcamento">
+                            <input type="email" placeholder="nome.sobrenome@email.com" required>
                         </div>
                         <div>
-                            <label for="">Telefone</label>
-                            <input type="tel" placeholder="(xx) xxxx-xxxx" name="telefoneOrcamento" class="inputs-orcamento">
+                            <label for="">Número</label>
+                            <input type="tel" placeholder="(xx) xxxx-xxxx" required>
                         </div>
                     </div>
                     <div class="div-form div-form-2">
                         <div>
                             <label for="">CEP*</label>
-                            <input type="text" name="cepOrcamento" placeholder="xxxxx-xxx" class="inputs-orcamento">
+                            <input type="text" name="cep" placeholder="xxxxx-xxx">
                         </div>
                         <div>
                             <label for="">Estado</label>
-                            <input type="text" name="estado" placeholder="São Paulo" class="inputs-orcamento">
+                            <input type="text" name="estado" placeholder="São Paulo" required>
                         </div>
                         <div>
                             <label for="">Cidade</label>
-                            <input type="text" name="cidade" placeholder="Presidente Prudente" class="inputs-orcamento">
+                            <input type="text" name="cidade" placeholder="Presidente Prudente" required>
                         </div>
                     </div>
-                    <button type="button" onclick="verificarFormsOrcamento()">Enviar Orçamento</button>
-            </form>
+                    <button type="submit">Enviar Orçamento</button>
+                </form>
             </section>
 
         </section>
