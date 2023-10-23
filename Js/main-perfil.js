@@ -31,7 +31,7 @@ document.getElementById('exit-aviso-editor').addEventListener('click', ()=>{
 })
 
 function cep () {
-    const cep = document.querySelector("input[name=cep]");
+    const cep = document.querySelector("input[name=cepEditor]");
 
     cep.addEventListener("blur", (e) => {
     const value = cep.value.replace(/[^0-9]+/, "");
@@ -79,15 +79,15 @@ function habilitarEdicao(){
 }
 
 function verificarFormsEditor(){
-    const todosInputs = document.querySelectorAll('input');
+    const todosInputs = document.querySelectorAll('.input-edicao');
         const areaAviso = document.getElementById('area-aviso');
         const aviso = document.getElementById('aviso');
         let todosPreenchidos = true;
-        const email = document.querySelector('input[name=email]');
-        const telefone = document.querySelector('input[name=telefone]');
+        const email = document.querySelector('input[name=emailEditor]');
+        const telefone = document.querySelector('input[name=telefoneEditor]');
         let telefoneValue = telefone.value;
         telefoneValue = telefoneValue.replace(/[^\d]/g, '');
-        const cep = document.querySelector('input[name=cep]');
+        const cep = document.querySelector('input[name=cepEditor]');
         let cepValue = cep.value;
         cepValue = cepValue.replace(/[^\d]/g, '');
 

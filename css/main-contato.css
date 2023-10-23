@@ -239,6 +239,7 @@ main .section-contato{
             padding: 20px;
             background-color:#992d2d;
             display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             z-index: 999;

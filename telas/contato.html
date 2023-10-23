@@ -48,7 +48,8 @@
 
                                                             <!-- Login || Cadastro -->
     <section class="section-login-cadastro" id="section-login-cadastro">
-        <iframe id="iframe-login-cadastro" src="./iframe/login.html" frameborder="0"></iframe>
+        <iframe id="iframe-login" src="../iframe/login.html" frameborder="0"></iframe>
+        <iframe id="iframe-cadastro" src="../iframe/cadastro.html" frameborder="0"></iframe>
     </section>
 
                                                             <!-- Barra de pesquisa -->
@@ -364,14 +365,14 @@
                 </div>
                 <form action="" method="post" class="form-contato" id="form-contato">
                     <label for="">Nome</label>
-                    <input type="text" name="nome" id="" placeholder="Seu nome" required>
+                    <input type="text" name="nome" id="" placeholder="Seu nome" class="inputs-contato">
                     <label for="">E-mail</label>
-                    <input type="email" name="email" id="" placeholder="nome.sobrenome@email.com" required>
+                    <input type="email" name="emailContato" id="" placeholder="nome.sobrenome@email.com" class="inputs-contato">
                     <label for="">Número</label>
-                    <input type="tel" name="numero" id="" placeholder="(xx) xxxx-xxxx" required>
+                    <input type="tel" name="telefoneContato" id="" placeholder="(xx) xxxx-xxxx" class="inputs-contato">
                     <label for="">Mensagem</label>
-                    <textarea name="mansagem" id="" placeholder="Descreva o assunto"></textarea>
-                    <button type="submit">Enviar mensagem</button>
+                    <textarea name="mansagem" id="" placeholder="Descreva o assunto" class="inputs-contato"></textarea>
+                    <button type="button" onclick="verificarFormsContato()">Enviar mensagem</button>
                 </form>
             </section>
 
