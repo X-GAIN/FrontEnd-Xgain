@@ -44,11 +44,12 @@
     </header>
 
     <main class="container">
-        <section id="" class="section-geral section-produtos">
+
+        <section id="" class="section-geral">
             <div class="menu-sections">
                 <h2>Produtos</h2>
                 <button id="">Ver mais</button>
-                <button id="">Adicionar</button>
+                <button id="btn-produto-adicionar">Adicionar</button>
             </div>
             <div class="lista lista-produtos">
                 <!-- ****Item Produto**** -->
@@ -57,12 +58,93 @@
                     <p id="" class="">ID</p>
                     <p id="" class="">Nome</p>
                     <div>
-                        <button id="">Editar</button>
+                        <button id="btn-produto-editar">Editar</button>
                         <button id="">Excluir</button>
                     </div>
                 </div>
             </div>
         </section>
+            <section id="section-adicionar-produto" class="section-adicionar-produto">
+                <div class="area-adicionar-produto">
+                    <i id="exit-produtos-section" class="btn-sair" title="Sair">
+                        <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                        <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                        <path id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                        /></g></g></svg>
+                    </i>
+
+                    <div class="area-forms">
+                        <form action="" method="POST" class="forms-produto">
+                            <label for="">Nome/Modelo</label>
+                            <input type="text" name="modelo" placeholder="Nome do produto">
+
+                            <label for="">Categoria</label>
+                            <select name="categoria" id="">
+                                <option value="nao-selecionado" selected>Não selecionado</option>
+                                <option value="cardio">Cardio</option>
+                                <option value="musculacao">Musculação</option>
+                                <option value="acessorios">Acessórios</option>
+                            </select>
+
+                            <label for="">Sub Categoria</label>
+                            <select name="sub-categoria" id="">
+                                <option value="nao-selecionado" selected class="">Não selecionado</option>
+
+                                <!-- ********* Cardio ******** -->
+                                <option value="esteira" class="subcategorias-cardio">Esteira</option>
+                                <option value="escada" class="subcategorias-cardio">Escada</option>
+                                <option value="bike" class="subcategorias-cardio">Bike</option>
+
+                                <!-- ********* Musculação ******** -->
+                                <option value="abdomen" class="subcategorias-musculacao">Abdômen</option>
+                                <option value="braco" class="subcategorias-musculacao">Braço</option>
+                                <option value="costas" class="subcategorias-musculacao">Costas</option>
+                                <option value="ombro" class="subcategorias-musculacao">Ombro</option>
+                                <option value="peito" class="subcategorias-musculacao">Peito</option>
+                                <option value="perna" class="subcategorias-musculacao">Perna</option>
+
+                                <!-- ********* Acessorios ******** -->
+                                <option value="utilitario" class="subcategorias-acessorios">Utilitário</option>
+                                <option value="equipamentos" class="subcategorias-acessorios">Equipamentos</option>
+                                <option value="outros" class="subcategorias-acessorios">Outros</option>
+                            </select>
+
+                            <label for="">Descrição</label>
+                            <textarea name="descricao" id="" placeholder="Descrição sobre o produto"></textarea>
+
+                            <label for="">Comprimento</label>
+                            <input type="number" name="comprimento" placeholder="0m">
+
+                            <label for="">Altura</label>
+                            <input type="number" name="altura" placeholder="0m">
+
+                            <label for="">Largura</label>
+                            <input type="number" name="largura" placeholder="0m">
+
+                            <label for="">Peso</label>
+                            <input type="number" name="" placeholder="0kg">
+
+                            <label for="">Garantia</label>
+                            <input type="number" name="" placeholder="3 anos">
+
+                            <!-- <p>Apenas imagens png, jpg e jpeg</p> -->
+                            <label for="">Imagens do produto</label>
+                            <label for="imgsFoto" class="file">Clique aqui para adicionar imagens do produto</label>
+                            <input type="file" name="imgsFoto" id="imgsFoto">
+
+                            <label for="">Modelo 3D do produto</label>
+                            <label for="obj3D" class="file">Clique aqui para adicionar o modelo 3d do produto</label>
+                            <input type="file" name="obj3D" id="obj3D">
+
+                            <!-- <label for=""></label>
+                            <input type="text" name="" placeholder=""> -->
+
+                            <button type="button">Adicionar</button>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
 
         <section id="" class="section-geral section-usuarios">
             <div class="menu-sections">
@@ -83,19 +165,52 @@
                 </div>
             </div>
         </section>
+            <!-- <section id="section-adicionar-usuario" class="section-adicionar-usuario">
+                <div class="area-adicionar-produto">
+                    <i id="exit-produtos-section" class="btn-sair" title="Sair">
+                        <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                        <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                        <path id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                        /></g></g></svg>
+                    </i>
+
+                    <div class="area-forms">
+                        <form action="" method="POST" class="forms-usuario">
+
+                        </form>
+                    </div>
+                </div>
+            </section> -->
 
         <section id="" class="section-geral section-banner">
             <div class="menu-sections">
                 <h2>Banner</h2>
-                <button id="">Ver mais</button>
+                <!-- <button id="">Ver mais</button> -->
                 <button id="">Adicionar</button>
             </div>
             <div class="area-mostrar-banner">
-                <img id="" class="banner-img" src="../imgs/banner-home-img-reserva.jpg" alt="Banner reserva">
+                <div class="area-imgsBanner">
+
+                    <img class="banner-img banner-img-foco" src="../imgs/banner-home-img-1.jpg" alt="Banner 1">
+                    <img class="banner-img" src="../imgs/banner-home-img-2.jpg" alt="Banner 2">
+                    <img class="banner-img" src="../imgs/banner-home-img-3.jpg" alt="Banner 3">
+                    <img class="banner-img" src="../imgs/banner-home-img-4.jpg" alt="Banner 4">
+                    <img class="banner-img" src="../imgs/banner-home-img-5.jpg" alt="Banner 5">
+
+                    <div class="area-btns-bolinhas-banner">
+                        <i id="btn-bolinha-banner" class="btn-bolinha-banner banner-foco"></i>
+                        <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
+                        <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
+                        <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
+                    </div>
+
+                </div>
+
                 <div>
-                    <button id="">Anterior</button>
-                    <button id="">Editar</button>
-                    <button id="">Proxima</button>
+                    <button id="btn-banner-anterior">Anterior</button>
+                    <button id="btn-banner-editar">Editar</button>
+                    <button id="btn-banner-excluir">Excluir</button>
+                    <button id="btn-banner-proxima">Proxima</button>
                 </div>
             </div>
         </section>
@@ -110,5 +225,6 @@
     </footer>
 
     <script src="../Js/loading.js" defer></script>
+    <script src="../Js/adm.js" defer></script>
 </body>
 </html>
