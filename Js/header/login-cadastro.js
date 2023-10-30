@@ -84,25 +84,31 @@ function mostrarSenha(a){
     if(a.id === 'icon-mostrar-senha-login'){
         if(inputSenha3.type == 'password'){
             inputSenha3.type = 'text';
+            inputSenha3.placeholder = 'a1a1a1a1'
         }
         else{
             inputSenha3.type = "password";
+            inputSenha3.placeholder="xxxxxxxxx"
         }
     }
     else if(a.id === 'icon-mostrar-senha-1'){
         if(inputSenha1.type == 'password'){
             inputSenha1.type = 'text';
+            inputSenha1.placeholder = 'a1a1a1a1'
         }
         else{
             inputSenha1.type = "password";
+            inputSenha1.placeholder="xxxxxxxxx"
         }
     }
     else if(a.id === 'icon-mostrar-senha-2'){
         if(inputSenha2.type == 'password'){
             inputSenha2.type = 'text';
+            inputSenha2.placeholder = 'a1a1a1a1'
         }
         else{
             inputSenha2.type = "password";
+            inputSenha2.placeholder="xxxxxxxxx"
         }
     }
 }

@@ -36,19 +36,30 @@
         </a>
         
         <a href="../">Home</a>
-        <p>Produtos</p>
-        <p>Usuários</p>
-        <p>Banner</p>
-        <p>Cadastro</p>
+        <a href="#section-produtos">Produtos</a>
+        <a href="#section-usuarios">Usuários</a>
+        <a href="#section-banner">Banner</a>
+        <a id="abrirCadastro">Cadastro</a>
 
     </header>
 
     <main class="container">
 
-        <section id="" class="section-geral">
+        <section id="section-produtos" class="section-geral">
+            <div class="area-aviso" id="area-aviso-excluir-produto">
+                <i id="exit-aviso-excluir-produto" class="btn-sair" title="Sair" onclick="fecharAvisos()">
+                    <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                    <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                    <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                    /></g></g></svg>
+                </i>
+                <p class="erro">--AVISO--</p>
+                <p class="aviso">Certeza que deseja excluir esse produto</p>
+                <button type="button" id="excluir-produto">Excluir</button>
+            </div>
             <div class="menu-sections">
                 <h2>Produtos</h2>
-                <button id="">Ver mais</button>
+                <!-- <button id="">Ver mais</button> -->
                 <button id="btn-produto-adicionar">Adicionar</button>
             </div>
             <div class="lista lista-produtos">
@@ -59,24 +70,34 @@
                     <p id="" class="">Nome</p>
                     <div>
                         <button id="btn-produto-editar">Editar</button>
-                        <button id="">Excluir</button>
+                        <button id="btn-produto-excluir">Excluir</button>
                     </div>
                 </div>
             </div>
         </section>
             <section id="section-adicionar-produto" class="section-adicionar-produto">
                 <div class="area-adicionar-produto">
-                    <i id="exit-produtos-section" class="btn-sair" title="Sair">
+                    <i id="exit-produtos-section" class="btn-sair" title="Sair" onclick="fecharTudo()">
                         <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
                         <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
                         <path id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
                         /></g></g></svg>
                     </i>
 
+                    <div class="area-aviso" id="area-aviso-produto">
+                        <i id="exit-aviso-produto" class="btn-sair" title="Sair" onclick="fecharAvisos()">
+                            <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                            <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                            <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                            /></g></g></svg>
+                        </i>
+                        <p class="erro">--ERRO--</p>
+                        <p class="aviso" id="aviso">Email ou senha incorreta | Sobrenome e telefone não inseridos</p>
+                    </div>
                     <div class="area-forms">
-                        <form action="" method="POST" class="forms-produto">
+                        <form action="" method="POST" class="forms-produto" id="form-produto">
                             <label for="">Nome/Modelo</label>
-                            <input type="text" name="modelo" placeholder="Nome do produto">
+                            <input type="text" name="modelo" placeholder="Nome do produto" class="input-produto">
 
                             <label for="">Categoria</label>
                             <select name="categoria" id="">
@@ -110,47 +131,60 @@
                             </select>
 
                             <label for="">Descrição</label>
-                            <textarea name="descricao" id="" placeholder="Descrição sobre o produto"></textarea>
+                            <textarea name="descricao" id="" placeholder="Descrição sobre o produto" class="input-produto"></textarea>
 
                             <label for="">Comprimento</label>
-                            <input type="number" name="comprimento" placeholder="0m">
+                            <input type="text" name="comprimento" placeholder="0m" class="input-produto">
 
                             <label for="">Altura</label>
-                            <input type="number" name="altura" placeholder="0m">
+                            <input type="text" name="altura" placeholder="0m" class="input-produto">
 
                             <label for="">Largura</label>
-                            <input type="number" name="largura" placeholder="0m">
+                            <input type="text" name="largura" placeholder="0m" class="input-produto">
 
                             <label for="">Peso</label>
-                            <input type="number" name="" placeholder="0kg">
+                            <input type="text" name="" placeholder="0kg" class="input-produto">
 
                             <label for="">Garantia</label>
-                            <input type="number" name="" placeholder="3 anos">
+                            <input type="text" name="" placeholder="3 anos" class="input-produto">
 
                             <!-- <p>Apenas imagens png, jpg e jpeg</p> -->
                             <label for="">Imagens do produto</label>
                             <label for="imgsFoto" class="file">Clique aqui para adicionar imagens do produto</label>
-                            <input type="file" name="imgsFoto" id="imgsFoto">
+                            <input type="file" name="imgsFoto" id="imgsFoto" multiple class="input-produto">
+                            <div id="arquivosSelecionados">Nenhum arquivo selecionado</div>
 
                             <label for="">Modelo 3D do produto</label>
                             <label for="obj3D" class="file">Clique aqui para adicionar o modelo 3d do produto</label>
-                            <input type="file" name="obj3D" id="obj3D">
+                            <input type="file" name="obj3D" id="obj3D" class="input-produto">
+                            <span id="nome3DSelecionado">Nenhum arquivo selecionado</span>
 
                             <!-- <label for=""></label>
                             <input type="text" name="" placeholder=""> -->
 
-                            <button type="button">Adicionar</button>
+                            <button type="button" onclick="verificarFormsProduto()">Adicionar</button>
 
                         </form>
                     </div>
                 </div>
             </section>
 
-        <section id="" class="section-geral section-usuarios">
+        <section id="section-usuarios" class="section-geral section-usuarios">
+            <div class="area-aviso" id="area-aviso-excluir-usuario">
+                <i id="exit-aviso-excluir-usuario" class="btn-sair" title="Sair" onclick="fecharAvisos()">
+                    <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                    <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                    <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                    /></g></g></svg>
+                </i>
+                <p class="erro">--AVISO--</p>
+                <p class="aviso">Certeza que deseja excluir esse usuário</p>
+                <button type="button" id="excluir-usuario">Excluir</button>
+            </div>
             <div class="menu-sections">
                 <h2>Usuários</h2>
-                <button id="">Ver mais</button>
-                <button id="">Adicionar</button>
+                <!-- <button id="">Ver mais</button> -->
+                <button id="btn-usuario-adicionar">Adicionar</button>
             </div>
             <div class="lista lista-produtos">
                 <!-- ****Item Produto**** -->
@@ -159,61 +193,149 @@
                     <p id="" class="">Nome</p>
                     <p id="">Email</p>
                     <div>
-                        <button id="">Editar</button>
-                        <button id="">Excluir</button>
+                        <button id="btn-usuario-editar">Editar</button>
+                        <button id="btn-usuario-excluir">Excluir</button>
                     </div>
                 </div>
             </div>
         </section>
-            <!-- <section id="section-adicionar-usuario" class="section-adicionar-usuario">
-                <div class="area-adicionar-produto">
-                    <i id="exit-produtos-section" class="btn-sair" title="Sair">
+            <section id="section-adicionar-usuario" class="section-adicionar-usuario">
+                <div class="area-adicionar-usuario">
+                    <i id="exit-usuario-section" class="btn-sair" title="Sair" onclick="fecharTudo()">
                         <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
                         <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
                         <path id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
                         /></g></g></svg>
                     </i>
 
+                    <div class="area-aviso" id="area-aviso-usuario">
+                        <i id="exit-aviso-usuario" class="btn-sair" title="Sair" onclick="fecharAvisos()">
+                            <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                            <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                            <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                            /></g></g></svg>
+                        </i>
+                        <p class="erro">--ERRO--</p>
+                        <p class="aviso" id="aviso-usuario">Email ou senha incorreta | Sobrenome e telefone não inseridos</p>
+                    </div>
+
                     <div class="area-forms">
                         <form action="" method="POST" class="forms-usuario">
+                            <label for="usuario-nome">Nome</label>
+
+                            <input type="text" name="nomeEditor" id="usuario-nome" class="input-usuario" placeholder="Nome">
+                        <label for="usuario-sobrenome">Sobrenome</label>
+
+                            <input type="text" name="sobrenomeEditor" id="usuario-sobrenome" class="input-usuario" placeholder="Sobrenome">
+
+                        <label for="usuario-email">E-mail</label>
+
+                            <input type="email" name="emailEditor" id="usuario-email" class="input-usuario" placeholder="nome.sobrenome@email.com">
+
+                        <label for="input-senha-usuario">Senha</label>
+                        <div class="senha-usuario">
+                            <input class="input-senha-usuario input-usuario" id="input-senha-usuario" type="password" placeholder="xxxxxxxxx">
+                            <i class="icon-mostrar-senha" id="icon-mostrar-senha" onclick="mostrarSenhaUsuario(this)"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></i>
+                        </div>
+                        <label for="usuario-numero">Telefone</label>
+
+                            <input type="tel" name="telefoneEditor" id="usuario-numero" class="input-usuario" placeholder="(xx)xxxx-xxxx">
+
+                        <label for="usuario-cep">CEP</label>
+
+                            <input type="text" name="cepEditor" id="usuario-cep" class="input-usuario" placeholder="xxxxx-xxx">
+
+                        <label for="usuario-estado">Estado</label>
+
+                            <input type="text" name="estado" id="usuario-estado" class="input-usuario" placeholder="SP" maxlength="2">
+
+                        <label for="usuario-cidade">Cidade</label>
+
+                            <input type="text" name="cidade" id="usuario-cidade" class="input-usuario" placeholder="Presidente Prudente">
+
+                        <label for="usuario-cargo">Cargo</label>
+
+                            <select name="cargo" id="usuario-cargo">
+                                <option value="0" selected>Usuário</option>
+                                <option value="1">ADM</option>
+                            </select>
+
+                        <button type="button" class="" id="" onclick="verificarFormsEditor()">Adicionar</button>
 
                         </form>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
-        <section id="" class="section-geral section-banner">
+        <section id="section-banner" class="section-geral section-banner">
+
             <div class="menu-sections">
                 <h2>Banner</h2>
                 <!-- <button id="">Ver mais</button> -->
-                <button id="">Adicionar</button>
+                
             </div>
             <div class="area-mostrar-banner">
+                <div class="area-aviso" id="area-aviso-excluir-banner">
+                    <i id="exit-aviso-excluir-banner" class="btn-sair" title="Sair" onclick="fecharAvisos()">
+                        <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                        <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                        <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                        /></g></g></svg>
+                    </i>
+                    <p class="erro">--AVISO--</p>
+                    <p class="aviso">Certeza que deseja excluir esse banner</p>
+                    <button type="button" id="excluir-banner">Excluir</button>
+                </div>
                 <div class="area-imgsBanner">
-
-                    <img class="banner-img banner-img-foco" src="../imgs/banner-home-img-1.jpg" alt="Banner 1">
-                    <img class="banner-img" src="../imgs/banner-home-img-2.jpg" alt="Banner 2">
-                    <img class="banner-img" src="../imgs/banner-home-img-3.jpg" alt="Banner 3">
-                    <img class="banner-img" src="../imgs/banner-home-img-4.jpg" alt="Banner 4">
-                    <img class="banner-img" src="../imgs/banner-home-img-5.jpg" alt="Banner 5">
-
+                    <div class="imgsBanner">
+                        <img class="banner-img banner-img-foco" src="../imgs/banner-home-img-1.jpg" alt="Banner 1">
+                        <img class="banner-img" src="../imgs/banner-home-img-2.jpg" alt="Banner 2">
+                        <img class="banner-img" src="../imgs/banner-home-img-3.jpg" alt="Banner 3">
+                        <img class="banner-img" src="../imgs/banner-home-img-4.jpg" alt="Banner 4">
+                        <img class="banner-img" src="../imgs/banner-home-img-5.jpg" alt="Banner 5">
+                    </div>
                     <div class="area-btns-bolinhas-banner">
-                        <i id="btn-bolinha-banner" class="btn-bolinha-banner banner-foco"></i>
+                        <!-- <i id="btn-bolinha-banner" class="btn-bolinha-banner banner-foco"></i>
                         <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
                         <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
-                        <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i>
+                        <i id="btn-bolinha-banner" class="btn-bolinha-banner"></i> -->
                     </div>
 
                 </div>
 
                 <div>
-                    <button id="btn-banner-anterior">Anterior</button>
-                    <button id="btn-banner-editar">Editar</button>
+                    <button class="passar-e-voltar btn-banner-anterior" id="btn-banner-anterior">Anterior</button>
+                    <!-- <button id="btn-banner-editar">Editar</button> -->
                     <button id="btn-banner-excluir">Excluir</button>
-                    <button id="btn-banner-proxima">Proxima</button>
+                    <button id="btn-adicionar-banner">Adicionar</button>
+                    <button class="passar-e-voltar btn-banner-proximo" id="btn-banner-proximo">Próximo</button>
                 </div>
             </div>
         </section>
+            <section class="adicionar-banner" id="adicionar-banner">
+                <div class="area-aviso" id="area-aviso-banner">
+                    <i id="exit-aviso-banner" class="btn-sair" title="Sair" onclick="fecharAvisos()">
+                        <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                        <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                        <path alt="Botão de sair da area de login/cadastro" id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                        /></g></g></svg>
+                    </i>
+                    <p class="erro">--ERRO--</p>
+                    <p class="aviso" id="aviso-banner">Email ou senha incorreta | Sobrenome e telefone não inseridos</p>
+                </div>
+                <i id="exit-banner-section" class="btn-sair" title="Sair" onclick="fecharTudo()">
+                    <svg version="1.1" viewBox="0 0 510.82 510.82" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(6254.9 1860.8)">
+                    <g transform="translate(37.2 -34.339)" stroke-linecap="round" stroke-linejoin="round">
+                    <path id="path1" d="m-6116.1-1809.4h158.93c88.05 0 158.93 70.885 158.93 158.93v158.93c0 88.05-70.885 158.93-158.93 158.93h-158.93c-88.05 0-158.93-70.885-158.93-158.93v-158.93c0-88.05 70.885-158.93 158.93-158.93z" stop-color="#000000"/><path id="path2" d="m-5904.5-1652.4c14.297-14.471 13.708-37.365-1.3219-51.136-7.2147-6.6135-16.861-10.196-26.818-9.9583-9.9576 0.2372-19.408 4.2758-26.274 11.226l-76.446 77.671-79.152-77.671c-6.8661-6.9494-16.316-10.987-26.272-11.226-9.9576-0.2373-19.606 3.3445-26.82 9.9583-15.023 13.771-15.613 36.665-1.3219 51.136l80.054 80.992-80.054 81.695c-14.297 14.471-13.708 37.366 1.3219 51.138 15.024 13.772 38.796 13.204 53.093-1.2674l77.792-78.435 77.806 78.435c14.297 14.471 38.067 15.039 53.091 1.2674 15.026-13.771 15.615-36.666 1.3219-51.138l-79.961-80.742z" 
+                    /></g></g></svg>
+                </i>
+                <form action="" method="POST">
+                    <label for="bannerImg" id="adicionarBannerLabel">Clique para adicionar</label>
+                    <input type="file" name="bannerImg" id="bannerImg" class="input-banner" multiple>
+                    <span id="bannerAdicionado">Nenhum arquivo selecionado</span>
+                    <button type="button" onclick="verificarBanner()">Adicionar</button>
+                </form>
+            </section>
     </main>
 
     <footer>

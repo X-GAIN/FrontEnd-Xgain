@@ -55,9 +55,11 @@ function mostrarSenhaEditar(a){
     if(a.id === 'icon-mostrar-senha-editar'){
         if(inputSenha.type == 'password'){
             inputSenha.type = 'text';
+            inputSenha.placeholder = 'a1a1a1a1'
         }
         else{
             inputSenha.type = "password";
+            inputSenha.placeholder="xxxxxxxxx"
         }
     }
 }
@@ -125,5 +127,6 @@ function verificarFormsEditor(){
         else{
             const formulario = document.querySelector('form');
             formulario.submit();
+            location.reload();
         }
 }

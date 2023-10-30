@@ -116,6 +116,8 @@ main .section-geral{
     height: 100vh;
     overflow-y: auto;
     flex-direction: column;
+    display: flex;
+    align-items: center;
 }
 .section-geral button{
     margin: 0 10px;
@@ -151,7 +153,11 @@ main .section-geral{
 
 .section-geral .lista{
     width: 100%;
+    max-height: 90vh;
     display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px;
 }
 .lista .item-produto{
     height: 100px;
@@ -168,14 +174,21 @@ main .section-geral{
 }
 
 main .section-banner .area-mostrar-banner{
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .area-imgsBanner{
-    max-width: 50%;
+    max-width: 70%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+.area-imgsBanner .imgsBanner{
+    max-width: 100%;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -183,7 +196,7 @@ main .section-banner .area-mostrar-banner{
 
 .area-imgsBanner .banner-img{
     width: 100%;
-    border-radius: 30px;
+    border-radius: 50px;
     margin-bottom: 20px;
 }
 
@@ -230,6 +243,7 @@ main .section-banner .area-mostrar-banner{
     /* display: none; */
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(2px);
 }
 
 .section-adicionar-produto .area-adicionar-produto{
@@ -270,32 +284,37 @@ main .section-banner .area-mostrar-banner{
     overflow-y: auto;
     padding: 10px 50px;
 }
+.area-forms::-webkit-scrollbar-button{
+    margin: 20px;
+}
 .area-forms form{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
 }
-.area-forms label{
+form label{
     font-size: 18px;
     font-family: var(--mulish), sans-serif;
     font-weight: 600;
 }
-.area-forms input{
+form input{
     border: none;
     border-bottom: 2px solid var(--Preto);
     background-color: transparent;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     font-family: var(--mulish), sans-serif;
     margin-bottom: 10px;
     padding: 0 10px;
+    width: 100%;
+    position: relative;
 }
-.area-forms input[type=file]{
+form input[type=file]{
     border: transparent;
     display: none;
 }
-.area-forms .file{
+form .file{
     width: 100%;
     height: 100px;
     display: flex;
@@ -309,12 +328,12 @@ main .section-banner .area-mostrar-banner{
     font-weight: 600;
     transition: all 0.2s ease-in-out;
 }
-.area-forms .file:hover{
-    background-color: var(--Preto);
+form .file:hover{
+    background-color: var(--verm);
     color: var(--bran);
 }
 
-.area-forms textarea{
+form textarea{
     max-width: 100%;
     min-width: 100%;
     min-height: 150px;
@@ -328,7 +347,7 @@ main .section-banner .area-mostrar-banner{
     background-color: transparent;
 }
 
-.area-forms select{
+form select{
     padding: 5px;
     border: 2px solid var(--Preto);
     margin: 10px 0;
@@ -339,7 +358,7 @@ main .section-banner .area-mostrar-banner{
     font-size: 15px;
     cursor: pointer;
 }
-.area-forms select option{
+form select option{
     border-radius: 25px;
     background-color: var(--bran);
     color: var(--Preto);
@@ -348,12 +367,12 @@ main .section-banner .area-mostrar-banner{
     font-size: 15px;
 }
 
-.area-forms input:focus, .area-forms textarea:focus{
+form input:focus, .area-forms textarea:focus{
     outline: none;
     border-color: var(--verm);
 }
 
-.area-forms button{
+form button{
     padding: 20px 0;
     border: 2px solid var(--Preto);
     border-radius: 25px;
@@ -361,10 +380,182 @@ main .section-banner .area-mostrar-banner{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     background-color: transparent;
-    font-weight: 600;
+    font-weight: 900;
     font-family: var(--mulish), sans-serif;
+    margin-top: 10px;
 }
-.area-forms button:hover{
-    background-color: var(--Preto);
+form button:hover{
+    background-color: var(--verm);
     color: var(--bran);
+}
+
+#btn-remove-file{
+    margin: 0 20px;
+    font-size: 10px;
+    padding: 10px;
+}
+#arquivosSelecionados, #nome3DSelecionado, #bannerAdicionado{
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-family: var(--mulish), sans-serif;
+    color: var(--Preto);
+    font-weight: 600;
+}
+
+
+/* ******************* Section Usuario ******************** */
+
+.section-adicionar-usuario{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0d0d0dde;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(2px);
+}
+.area-adicionar-usuario{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: var(--bran);
+    border: 2px solid var(--Preto);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.senha-usuario{
+    width: 100%;
+    position: relative;
+}
+.icon-mostrar-senha{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.icon-mostrar-senha svg{
+    fill: var(--Preto);
+    transition: all 0.2s ease-in-out;
+}
+.icon-mostrar-senha:hover svg{
+    fill: var(--verm);
+}
+.area-aviso{
+    position: absolute;
+    min-height: 100px;
+    width: 60%;
+    margin-top: 35px;
+    padding: 20px;
+    background-color:#992d2d;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border: 2px solid var(--Preto);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    color: var(--bran);
+    font-family: var(--mulish), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0;
+    animation-name: surgiAreaAviso;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 70;
+}
+    @keyframes surgiAreaAviso {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .area-aviso .erro{
+        /* position: absolute; */
+        /* top: 20px; */
+        font-weight: 900;
+    }
+    .area-aviso .btn-sair{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+    .area-aviso .btn-sair svg{
+        stroke: var(--bran);
+    }
+    .area-aviso .btn-sair svg:hover{
+        stroke: var(--cinz-bran);
+    }
+
+
+/* ********************* Section adicionar Banner ************************* */
+
+.adicionar-banner{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    /* border: 1px solid red; */
+    z-index: -1;
+    opacity: 0;
+    background-color:#d9dbda8e;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease-in-out;
+}
+.adicionar-banner button{
+    width: 100%;
+    background-color: var(--bran);
+    margin: 0;
+    margin-top: 15px;
+}
+.adicionar-banner button:hover{
+    background-color: var(--verm);
+}
+.adicionar-banner #adicionarBannerLabel{
+    width: 50vw;
+    height: 100px;
+    background-color: var(--bran);
+    display: flex;
+    border: 2px solid var(--Preto);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 20px;
+}
+#adicionarBannerLabel:hover{
+    background-color: var(--verm);
+    color: var(--bran);
+}
+
+#area-aviso-excluir-banner button, #area-aviso-excluir-usuario button, #area-aviso-excluir-produto button{
+    margin-top: 15px;
+    border-color: var(--bran);
+    color: var(--bran);
+}
+#area-aviso-excluir-banner button:hover, #area-aviso-excluir-usuario button:hover,  #area-aviso-excluir-produto button:hover{
+    color: var(--verm);
+    background-color: var(--bran);
 }

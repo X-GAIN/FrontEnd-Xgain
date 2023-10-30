@@ -37,7 +37,7 @@ function verificarFormsContato(){
     else{
         const formulario = document.querySelector('form');
         formulario.submit();
-        parent.location.reload();
+        location.reload();
     }
     
     // console.log(telefoneValue)
