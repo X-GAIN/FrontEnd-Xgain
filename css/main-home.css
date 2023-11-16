@@ -301,6 +301,9 @@ main .section-produtos-destaque-home{
                         cursor: pointer;
                         transition: all 0.2s ease-in-out;
                     }
+                    .produtos-outros-linha a{
+                        text-decoration: none;
+                    }
                         .produtos-outros-linha img:hover{
                             filter: brightness(0.9);
                         }
