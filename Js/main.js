@@ -1,21 +1,21 @@
-window.sr = ScrollReveal({ reset: true });
+// window.sr = ScrollReveal({ reset: true });
 
-sr.reveal('.section-banner-home');
-sr.reveal('.section-categorias-main-home');
-sr.reveal('.section-produtos-destaque-home');
-sr.reveal('.section-sobre-home');
-sr.reveal('.section-banner-cadastro');
+// sr.reveal('.section-banner-home');
+// sr.reveal('.section-categorias-main-home');
+// sr.reveal('.section-produtos-destaque-home');
+// sr.reveal('.section-sobre-home');
+// sr.reveal('.section-banner-cadastro');
 
-sr.reveal('.section-banner-titulo-main');
-sr.reveal('.area-sobre-nos');
-sr.reveal('.area-como');
-sr.reveal('.area-desafios');
-sr.reveal('.area-bem-vindo');
+// sr.reveal('.section-banner-titulo-main');
+// sr.reveal('.area-sobre-nos');
+// sr.reveal('.area-como');
+// sr.reveal('.area-desafios');
+// sr.reveal('.area-bem-vindo');
 
 
-sr.reveal('.section-forms-contato');
-sr.reveal('.area-info');
-sr.reveal('.area-redes-sociais');
+// sr.reveal('.section-forms-contato');
+// sr.reveal('.area-info');
+// sr.reveal('.area-redes-sociais');
 
 
 
