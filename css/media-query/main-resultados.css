@@ -66,13 +66,12 @@
     }
     @keyframes section-filtro {
         0%{
-            max-height: 80px;
+            height: 80px;
             width: 80px;
             padding: 0;
         }
         100%{
-            width: 35%;
-            max-height: 100vh;
+            height: 100%;
             align-items: start;
             justify-content: start;
             padding: 25px;

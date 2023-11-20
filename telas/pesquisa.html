@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
 
-    <title>Pesquisa | XGAIN</title>
+    <title id="titlePagina">Pesquisa | XGAIN</title>
 
     <!-- Link do script do Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -296,7 +296,7 @@
     <main class="container">
 
         <section class="section-titulo-main">
-            <h2 class="nome-produto">Pesquisa</h2>
+            <h2 class="" id="pesquisaTitle">Pesquisa</h2>
         </section>
                     
         <section class="main-resultado">
@@ -310,7 +310,7 @@
                     </i>
                     <div class="area-itens-filtro" id="area-itens-filtro">
                         <div class="title-filter">
-                            <h3 id="filtro-cardio">CÁRDIO</h3>
+                            <h3 class="categoriaFiltro cardio" id="filtro-cardio">CÁRDIO</h3>
                             <i id="abrir-itens-filtro-categoria-cardio">
                                 <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10539 1782.7)"><path d="m-10244-1392.5-134.21-134.21 134.21-134.21m198.86 134.21a238.11 238.11 0 0 1-238.1 238.11 238.11 238.11 0 0 1-238.11-238.11 238.11 238.11 0 0 1 238.11-238.11 238.11 238.11 0 0 1 238.1 238.11z" 
                                 fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="40"/></g></svg>
@@ -318,14 +318,14 @@
                         </div>
                             <div class="itens-filtro-categoria" id="itens-filtro-categoria-cardio">
                                 <ul>
-                                    <li id="">Esteira</li>
-                                    <li id="">Escada</li>
-                                    <li id="">Bike</li>
+                                    <li id="subFiltro-esteira" class="subFiltro esteira">Esteira</li>
+                                    <li id="subFiltro-escada" class="subFiltro escada">Escada</li>
+                                    <li id="subFiltro-bike" class="subFiltro bike">Bike</li>
                                 </ul>
                             </div>
 
                         <div class="title-filter">
-                            <h3 id="filtro-musculacao">MUSCULAÇÃO</h3>
+                            <h3 class="categoriaFiltro musculacao" id="filtro-musculacao">MUSCULAÇÃO</h3>
                             <i id="abrir-itens-filtro-categoria-musculacao">
                                 <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10539 1782.7)"><path d="m-10244-1392.5-134.21-134.21 134.21-134.21m198.86 134.21a238.11 238.11 0 0 1-238.1 238.11 238.11 238.11 0 0 1-238.11-238.11 238.11 238.11 0 0 1 238.11-238.11 238.11 238.11 0 0 1 238.1 238.11z" 
                                     fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="40"/></g></svg>
@@ -333,16 +333,16 @@
                         </div>
                         <div class="itens-filtro-categoria" id="itens-filtro-categoria-musculação">
                             <ul>
-                                <li id="">Abdômen</li>
-                                <li id="">Braço</li>
-                                <li id="">Ombro</li>
-                                <li id="">Peito</li>
-                                <li id="">Perna</li>
+                                <li id="subFiltro-abdomen" class="subFiltro abdomen">Abdômen</li>
+                                <li id="subFiltro-braco" class="subFiltro braco">Braço</li>
+                                <li id="subFiltro-ombro" class="subFiltro ombro">Ombro</li>
+                                <li id="subFiltro-peito" class="subFiltro peito">Peito</li>
+                                <li id="subFiltro-perna" class="subFiltro perna">Perna</li>
                             </ul>
                         </div>
 
                         <div class="title-filter">
-                            <h3 id="filtro-acessorios">ACESSÓRIOS</h3>
+                            <h3 class="categoriaFiltro acessorios" id="filtro-acessorios">ACESSÓRIOS</h3>
                             <i id="abrir-itens-filtro-categoria-acessorios">
                                 <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10539 1782.7)"><path d="m-10244-1392.5-134.21-134.21 134.21-134.21m198.86 134.21a238.11 238.11 0 0 1-238.1 238.11 238.11 238.11 0 0 1-238.11-238.11 238.11 238.11 0 0 1 238.11-238.11 238.11 238.11 0 0 1 238.1 238.11z" 
                                     fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="40"/></g></svg>
@@ -350,9 +350,9 @@
                         </div>
                         <div class="itens-filtro-categoria" id="itens-filtro-categoria-acessorios">
                             <ul>
-                                <li id="">Utilitários</li>
-                                <li id="">Equipamentos</li>
-                                <li id="">Outros</li>
+                                <li id="subFiltro-ultilitarios" class="subFiltro ultilitarios">Utilitários</li>
+                                <li id="subFiltro-equipamentos" class="subFiltro equipamentos">Equipamentos</li>
+                                <li id="subFiltro-outros" class="subFiltro outros">Outros</li>
                             </ul>
                         </div>
 
