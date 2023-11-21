@@ -159,7 +159,7 @@ function categoriaFiltros(){
 
 categoriaFiltros()
 
-var esteiraTag = false, escadaTag = false, bikeTag = false, abdomenTag = false, ombroTag = false, peitoTag = false, pernaTag = false, ultilitariosTag = false, equipamentosTag = false, outrosTag = false;
+var esteiraTag = false, escadaTag = false, bikeTag = false, abdomenTag = false, ombroTag = false, peitoTag = false, pernaTag = false, utilitariosTag = false, equipamentosTag = false, outrosTag = false;
 function subCategoriaFiltros(){
     const subCategorias = document.querySelectorAll('.subFiltro')
 
@@ -173,7 +173,7 @@ function subCategoriaFiltros(){
             const ombro = subCategoria.target.classList.contains('ombro');
             const peito = subCategoria.target.classList.contains('peito');
             const perna = subCategoria.target.classList.contains('perna');
-            const ultilitarios = subCategoria.target.classList.contains('ultilitarios');
+            const utilitarios = subCategoria.target.classList.contains('utilitarios');
             const equipamentos = subCategoria.target.classList.contains('equipamentos');
             const outros = subCategoria.target.classList.contains('outros');
 
@@ -302,17 +302,17 @@ function subCategoriaFiltros(){
                 console.log(atualizarUrl);
             }
             
-            else if(ultilitarios){
-                ultilitariosTag = true;
+            else if(utilitarios){
+                utilitariosTag = true;
                 const url = window.location.href;
                 if(url.includes('&')){
                     var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `&ultilitarios=${ultilitariosTag}`;
+                    var atualizarUrl = urlLimpa + `&utilitarios=${utilitariosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `&ultilitarios=${ultilitariosTag}`;
+                    var atualizarUrl = window.location.href + `&utilitarios=${utilitariosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -480,10 +480,4 @@ function alterarTituloDaPesquisa(){
 }
 alterarTituloDaPesquisa();
 
-// function alterarTituloDoResultados(){
-//     var categoria = 'Cardio';
-//     // var urlPesquisa = window.location.href = `pesquisa.html/busca=${busca}`;
-//     document.getElementById('resultadoTitle').innerHTML = categoria;
-//     document.getElementById('titlePagina').innerHTML = categoria + ' | XGAIN';
-// }
-// alterarTituloDoResultados();
+
