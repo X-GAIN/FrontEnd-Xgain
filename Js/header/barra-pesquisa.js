@@ -144,4 +144,38 @@ function pesquisar() {
     
     var buscar = window.location.href = `../telas/pesquisa.html?buscar=${input}`;
     parent.window.location.href = buscar;
+    window.location.href = '../iframe/barra-pesquisa.html';
+}
+
+
+function itemPesquisado(){
+    var input = document.getElementById('searchbar').value;
+
+    var divItem = document.createElement('div');
+    divItem.setAttribute('id', input+'div');
+    divItem.classList.add('item-resultado');
+
+    var sectionResultadoPesquisa = document.getElementById('resultado-pesquisa');
+
+    // Limpar resultados anteriores
+    sectionResultadoPesquisa.innerHTML = '';
+
+    // Verificar se há entrada antes de adicionar novos resultados
+    if (input.trim() !== '') {
+        sectionResultadoPesquisa.appendChild(divItem);
+
+        var pItem = document.createElement('p');
+        pItem.setAttribute('id', input+'item')
+        pItem.textContent = input;
+
+        divItem.appendChild(pItem);
+    }
+
+    divItem.addEventListener('click', ()=>{
+        var item = document.getElementById(input+'item').innerHTML;
+
+        var buscar = window.location.href = `../telas/pesquisa.html?buscar=${item}`;
+        parent.window.location.href = buscar;
+        window.location.href = '../iframe/barra-pesquisa.html';
+    })
 }

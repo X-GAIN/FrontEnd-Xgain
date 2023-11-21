@@ -31,3 +31,9 @@
 main{
     min-height: 100vh !important;
 }
+
+.nome-produto{
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+}

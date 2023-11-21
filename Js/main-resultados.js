@@ -471,7 +471,11 @@ function alterarTituloDaPesquisa(){
     const urlParams = new URLSearchParams(window.location.search);
     buscar = urlParams.get('buscar');
     // var urlPesquisa = window.location.href = `pesquisa.html/busca=${busca}`;
-    document.getElementById('pesquisaTitle').innerHTML = buscar;
+
+    let titulo = document.getElementById('pesquisaTitle');
+
+    titulo.innerHTML = buscar.slice(0, 30) + '...';;
+    titulo.title = buscar;
     document.getElementById('titlePagina').innerHTML = buscar + ' | XGAIN';
 }
 alterarTituloDaPesquisa();

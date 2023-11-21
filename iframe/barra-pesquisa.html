@@ -41,18 +41,20 @@
             /></g></g></svg>
         </i>
         <div class="barra-pesquisa" title="">
-            <input type="search" placeholder="Pesquise..." id="searchbar">
-            <button type="button" onclick="pesquisar()"><!-- botao onde será execultado a pesquisa e enviado o usuario até a pagina de resultados da pesquisa -->
-                <i title="Pesquisar">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
-                </i>
-            </button>
+            <form action="">
+                <input type="search" placeholder="Pesquise..." id="searchbar" oninput="itemPesquisado()">
+                <button type="submit" onclick="pesquisar()"><!-- botao onde será execultado a pesquisa e enviado o usuario até a pagina de resultados da pesquisa -->
+                    <i title="Pesquisar">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                    </i>
+                </button>
+            </form>
         </div>
 
         <section id="resultado-pesquisa" class="resultado-pesquisa">
             <!-- Dentro de espaço apararecera o resultado da pesquisa -->
             <!-- <div class="item-resultado" id="item-resultado" onclick="pesquisarItem()">
-                <p>Exemplo de produto pesquisado</p>
+                <p id="resultadoItem">Exemplo de produto pesquisado</p>
             </div> -->
         </section>
 
