@@ -2,6 +2,7 @@ document.getElementById('exit-aviso-section-contato').addEventListener('click', 
     document.getElementById('area-aviso-contato').style.display = "none";
 });
 
+var envio = false;
 function verificarFormsContato(){
     const todosInputs = document.querySelectorAll('.inputs-contato');
     const areaAviso = document.getElementById('area-aviso-contato');
@@ -38,8 +39,23 @@ function verificarFormsContato(){
         const formulario = document.querySelector('form');
         formulario.submit();
         location.reload();
+        envio = true;
+        window.location.href = `contato.html?envio=${envio}`;
     }
     
     // console.log(telefoneValue)
 
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+envio = urlParams.get('envio');
+console.log(envio);
+
+if(envio){
+    const areaAviso = document.getElementById('area-aviso-contato');
+    document.getElementById('tituloNotificacao').innerHTML = 'MENSAGEM ENVIADA!';
+    document.getElementById('aviso').innerHTML = 'Entraremos em contato em até 72h, fique atento em sua caixa de e-mail';
+    areaAviso.style.display = 'flex';
+    envio = null;
+    console.log(envio);
 }
