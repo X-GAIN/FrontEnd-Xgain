@@ -1,15 +1,16 @@
-document.getElementById('exit-pesquisa-section').addEventListener('click', fecharBarraDePesquisa);
+// document.getElementById('exit-pesquisa-section').addEventListener('click', fecharBarraDePesquisa);
 document.getElementById('icon-pesquisa').addEventListener('click', abrirBarraDePesquisa);
 
 
 function abrirBarraDePesquisa(){
-    document.getElementById('pesquisa-section').style.display = 'flex';
+    document.getElementById('pesquisa-section-iframe').style.display = 'flex';
     document.getElementById('body').style.overflowY = 'hidden';
 };
 
 function fecharBarraDePesquisa(){
-    document.getElementById('pesquisa-section').style.display = 'none';
+    document.getElementById('pesquisa-section-iframe').style.display = 'none';
     document.getElementById('body').style.overflowY = 'auto';
+    // console.log('x clicado')
 };
 
 
@@ -127,4 +128,20 @@ function pesquisaProdutos(){
             alert (produto.modelo)              
         }
     }
+}
+
+
+function pesquisarItem(){
+    var item = document.querySelector('#item-resultado p').innerHTML;
+
+    var buscar = window.location.href = `../telas/pesquisa.html?buscar=${item}`;
+    parent.window.location.href = buscar;
+}
+
+
+function pesquisar() {
+    var input = document.getElementById('searchbar').value;
+    
+    var buscar = window.location.href = `../telas/pesquisa.html?buscar=${input}`;
+    parent.window.location.href = buscar;
 }

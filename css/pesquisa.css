@@ -9,24 +9,42 @@
     --mulish: 'mulish';
     --audiowide: 'audiowide';
 }
-
-.section-pesquisa{
+#pesquisa-section-iframe{
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 70;
+    top: 0;
+    background-color: #0d0d0ddb;
+    backdrop-filter: blur(2px);
+}
+#pesquisa-section-iframe iframe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 120px;
+}
+.section-pesquisa{
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     height: 75vh;
-    position: fixed;
     /* background-color: #0D0D0D; */
     z-index: 70;
-    top: 120px;
     transition: 0.2s;
     animation-name: surgiDaAreaDePesquisa;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(0px);
     border-radius: 3vw;
 }
 @keyframes surgiDaAreaDePesquisa {
@@ -51,7 +69,7 @@
     position: fixed;
     width: 100%;
     height: 75vh;
-    background-color:#0d0d0dcb;
+    background-color:#0d0d0db0;
     display: flex;
     flex-flow: column;
     border-radius: 3vw;
@@ -246,14 +264,14 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color:#9e9e9e;
 } */
 
-.section-pesquisa .fundo{
+/* .section-pesquisa .fundo{
     background-color: #0d0d0dd8;
     position: absolute;
     top: -1;
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
     z-index: 69;
-}
+} */
 
 
 

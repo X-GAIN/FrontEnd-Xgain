@@ -86,14 +86,14 @@ function categoriaFiltros(){
             if(cardio){
                 cardioTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?cardio=${cardioTag}`;
+                    var atualizarUrl = urlLimpa + `&cardio=${cardioTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?cardio=${cardioTag}`;
+                    var atualizarUrl = window.location.href + `&cardio=${cardioTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl)
@@ -101,14 +101,14 @@ function categoriaFiltros(){
             else if(musculacao){
                 musculacaoTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?musculacao=${musculacaoTag}`;
+                    var atualizarUrl = urlLimpa + `&musculacao=${musculacaoTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?musculacao=${musculacaoTag}`;
+                    var atualizarUrl = window.location.href + `&musculacao=${musculacaoTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl)
@@ -116,14 +116,14 @@ function categoriaFiltros(){
             else if(acessorios){
                 acessoriosTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?acessorios=${acessoriosTag}`;
+                    var atualizarUrl = urlLimpa + `&acessorios=${acessoriosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?acessorios=${acessoriosTag}`;
+                    var atualizarUrl = window.location.href + `&acessorios=${acessoriosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl)
@@ -181,14 +181,14 @@ function subCategoriaFiltros(){
             if(esteira){
                 esteiraTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?esteira=${esteiraTag}`;
+                    var atualizarUrl = urlLimpa + `&esteira=${esteiraTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?esteira=${esteiraTag}`;
+                    var atualizarUrl = window.location.href + `&esteira=${esteiraTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl)
@@ -196,14 +196,14 @@ function subCategoriaFiltros(){
             else if(escada){
                 escadaTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?escada=${escadaTag}`;
+                    var atualizarUrl = urlLimpa + `&escada=${escadaTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?escada=${escadaTag}`;
+                    var atualizarUrl = window.location.href + `&escada=${escadaTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl)
@@ -211,14 +211,14 @@ function subCategoriaFiltros(){
             else if(bike){
                 bikeTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?bike=${bikeTag}`;
+                    var atualizarUrl = urlLimpa + `&bike=${bikeTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?escada=${bikeTag}`;
+                    var atualizarUrl = window.location.href + `&escada=${bikeTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl)
@@ -226,14 +226,14 @@ function subCategoriaFiltros(){
             else if(abdomen){
                 abdomenTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?abdomen=${abdomenTag}`;
+                    var atualizarUrl = urlLimpa + `&abdomen=${abdomenTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?abdomen=${abdomenTag}`;
+                    var atualizarUrl = window.location.href + `&abdomen=${abdomenTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -241,14 +241,14 @@ function subCategoriaFiltros(){
             else if(braco){
                 bracoTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?braco=${bracoTag}`;
+                    var atualizarUrl = urlLimpa + `&braco=${bracoTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?braco=${bracoTag}`;
+                    var atualizarUrl = window.location.href + `&braco=${bracoTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -257,14 +257,14 @@ function subCategoriaFiltros(){
             else if(ombro){
                 ombroTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?ombro=${ombroTag}`;
+                    var atualizarUrl = urlLimpa + `&ombro=${ombroTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?ombro=${ombroTag}`;
+                    var atualizarUrl = window.location.href + `&ombro=${ombroTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -273,14 +273,14 @@ function subCategoriaFiltros(){
             else if(peito){
                 peitoTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?peito=${peitoTag}`;
+                    var atualizarUrl = urlLimpa + `&peito=${peitoTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?peito=${peitoTag}`;
+                    var atualizarUrl = window.location.href + `&peito=${peitoTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -289,14 +289,14 @@ function subCategoriaFiltros(){
             else if(perna){
                 pernaTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?perna=${pernaTag}`;
+                    var atualizarUrl = urlLimpa + `&perna=${pernaTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?perna=${pernaTag}`;
+                    var atualizarUrl = window.location.href + `&perna=${pernaTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -305,14 +305,14 @@ function subCategoriaFiltros(){
             else if(ultilitarios){
                 ultilitariosTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?ultilitarios=${ultilitariosTag}`;
+                    var atualizarUrl = urlLimpa + `&ultilitarios=${ultilitariosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?ultilitarios=${ultilitariosTag}`;
+                    var atualizarUrl = window.location.href + `&ultilitarios=${ultilitariosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -321,14 +321,14 @@ function subCategoriaFiltros(){
             else if(equipamentos){
                 equipamentosTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?equipamentos=${equipamentosTag}`;
+                    var atualizarUrl = urlLimpa + `&equipamentos=${equipamentosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?equipamentos=${equipamentosTag}`;
+                    var atualizarUrl = window.location.href + `&equipamentos=${equipamentosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -337,14 +337,14 @@ function subCategoriaFiltros(){
             else if(outros){
                 outrosTag = true;
                 const url = window.location.href;
-                if(url.includes('?')){
-                    var limparUrl = url.split('?');
+                if(url.includes('&')){
+                    var limparUrl = url.split('&');
                     var urlLimpa = limparUrl[0];
-                    var atualizarUrl = urlLimpa + `?outros=${outrosTag}`;
+                    var atualizarUrl = urlLimpa + `&outros=${outrosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 else{
-                    var atualizarUrl = window.location.href + `?outros=${outrosTag}`;
+                    var atualizarUrl = window.location.href + `&outros=${outrosTag}`;
                     window.location.href = atualizarUrl;
                 }
                 console.log(atualizarUrl);
@@ -467,10 +467,12 @@ subCategoriaFiltros();
 
 // futuro quando isso estiver funfando
 function alterarTituloDaPesquisa(){
-    var busca = 'Pesquisa';
+    var buscar;
+    const urlParams = new URLSearchParams(window.location.search);
+    buscar = urlParams.get('buscar');
     // var urlPesquisa = window.location.href = `pesquisa.html/busca=${busca}`;
-    document.getElementById('pesquisaTitle').innerHTML = busca;
-    document.getElementById('titlePagina').innerHTML = busca + ' | XGAIN';
+    document.getElementById('pesquisaTitle').innerHTML = buscar;
+    document.getElementById('titlePagina').innerHTML = buscar + ' | XGAIN';
 }
 alterarTituloDaPesquisa();
 
