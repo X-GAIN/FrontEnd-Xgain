@@ -198,6 +198,7 @@
     width: 50%;
     align-items: center;
     font-size: 15px;
+    text-align: start;
 }
 
 .section-carrinho .excluir-produto {
@@ -206,6 +207,7 @@
     width: 5%;
     justify-content: end;
     align-items: center;
+    cursor: pointer;
 }
 
 .section-carrinho .excluir-produto svg {

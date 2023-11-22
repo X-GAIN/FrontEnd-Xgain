@@ -141,10 +141,14 @@ function pesquisarItem(){
 
 function pesquisar() {
     var input = document.getElementById('searchbar').value;
-    
+    if(input.trim() !== ''){
     var buscar = window.location.href = `../telas/pesquisa.html?buscar=${input}`;
     parent.window.location.href = buscar;
     window.location.href = '../iframe/barra-pesquisa.html';
+    }
+    else{
+        // alert("Por favor, digite algo para procurar!");
+    }
 }
 
 
