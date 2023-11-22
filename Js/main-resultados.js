@@ -474,7 +474,9 @@ function alterarTituloDaPesquisa(){
 
     let titulo = document.getElementById('pesquisaTitle');
 
-    titulo.innerHTML = buscar.slice(0, 30) + '...';;
+    if(buscar.length > 30){
+        titulo.innerHTML = buscar.slice(0, 30) + '...';
+    }else {titulo.innerHTML = buscar;}
     titulo.title = buscar;
     document.getElementById('titlePagina').innerHTML = buscar + ' | XGAIN';
 }
