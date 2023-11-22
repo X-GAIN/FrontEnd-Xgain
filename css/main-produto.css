@@ -276,6 +276,25 @@ main svg:hover{
                     }
                         .load-3d svg{
                             height: 40px;
+                            stroke: var(--Preto);
+                            animation: startLoadIcon2 3s cubic-bezier(.56,.64,.87,.19) infinite;
+                        }
+                        .load-3d .load-icon::after{
+                            color: var(--Preto);
+                        }
+                        @keyframes startLoadIcon2 {
+                            0%{
+                                stroke-dashoffset: 1000;
+                                fill: transparent;
+                            }
+                            60%{
+                                fill: var(--Preto);
+                                stroke-dashoffset: 100;
+                            }
+                            100%{
+                                fill: var(--Preto);
+                                stroke-dashoffset: 0;
+                            }
                         }
                     .area-img3d .btn-sair-img3d{
                         position: absolute;
