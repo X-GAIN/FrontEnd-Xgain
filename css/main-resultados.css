@@ -76,12 +76,13 @@ main svg:hover{
         .main-resultado .main-filter-produtos{
             width: 100%;
             display: flex;
+            align-items: start;
         }
         .main-resultado .section-filtro{
             width: 80px;
             min-width: 220px;
             height: 80px;
-            /* max-height: 100vh; */
+            max-height: 100vh;
             border: 2px solid var(--Preto);
             overflow-y: auto;
             overflow-x: hidden;
@@ -158,7 +159,6 @@ main svg:hover{
                         font-size: 20px;
                         cursor: pointer;
                         transition: all 0.2s ease-in-out;
-                        text-transform: uppercase;
                     }
                     .title-filter h3:hover{
                         color: var(--verm);
@@ -209,8 +209,10 @@ main svg:hover{
                 align-items: end;
             }
                 .section-produtos .produto{
-                    height: 100%;
-                    width: 100%;
+                    /* height: 100%;
+                    width: 100%; */
+                    max-width: 300px;
+                    max-height: 300px;
                     position: relative;
                     cursor: pointer;
                     transition: all 0.3s ease-in-out;

@@ -1,9 +1,9 @@
 document.getElementById('btn-categoria-cardio').addEventListener('click', ()=>{
-    window.location.href = './telas/categoria.html?c=&cardio=true';
+    window.location.href = './telas/resultados.html?buscar=categoria&cat=Cárdio';
 })
 document.getElementById('btn-categoria-musculacao').addEventListener('click', ()=>{
-    window.location.href = './telas/categoria.html?c=&musculacao=true';
+    window.location.href = './telas/resultados.html?buscar=categoria&cat=Musculação';
 })
 document.getElementById('btn-categoria-acessorios').addEventListener('click', ()=>{
-    window.location.href = './telas/categoria.html?c=&acessorios=true';
+    window.location.href = './telas/resultados.html?buscar=categoria&cat=Acessórios';
 })
