@@ -1,20 +1,20 @@
 document.getElementById('btn-produto-adicionar').addEventListener('click', ()=>{
     // document.getElementById('section-adicionar-produto').style.display = 'flex'
-    document.getElementById('section-adicionar-produto').style.opacity = '1'
-    document.getElementById('section-adicionar-produto').style.zIndex = '1'
-    document.getElementById('body').style.overflow = 'hidden'
+    document.getElementById('section-adicionar-produto').style.opacity = '1';
+    document.getElementById('section-adicionar-produto').style.zIndex = '1';
+    document.getElementById('body').style.overflow = 'hidden';
 })
 document.getElementById('btn-produto-editar').addEventListener('click', ()=>{
     // document.getElementById('section-adicionar-produto').style.display = 'flex'
-    document.getElementById('section-adicionar-produto').style.opacity = '1'
-    document.getElementById('section-adicionar-produto').style.zIndex = '1'
-    document.getElementById('body').style.overflow = 'hidden'
+    document.getElementById('section-adicionar-produto').style.opacity = '1';
+    document.getElementById('section-adicionar-produto').style.zIndex = '1';
+    document.getElementById('body').style.overflow = 'hidden';
 })
 document.getElementById('btn-adicionar-banner').addEventListener('click', ()=>{
     // document.getElementById('section-adicionar-produto').style.display = 'flex'
-    document.getElementById('adicionar-banner').style.opacity = '1'
-    document.getElementById('adicionar-banner').style.zIndex = '1'
-    document.getElementById('body').style.overflow = 'hidden'
+    document.getElementById('adicionar-banner').style.opacity = '1';
+    document.getElementById('adicionar-banner').style.zIndex = '1';
+    document.getElementById('body').style.overflow = 'hidden';
 })
 
 // document.getElementById('exit-produtos-section').addEventListener('click', ()=>{
@@ -25,13 +25,13 @@ document.getElementById('btn-adicionar-banner').addEventListener('click', ()=>{
 // })
 
 function fecharTudo(){
-    document.getElementById('section-adicionar-produto').style.opacity = '0'
-    document.getElementById('section-adicionar-produto').style.zIndex = '-1'
-    document.getElementById('section-adicionar-usuario').style.opacity = '0'
-    document.getElementById('section-adicionar-usuario').style.zIndex = '-1'
-    document.getElementById('adicionar-banner').style.opacity = '0'
-    document.getElementById('adicionar-banner').style.zIndex = '-1'
-    document.getElementById('body').style.overflow = 'auto'
+    document.getElementById('section-adicionar-produto').style.opacity = '0';
+    document.getElementById('section-adicionar-produto').style.zIndex = '-1';
+    document.getElementById('section-adicionar-usuario').style.opacity = '0';
+    document.getElementById('section-adicionar-usuario').style.zIndex = '-1';
+    document.getElementById('adicionar-banner').style.opacity = '0';
+    document.getElementById('adicionar-banner').style.zIndex = '-1';
+    document.getElementById('body').style.overflow = 'auto';
 }
 function fecharAvisos(){
         // document.getElementById('area-aviso').style.display = 'none';
@@ -45,21 +45,21 @@ function fecharAvisos(){
 
 document.getElementById('btn-usuario-adicionar').addEventListener('click', ()=>{
     // document.getElementById('section-adicionar-produto').style.display = 'flex'
-    document.getElementById('section-adicionar-usuario').style.opacity = '1'
-    document.getElementById('section-adicionar-usuario').style.zIndex = '1'
-    document.getElementById('body').style.overflow = 'hidden'
+    document.getElementById('section-adicionar-usuario').style.opacity = '1';
+    document.getElementById('section-adicionar-usuario').style.zIndex = '1';
+    document.getElementById('body').style.overflow = 'hidden';
 })
 document.getElementById('abrirCadastro').addEventListener('click', ()=>{
     // document.getElementById('section-adicionar-produto').style.display = 'flex'
-    document.getElementById('section-adicionar-usuario').style.opacity = '1'
-    document.getElementById('section-adicionar-usuario').style.zIndex = '1'
+    document.getElementById('section-adicionar-usuario').style.opacity = '1';
+    document.getElementById('section-adicionar-usuario').style.zIndex = '1';
     document.getElementById('body').style.overflow = 'hidden'
 })
 document.getElementById('btn-usuario-editar').addEventListener('click', ()=>{
     // document.getElementById('section-adicionar-produto').style.display = 'flex'
-    document.getElementById('section-adicionar-usuario').style.opacity = '1'
-    document.getElementById('section-adicionar-usuario').style.zIndex = '1'
-    document.getElementById('body').style.overflow = 'hidden'
+    document.getElementById('section-adicionar-usuario').style.opacity = '1';
+    document.getElementById('section-adicionar-usuario').style.zIndex = '1';
+    document.getElementById('body').style.overflow = 'hidden';
 })
 // document.getElementById('exit-aviso').addEventListener('click', ()=>{
 //     document.getElementById('area-aviso').style.display = 'none';
@@ -78,11 +78,11 @@ function mostrarSenhaUsuario(a){
     if(a.id === 'icon-mostrar-senha'){
         if(inputSenha.type == 'password'){
             inputSenha.type = 'text';
-            inputSenha.placeholder = 'a1a1a1a1'
+            inputSenha.placeholder = 'a1a1a1a1';
         }
         else{
             inputSenha.type = "password";
-            inputSenha.placeholder="xxxxxxxxx"
+            inputSenha.placeholder="xxxxxxxxx";
         }
     }
 }
