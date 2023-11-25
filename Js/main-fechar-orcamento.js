@@ -42,6 +42,12 @@ document.getElementById('exit-aviso-section-orcamento').addEventListener('click'
 });
 })();
 
+document.getElementById('enviarFecharOrcamento').addEventListener('click', (e)=>{
+    e.preventDefault();
+    
+    verificarFormsOrcamento();
+})
+
 var envio = false;
 function verificarFormsOrcamento(){
     const todosInputs = document.querySelectorAll('.inputs-orcamento');
@@ -91,10 +97,12 @@ function verificarFormsOrcamento(){
             aviso.innerHTML = 'CEP inválido';
         }
         else{
-            const formulario = document.querySelector('form');
+            copyInformacoes();
+            const formulario = document.getElementById('form-fecharOrcamento-copy');
             formulario.submit();
             envio = true;
-            window.location.href = `fechar-orcamento.html?envio=${envio}`;
+            // window.location.href = `fechar-orcamento.html?envio=${envio}`;
+            formulario.action = 'https://api.staticforms.xyz/submit'
         }
 }
 const urlParams = new URLSearchParams(window.location.search);
@@ -106,4 +114,33 @@ if(envio){
     areaAviso.style.display = 'flex';
     envio = null;
     console.log(envio);
+}
+
+function copyInformacoes(){
+    const nome = document.getElementById('nomeOrcamento').value;
+    const sobrenome = document.getElementById('sobrenomOrcamento').value;
+    const email = document.getElementById('emailOrcamento').value;
+    const telefone = document.getElementById('telefoneOrcamento').value;
+    const cep = document.getElementById('cepOrcamento').value;
+    const estado = document.getElementById('estadoOrcamento').value;
+    const cidade = document.getElementById('cidadeOrcamento').value;
+    const copynome = document.getElementById('copyNome');
+    const copyemail = document.getElementById('copyEmail');
+    const copytelefone = document.getElementById('copyTelefone');
+    const copycep = document.getElementById('copyCep');
+    const copyestado = document.getElementById('copyEstado');
+    const copycidade = document.getElementById('copyCidade');
+    const copyProdutos = document.getElementById('copyProdutos');
+    const prodsSelect = 'Nada escolhido';
+
+    
+
+    copynome.value = nome + ' ' + sobrenome;
+    copyemail.value = email;
+    copytelefone.value = telefone;
+    copycep.value = cep;
+    copyestado.value = estado;
+    copycidade.value = cidade;
+
+    copyProdutos.value = prodsSelect;
 }

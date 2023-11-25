@@ -25,3 +25,5 @@ function maisOuMenos(valor){
     
     numero.textContent = contador;
 }
+
+document.getElementById('titleProduto').innerHTML = document.getElementById('nomeProduto').innerHTML + ' | XGAIN';

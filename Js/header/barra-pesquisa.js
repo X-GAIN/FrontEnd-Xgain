@@ -18,21 +18,21 @@ function fecharBarraDePesquisa(){
 
 
 
-function pesquisaProdutos(){
-    let input = document.getElementById('searchbar').value
-    input = input.toLowerCase();
-    const produto = produtosForaDoBanco.find((p) => p.id === idProduto);
+// function pesquisaProdutos(){
+//     let input = document.getElementById('searchbar').value
+//     input = input.toLowerCase();
+//     const produto = produtosForaDoBanco.find((p) => p.id === idProduto);
 
-    for (i = 0; i < produto.modelo.length; i++){
-        if (!produto[i].innerHTML.toLowerCase().includes(input)) {
-            produto[i].style.display="none";
-        }
-        else {
-            produto[i].style.display="list-item";  
-            alert (produto.modelo)              
-        }
-    }
-}
+//     for (i = 0; i < produto.modelo.length; i++){
+//         if (!produto[i].innerHTML.toLowerCase().includes(input)) {
+//             produto[i].style.display="none";
+//         }
+//         else {
+//             produto[i].style.display="list-item";  
+//             alert (produto.modelo)              
+//         }
+//     }
+// }
 
 
 function pesquisarItem(){

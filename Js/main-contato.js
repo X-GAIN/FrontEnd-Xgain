@@ -3,6 +3,12 @@ document.getElementById('exit-aviso-section-contato').addEventListener('click', 
 });
 
 var envio = false;
+
+document.getElementById('enviarMensagemContato').addEventListener('click', (e)=>{
+    e.preventDefault();
+
+    verificarFormsContato();
+})
 function verificarFormsContato(){
     const todosInputs = document.querySelectorAll('.inputs-contato');
     const areaAviso = document.getElementById('area-aviso-contato');
@@ -36,11 +42,12 @@ function verificarFormsContato(){
         aviso.innerHTML = 'Telefone inválido';
     }
     else{
-        const formulario = document.querySelector('form');
+        const formulario = document.getElementById('form-contato-copy');
         formulario.submit();
-        location.reload();
+        // location.reload();
         envio = true;
-        window.location.href = `contato.html?envio=${envio}`;
+        // window.location.href = `https://formsubmit.co/xgain.oficial@gmail.com`;
+        formulario.action = 'https://formsubmit.co/xgain.oficial@gmail.com';
     }
     
     // console.log(telefoneValue)
@@ -58,4 +65,21 @@ if(envio){
     areaAviso.style.display = 'flex';
     envio = null;
     console.log(envio);
+}
+
+function copyInformacoes(){
+    const nome = document.getElementById('nomeContato').value;
+    const email = document.getElementById('emailContato').value;
+    const telefone = document.getElementById('telefoneContato').value;
+    const mensagem = document.getElementById('mensagemContato').value;
+    const copynome = document.getElementById('copyNomeContato');
+    const copyemail = document.getElementById('copyEmailContato');
+    const fullmensagem = document.getElementById('copyMensagemContato');
+
+    copynome.value = nome;
+    copyemail.value = email;
+
+    fullmensagem.value = `Telefone: ${telefone}
+-----------------------------------------------
+Mensagem: ${mensagem}`;
 }
