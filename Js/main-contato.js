@@ -28,18 +28,30 @@ function verificarFormsContato(){
     if (!todosPreenchidos) {
         areaAviso.style.display = 'flex';
         aviso.innerHTML = 'Preencha todos os campos';
+        areaAviso.scrollIntoView({
+            behavior: 'smooth'
+        });
     }
     else if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
         areaAviso.style.display = 'flex';
         aviso.innerHTML = 'Email incorreto';
+        areaAviso.scrollIntoView({
+            behavior: 'smooth'
+        });
     }
     else if(telefoneValue === ''){
         areaAviso.style.display = 'flex';
         aviso.innerHTML = 'Telefone inválido';
+        areaAviso.scrollIntoView({
+            behavior: 'smooth'
+        });
     }
     else if(!(telefoneValue.length >= 10 && telefoneValue.length <= 11)){
         areaAviso.style.display = 'flex';
         aviso.innerHTML = 'Telefone inválido';
+        areaAviso.scrollIntoView({
+            behavior: 'smooth'
+        });
     }
     else{
         const formulario = document.getElementById('form-contato-copy');

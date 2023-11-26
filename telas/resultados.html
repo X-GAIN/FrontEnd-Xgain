@@ -405,9 +405,9 @@
         </section>
 
         <section class="end-footer container">
-            <a href="#topo"><i id="icon-logo-footer" title="Logo, clique para subir para o topo da pagina"><svg version="1.1" viewBox="0 0 514.16 314.73" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(3.3284 0 0 3.3284 -14854 -1506.8)">
+            <i id="icon-logo-footer" title="Logo, clique para subir para o topo da pagina"><svg version="1.1" viewBox="0 0 514.16 314.73" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(3.3284 0 0 3.3284 -14854 -1506.8)">
                 <path alt="logo do site, clique para subir até o topo da página" transform="translate(976.43,-7.7164)" d="m3540.4 553.19-33.732-0.0426-18.533-23.68 0.03-24.933 39.806 0.0204-14.475 15.52-0.2235 0.22443 10.251 13.077 23.143-26.962-16.234-18.4-18.802-0.025-23.451-25.721 53.76-0.0312 21.638 24.421 21.624-24.421 53.76 0.0312-23.451 25.721-18.802 0.025-16.234 18.4 23.143 26.962 10.251-13.077-0.2236-0.22443-14.475-15.52 39.806-0.0204 0.03 24.933-18.533 23.68-33.732 0.0426-23.158-26.958z" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.6053" style="font-variation-settings:'wght' 400;paint-order:normal"/></g></svg>
-            </i></a>
+            </i>
             <p>© 2023 X GAIN | CNPJ - 01. 010. 101/0101-01</p>
             <p>X Gain empresa fictícia criada em um projeto de TCC</p>
         </section>
@@ -421,5 +421,12 @@
 <script src="../Js/loading.js" defer></script>
 <script src="../Js/main.js"></script>
 <script src="../Js/main-resultados.js" defer></script>
+<script>
+    document.getElementById('icon-logo-footer').addEventListener('click', ()=>{
+    document.getElementById('topo').scrollIntoView({
+        behavior: 'smooth'
+    });
+})
+</script>
 </body>
 </html>

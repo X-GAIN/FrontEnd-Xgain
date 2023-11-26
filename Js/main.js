@@ -7,3 +7,9 @@ document.getElementById('btn-categoria-musculacao').addEventListener('click', ()
 document.getElementById('btn-categoria-acessorios').addEventListener('click', ()=>{
     window.location.href = './telas/resultados.html?buscar=categoria&cat=Acessórios';
 })
+
+document.getElementById('icon-logo-footer').addEventListener('click', ()=>{
+    document.getElementById('topo').scrollIntoView({
+        behavior: 'smooth'
+    });
+})

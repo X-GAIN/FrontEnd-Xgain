@@ -88,14 +88,13 @@ function verificarFormsOrcamento(){
             areaAviso.style.display = 'flex';
             aviso.innerHTML = 'Telefone inválido';
         }
-        else if(cepValue === ''){
+        else if(cepValue !== ''){
+            if(!(cepValue.length === 8)){
             areaAviso.style.display = 'flex';
             aviso.innerHTML = 'CEP inválido';
         }
-        else if(!(cepValue.length === 8)){
-            areaAviso.style.display = 'flex';
-            aviso.innerHTML = 'CEP inválido';
         }
+        
         else{
             copyInformacoes();
             const formulario = document.getElementById('form-fecharOrcamento-copy');
