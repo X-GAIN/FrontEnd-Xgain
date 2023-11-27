@@ -173,9 +173,10 @@ header .item-header:hover a{
     justify-content: center;
     position: absolute;
     background-color: var(--bran);
-    height: 16px;
-    width: 16px;
-    border-radius: 100%;
+    min-height: 16px;
+    min-width: 16px;
+    padding: 1px;
+    border-radius: 5px;
     color: var(--Preto);
     top: -7px;
     right: -10px;

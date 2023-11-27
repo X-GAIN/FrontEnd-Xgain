@@ -235,7 +235,16 @@ main svg:hover{
                 color: var(--bran);
             }
 
-            main .section-img3d{
+            .section-img3d{
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* background-color: #992d2d; */
+            }
+            #iframe-section-img3d{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -258,8 +267,9 @@ main svg:hover{
             }
                 .section-img3d .area-img3d{
                     position: relative;
-                    width: 80vw;
+                    width: 80vh;
                     height: 80vh;
+                    
                     /* background-color: var(--bran); */
                     border-radius: 50px;
                     /* border: 2px solid var(--Preto); */
@@ -300,6 +310,7 @@ main svg:hover{
                         position: absolute;
                         right: 35px;
                         top: 35px;
+                        cursor: pointer;
                     }
                         .btn-sair-img3d svg{
                             height: 35px;

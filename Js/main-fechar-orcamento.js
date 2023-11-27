@@ -88,12 +88,12 @@ function verificarFormsOrcamento(){
             areaAviso.style.display = 'flex';
             aviso.innerHTML = 'Telefone inválido';
         }
-        else if(cepValue !== ''){
-            if(!(cepValue.length === 8)){
-            areaAviso.style.display = 'flex';
-            aviso.innerHTML = 'CEP inválido';
-        }
-        }
+        // else if(cepValue !== ''){
+        //     if(!(cepValue.length === 8)){
+        //     areaAviso.style.display = 'flex';
+        //     aviso.innerHTML = 'CEP inválido';
+        //     }
+        // }
         
         else{
             copyInformacoes();
@@ -101,7 +101,7 @@ function verificarFormsOrcamento(){
             formulario.submit();
             envio = true;
             // window.location.href = `fechar-orcamento.html?envio=${envio}`;
-            formulario.action = 'https://api.staticforms.xyz/submit'
+            formulario.action = 'https://api.staticforms.xyz/submit';
         }
 }
 const urlParams = new URLSearchParams(window.location.search);

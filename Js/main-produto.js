@@ -1,13 +1,13 @@
 
-document.getElementById('exit-img3d-section').addEventListener('click', () => {
-    document.getElementById('section-img3d').style.display = "none";
-});
-document.getElementById('icon-3d').addEventListener('click', () => {
-    document.getElementById('section-img3d').style.display = "flex";
-});
-document.getElementById('icon-3d2').addEventListener('click', () => {
-    document.getElementById('section-img3d').style.display = "flex";
-});
+function fechar3D(){
+    document.getElementById('iframe-section-img3d').style.display = "none";
+    document.querySelector('#body').style.overflow = 'auto';
+};
+
+function abrir3D(){
+    document.getElementById('iframe-section-img3d').style.display = "flex";
+    document.getElementById('body').style.overflow = 'hidden';
+}
 
 const imagensProdutos = document.querySelectorAll('.img-produto-galery');
 
@@ -26,4 +26,4 @@ function maisOuMenos(valor){
     numero.textContent = contador;
 }
 
-document.getElementById('titleProduto').innerHTML = document.getElementById('nomeProduto').innerHTML + ' | XGAIN';
+// document.getElementById('titleProduto').innerHTML = document.getElementById('nomeProduto').innerHTML + ' | XGAIN';
