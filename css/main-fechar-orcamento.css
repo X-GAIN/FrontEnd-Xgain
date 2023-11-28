@@ -134,17 +134,15 @@ main svg:hover{
                 width: 100%;
                 padding: 1vw 20px;
             }
-                .area-lista-itens .lista-itens{
+                .area-lista-itens .item-lista{
+                    position: relative;
                     width: 100%;
                     max-height: 50vh;
                     overflow-y: auto;
                     padding-right: 10px;
-                }
-                .area-lista-itens .item-lista{
-                    position: relative;
-                    width: 100%;
                     display: flex;
-                    justify-content: start;
+                    /* flex-direction: column; */
+                    justify-content: space-between;
                     align-items: start;
                     padding-bottom: 10px;
                     margin-bottom: 10px;
@@ -165,14 +163,15 @@ main svg:hover{
                     } */
                     .item-lista p{
                         font-family: var(--mulish);
-                        font-weight: 500;
+                        font-weight: 700;
                         margin: 0 10px;
                         font-size: 18px;
                     }
                     .item-lista p.nome-produto{
                         font-family: var(--mulish);
                         font-size: 18px;
-                        font-weight: 600;
+                        text-align: start;
+                        font-weight: 700;
                     }
                 .area-lista-itens .total-produtos{
                     margin: 10px 0;
