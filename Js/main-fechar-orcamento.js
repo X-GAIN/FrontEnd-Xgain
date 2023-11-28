@@ -1,3 +1,5 @@
+// const urlParams = new URLSearchParams(window.location.search);
+
 const lista = document.getElementById('area-lista-itens');
 const btnAbrirFechar = document.getElementById('lista-itens-titulo');
 const iconAbrirFechar = document.getElementById('icone-lista-itens-titulo');
@@ -104,7 +106,6 @@ function verificarFormsOrcamento(){
             formulario.action = 'https://api.staticforms.xyz/submit';
         }
 }
-const urlParams = new URLSearchParams(window.location.search);
 envio = urlParams.get('envio');
 console.log(envio);
 
