@@ -262,7 +262,7 @@
                     </i>
                 </div>
                 <div class="area-lista-itens" id="area-lista-itens">
-                    <div class="lista-itens">
+                    <div class="lista-itens" id="lista-itens">
                         <!-- <div class="item-lista" id="item-lista">
                                 <div class="qtn-produto">
                                     <i class="menos-mais" title="Subtrair">
@@ -270,7 +270,7 @@
                                             <path id="path1" d="m-8504-1572.8v-64.908h153.49v64.908z"/>
                                             <circle id="path2" cx="-8427.3" cy="-1605.3" r="240" stroke-width="40"/></g></svg>                              
                                     </i>
-        
+                                    <p class="nome-produto">Leg Press</p>
                                     <p class="numero-qtn">01</p>
         
                                     <i class="menos-mais" title="Adicionar">
@@ -290,7 +290,7 @@
                     </div>
 
                     <div id="total-produtos-lista" class="total-produtos">
-                        <p>TOTAL - 0</p>
+                        <p id="totalListaProd">TOTAL - 0</p>
                     </div>
 
                     <!-- <div class="limpar-lista"><button id="btn-limpar-lista" class="btn-limpar-lista">ZERAR LISTA</button></div> -->
@@ -356,7 +356,7 @@
                     <input type="text" placeholder="" id="copyCep" name="$CEP" class="" style="display: none;">
                     <input type="text" placeholder="" id="copyEstado" name="$Estado" class="" style="display: none;">
                     <input type="text" placeholder="" id="copyCidade" name="$Cidade" class="" style="display: none;">
-                    <textarea name="$Produtos" id="copyProdutos" placeholder="Descreva o assunto" class="" style="display: none;"></textarea>
+                    <textarea name="$Produtos" id="copyProdutos" placeholder="Descreva o assunto" class="" style="width: 100%; height: 300px;" hidden></textarea>
                     <button type="submit" id="enviarFecharOrcamento">Enviar mensagem</button>
 
                     <input type="hidden" name="accessKey" value="1cd64077-fa50-42d4-a271-1ea9c8b2e444">

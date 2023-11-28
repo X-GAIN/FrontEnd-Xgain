@@ -1,3 +1,33 @@
+// function inicializarCarrinho(){
+const urlIdProd = new URLSearchParams(window.location.search);
+const idProd = urlIdProd.get('idProd');
+
+// const btnAddProd = ;
+const prodNome = document.getElementById('nomeProduto');
+const qtdProdAdd = document.getElementById('numero-produto');
+const itemProdCarrinho = document.getElementsByClassName('item-produto-carrinho');
+const sectionTableProdCarrinho = document.getElementById('tabela-produtos-carrinho');
+function addProdInCarrinho(){
+    // console.log('Botão clicado');
+    if (!idProd) {
+        console.log('Tela sem produto válido');
+        return;
+    } else {
+        if (produtoJaNoCarrinho(idProd)) {
+            var qtdProdText = qtdProdAdd ? qtdProdAdd.textContent : '0';
+            var qtdProd = parseInt(qtdProdText);
+            atualizarQuantidadeProduto(idProd, qtdProd);
+        } else {
+            addProdLocalStorage();
+            atualizarCarrinho();
+            // document.getElementById('carrinho-section').style.right = '0';
+            popupAtualizacaoCarrinho();
+        }
+    }
+    atualizarTotal();
+}
+// document.addEventListener('DOMContentLoaded', function () {
+
 const iconCarrinho = document.getElementById('icon-carrinho');
 
 iconCarrinho.addEventListener('click', abrirCarrinho);
@@ -22,35 +52,25 @@ function fecharCarrinho(){
     document.getElementById('body').style.overflowY = 'auto';
 }
 
-
-const urlParams = new URLSearchParams(window.location.search);
-const idProd = urlParams.get('idProd');
-
-const btnAddProd = document.getElementById('btnAdicionarProd');
-const prodNome = document.getElementById('nomeProduto');
-const qtdProdAdd = document.getElementById('numero-produto');
-const itemProdCarrinho = document.getElementsByClassName('item-produto-carrinho');
-const sectionTableProdCarrinho = document.getElementById('tabela-produtos-carrinho');
-
-btnAddProd.addEventListener('click', () => {
-    // console.log('Botão clicado');
-    if (!idProd) {
-        console.log('Tela sem produto válido');
-        return;
-    } else {
-        if (produtoJaNoCarrinho(idProd)) {
-            var qtdProdText = qtdProdAdd ? qtdProdAdd.textContent : '0';
-            var qtdProd = parseInt(qtdProdText);
-            atualizarQuantidadeProduto(idProd, qtdProd);
-        } else {
-            addProdLocalStorage();
-            atualizarCarrinho();
-            // document.getElementById('carrinho-section').style.right = '0';
-            popupAtualizacaoCarrinho();
-        }
-    }
-    atualizarTotal();
-});
+// document.getElementById('btnAdicionarProd').addEventListener('click', () => {
+//     // console.log('Botão clicado');
+//     if (!idProd) {
+//         console.log('Tela sem produto válido');
+//         return;
+//     } else {
+//         if (produtoJaNoCarrinho(idProd)) {
+//             var qtdProdText = qtdProdAdd ? qtdProdAdd.textContent : '0';
+//             var qtdProd = parseInt(qtdProdText);
+//             atualizarQuantidadeProduto(idProd, qtdProd);
+//         } else {
+//             addProdLocalStorage();
+//             atualizarCarrinho();
+//             // document.getElementById('carrinho-section').style.right = '0';
+//             popupAtualizacaoCarrinho();
+//         }
+//     }
+//     atualizarTotal();
+// });
 
 function addProdLocalStorage(){
     var nome = prodNome.textContent;
@@ -258,9 +278,9 @@ function incrementarQtdProd(e) {
 }
 
 
-function atualizarLocalStorage(){
+// function atualizarLocalStorage(){
 
-}
+// }
 
 function atualizarTotal() {
     const total = document.getElementById('totalQtnProdutos');
@@ -300,13 +320,16 @@ function popupAtualizacaoCarrinho(){
     popup.classList.add('popupDoCarrinho');
     document.body.appendChild(popup);
 
-    popup.addEventListener('click', ()=>{
-        popup.style.bottom = '-100px';
-    })
-
     popup.style.bottom = '40px';
     setTimeout(()=>{
         popup.style.bottom = '-100px'
     }, 2500);
 }
+// document.getElementById('popupCarrinho').addEventListener('click', ()=>{
+//     document.getElementById('popupCarrinho').style.bottom = '-100px';
+//     console.log('jonas')
+// })
 // popupAtualizacaoCarrinho();
+// }
+// inicializarCarrinho();
+// });

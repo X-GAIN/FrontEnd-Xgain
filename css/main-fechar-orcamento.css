@@ -144,8 +144,8 @@ main svg:hover{
                     position: relative;
                     width: 100%;
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    justify-content: start;
+                    align-items: start;
                     padding-bottom: 10px;
                     margin-bottom: 10px;
                 }
@@ -158,21 +158,21 @@ main svg:hover{
                     width: 100%;
                     background-color: var(--Preto);
                 }
-                    .item-lista .qtn-produto{
+                    /* .item-lista .qtn-produto{
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                    }
-                    .item-lista .qtn-produto p{
+                    } */
+                    .item-lista p{
                         font-family: var(--mulish);
-                        font-weight: 900;
+                        font-weight: 500;
                         margin: 0 10px;
                         font-size: 18px;
                     }
                     .item-lista p.nome-produto{
                         font-family: var(--mulish);
                         font-size: 18px;
-                        font-weight: 800;
+                        font-weight: 600;
                     }
                 .area-lista-itens .total-produtos{
                     margin: 10px 0;

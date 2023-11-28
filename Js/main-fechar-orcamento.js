@@ -1,5 +1,3 @@
-// const urlParams = new URLSearchParams(window.location.search);
-
 const lista = document.getElementById('area-lista-itens');
 const btnAbrirFechar = document.getElementById('lista-itens-titulo');
 const iconAbrirFechar = document.getElementById('icone-lista-itens-titulo');
@@ -96,7 +94,10 @@ function verificarFormsOrcamento(){
         //     aviso.innerHTML = 'CEP inválido';
         //     }
         // }
-        
+        else if(total == 0){
+            areaAviso.style.display = 'flex';
+            aviso.innerHTML = 'A lista de itens está vazia.';
+        }
         else{
             copyInformacoes();
             const formulario = document.getElementById('form-fecharOrcamento-copy');
@@ -106,15 +107,41 @@ function verificarFormsOrcamento(){
             formulario.action = 'https://api.staticforms.xyz/submit';
         }
 }
+const urlParams = new URLSearchParams(window.location.search);
 envio = urlParams.get('envio');
-console.log(envio);
+// console.log(envio);
 
 if(envio){
     const areaAviso = document.getElementById('area-aviso-orcamento');
     areaAviso.style.display = 'flex';
     envio = null;
-    console.log(envio);
+    localStorage.removeItem('Produtos');
+    // console.log(envio);
 }
+let total = 0;
+function carregarLista() {
+    const prodLocalStorage = JSON.parse(localStorage.getItem('Produtos')) || [];
+    const tabelaProdutosSelecionados = document.getElementById('lista-itens');
+
+    for (var i = 0; i < prodLocalStorage.length; i++) {
+        const divListProdSelecionados = document.createElement('div');
+        divListProdSelecionados.classList.add('item-lista');
+        divListProdSelecionados.innerHTML = `
+                <p class="nome-produto" id="">${prodLocalStorage[i].Nome}</p>
+                <p class="numero-qtn" id="">${prodLocalStorage[i].Quantidade}</p>
+        `;
+        tabelaProdutosSelecionados.appendChild(divListProdSelecionados);
+        // console.log(prodLocalStorage[i]);
+
+        total += prodLocalStorage[i].Quantidade;
+    }
+
+    const totalLista = document.getElementById('totalListaProd');
+    totalLista.innerText = "Total - " + total;
+    return total;
+}
+
+carregarLista();
 
 function copyInformacoes(){
     const nome = document.getElementById('nomeOrcamento').value;
@@ -131,7 +158,25 @@ function copyInformacoes(){
     const copyestado = document.getElementById('copyEstado');
     const copycidade = document.getElementById('copyCidade');
     const copyProdutos = document.getElementById('copyProdutos');
-    const prodsSelect = 'Nada escolhido';
+
+    
+    const prodLocalStorage = JSON.parse(localStorage.getItem('Produtos')) || [];
+    let total = 0;
+    let prodsSelect = '';
+
+    for (var i = 0; i < prodLocalStorage.length; i++) {
+        prodsSelect += `
+Id: ${prodLocalStorage[i].id}, Nome: ${prodLocalStorage[i].Nome}, Quantidade: ${prodLocalStorage[i].Quantidade};
+--------------------------------------------------
+        `;
+
+        total += prodLocalStorage[i].Quantidade;
+    }
+
+    const totalLista = document.getElementById('totalListaProd');
+    totalLista.innerText = "Total - " + total;
+
+    
 
     
 
@@ -142,5 +187,7 @@ function copyInformacoes(){
     copyestado.value = estado;
     copycidade.value = cidade;
 
-    copyProdutos.value = prodsSelect;
+    copyProdutos.value = prodsSelect + `
+${totalLista.innerText}`;
 }
+
