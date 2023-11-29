@@ -95,6 +95,7 @@ if(qtnImgs <= 0){
         localImg.appendChild(img);
 
         document.getElementById('btns-setinha-banner-home').style.display = ('none');
+        document.getElementById('btn-saiba-mais').style.display = ('none');
     }
 else if(qtnImgs === 1){
         document.getElementById('btns-setinha-banner-home').style.display = ('none');
