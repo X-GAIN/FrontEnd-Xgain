@@ -44,7 +44,6 @@ document.getElementById('exit-aviso-section-orcamento').addEventListener('click'
 
 document.getElementById('enviarFecharOrcamento').addEventListener('click', (e)=>{
     e.preventDefault();
-    
     verificarFormsOrcamento();
 })
 
@@ -63,6 +62,7 @@ function verificarFormsOrcamento(){
         const cep = document.querySelector('input[name=cepOrcamento]');
         let cepValue = cep.value;
         cepValue = cepValue.replace(/[^\d]/g, '');
+        
 
 
         todosInputs.forEach(input => {
@@ -101,18 +101,24 @@ function verificarFormsOrcamento(){
         else{
             copyInformacoes();
             const formulario = document.getElementById('form-fecharOrcamento-copy');
-            formulario.submit();
             envio = true;
+            const redirectTo = document.querySelector('#form-fecharOrcamento-copy input[name=redirectTo]');
+            redirectTo.value = window.location.href + `?envio=${envio}`;
+            //console.log(redirectTo);
+            formulario.submit();
             // window.location.href = `fechar-orcamento.html?envio=${envio}`;
+            
             formulario.action = 'https://api.staticforms.xyz/submit';
         }
 }
 const urlParams = new URLSearchParams(window.location.search);
 envio = urlParams.get('envio');
 // console.log(envio);
+const areaAviso = document.getElementById('area-aviso-orcamento');
+const aviso = areaAviso.querySelector('#aviso');
+const motivo = areaAviso.querySelector('#motivo');
 
 if(envio){
-    const areaAviso = document.getElementById('area-aviso-orcamento');
     areaAviso.style.display = 'flex';
     envio = null;
     localStorage.removeItem('Produtos');
