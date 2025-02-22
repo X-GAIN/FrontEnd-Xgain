@@ -5,6 +5,7 @@ const bolinhasContainer = document.querySelector(".btns-bolinha-banner-home");
     let bannerImgFoco = 0;
     const banners = document.querySelectorAll('.banner-img');
     const maxBanners = banners.length;  
+    const saibaMais = document.querySelector('#btn-saiba-mais a');
 
 function bolinhasFuntion(imagens) {
     let primeiraIteracao = true;
@@ -24,8 +25,10 @@ function bolinhasFuntion(imagens) {
 
         banners[bannerImgFoco].scrollIntoView({
             behavior: "smooth",
-            inline: "center"
+            block: 'nearest', 
+            inline: 'center'
         })
+        
 
         });
 
@@ -65,8 +68,10 @@ function setinhasControl(){
 
             banners[bannerImgFoco].scrollIntoView({
                 behavior: "smooth",
-                inline: "center",
+                block: 'nearest', 
+                inline: 'center'
             })
+
             // console.log(bannerImgFoco)
             const bolinhaFoco = document.querySelectorAll('.btn-bolinha-banner');
             bolinhaFoco.forEach((b) => {
@@ -99,4 +104,19 @@ if(qtnImgs <= 0){
     }
 else if(qtnImgs === 1){
         document.getElementById('btns-setinha-banner-home').style.display = ('none');
+}
+
+//saibaMais.addEventListener('click', saibaMaisFunction(e));
+
+function saibaMaisFunction(e){
+    e.preventDefault();
+    //console.log(bannerImgFoco)
+
+    switch (bannerImgFoco) {
+        case 0: window.location.href = './telas/resultados.html?buscar=categoria&cat=Musculação'; break;
+        case 1: window.location.href = './telas/resultados.html?buscar=categoria&cat=Acessórios'; break;
+        case 2: window.location.href = './telas/resultados.html?buscar=categoria&cat=Musculação'; break;
+        case 3: window.location.href = './telas/resultados.html?buscar=categoria&cat=Cárdio'; break;
+        case 4: window.location.href = './telas/resultados.html?buscar=categoria&cat=Cárdio'; break;
+    }
 }
