@@ -47,7 +47,7 @@ function pesquisar() {
     var input = document.getElementById('searchbar').value;
     if(input.trim() !== ''){
     // var buscar = window.location.href = `../telas/resultados.html?buscar=${input}`;
-    var buscar = window.location.href = `../telas/resultados.html?buscar=${input}`;
+    const buscar = window.location.href = `../telas/resultados.html?buscar=${input}`;
     parent.window.location.href = buscar;
     window.location.href = '../iframe/barra-pesquisa.html';
     }
@@ -83,7 +83,7 @@ function itemPesquisado(){
     divItem.addEventListener('click', ()=>{
         var item = document.getElementById(input+'item').innerHTML;
 
-        var buscar = window.location.href = `../telas/pesquisa.html?buscar=${item}`;
+        var buscar = window.location.href = `../telas/resultados.html?buscar=${item}`;
         parent.window.location.href = buscar;
         window.location.href = '../iframe/barra-pesquisa.html';
     })
