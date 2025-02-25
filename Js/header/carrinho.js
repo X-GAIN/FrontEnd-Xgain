@@ -310,7 +310,7 @@ function atualizarTotal() {
 atualizarTotal();
 
 document.getElementById('finalizar-orcamento').addEventListener('click', ()=>{
-    window.location = './fechar-orcamento.html';
+    window.location = './telas/fechar-orcamento.html';
 })
 
 function popupAtualizacaoCarrinho(){
