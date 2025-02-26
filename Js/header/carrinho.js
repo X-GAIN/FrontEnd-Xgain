@@ -313,8 +313,10 @@ document.getElementById('finalizar-orcamento').addEventListener('click', ()=>{
     window.location = ".";
     if(window.location == "./index.html"){
         window.location = './telas/fechar-orcamento.html';
+        console.log("index");
     }else{
         window.location = './fechar-orcamento.html';
+        console.log("nao index");
     }
     
 })
