@@ -110,7 +110,7 @@
         </section>
 
         <section id="" class="btns-carrinho">
-            <button id="finalizar-orcamento" class="btn-carrinho">
+            <button id="finalizar-orcamento" class="btn-carrinho" onclick="carrinhoLevarFecharOrcamento()">
                 FINALIZAR ORÇAMENTO
             </button>
             <button id="voltar-carrinho" class="btn-carrinho">
@@ -469,6 +469,11 @@
         behavior: 'smooth'
     });
 })
+    
+       function carrinhoLevarFecharOrcamento(){
+            window.location = "./telas/fechar-orcamento.html"
+       }
+   
 </script>
 </body>
 </html>
