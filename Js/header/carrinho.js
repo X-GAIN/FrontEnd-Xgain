@@ -310,7 +310,6 @@ function atualizarTotal() {
 atualizarTotal();
 
 document.getElementById('finalizar-orcamento').addEventListener('click', ()=>{
-    window.location = ".";
     if(window.location == "./index.html"){
         //window.location = './telas/fechar-orcamento.html';
         console.log("index");
